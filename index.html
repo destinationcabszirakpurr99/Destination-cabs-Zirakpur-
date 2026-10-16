@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination Cabs Zirakpur | Ultra-Premium Taxi & Tours</title>
-    <meta name="description" content="Experience the pinnacle of luxury travel with Destination Cabs Zirakpur. Elite fleets, master chauffeurs, and bespoke tours across India.">
+    <title>Destination Cabs Zirakpur | Premium Outstation Cabs</title>
+    <meta name="description" content="Experience royal travel with Destination Cabs Zirakpur. Premium fleet, master chauffeurs, and luxury tours across India.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -20,33 +20,32 @@
     
     <style>
         /* ====================================================
-           ULTRA-PREMIUM THEME (NAVY, GOLD, ONYX)
+           ULTRA-LUXURY THEME VARIABLES
         ==================================================== */
         :root {
             --navy-dark: #050a15;
-            --navy-light: #0a192f;
-            --gold-light: #f9e596;
+            --navy-light: #0d1b2a;
+            --navy-card: #1b263b;
             --gold-primary: #d4af37;
-            --gold-dark: #aa8623;
+            --gold-light: #f3e5ab;
             --text-white: #ffffff;
-            --text-muted: #a0aabf;
-            --bg-body: #f8f9fa;
+            --text-muted: #9ca3af;
+            --bg-light: #f8f9fa;
             --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
-            --shadow-dark: 0 20px 40px rgba(0, 0, 0, 0.4);
-            --gradient-gold: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+            --shadow-dark: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--bg-body); color: var(--navy-dark); font-family: 'Poppins', sans-serif; overflow-x: hidden; padding-top: 85px; }
+        body { background-color: var(--bg-light); color: var(--navy-dark); font-family: 'Poppins', sans-serif; overflow-x: hidden; padding-top: 85px; }
         h1, h2, h3, h4, .royal-font { font-family: 'Playfair Display', serif; }
 
-        /* Utilities */
+        /* Smooth Hover Effects */
         .hover-lift { transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .hover-lift:hover { transform: translateY(-10px); box-shadow: var(--shadow-gold); }
-        
-        /* Navbar */
-        nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(5, 10, 21, 0.95); backdrop-filter: blur(15px); padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212,175,55,0.2); transition: 0.3s; }
-        .nav-brand { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+
+        /* ================= NAVBAR ================= */
+        nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(5, 10, 21, 0.98); backdrop-filter: blur(10px); padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212,175,55,0.3); }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
         .nav-brand span { color: var(--text-white); font-weight: 700; font-size: 24px; font-family: 'Playfair Display', serif; letter-spacing: 2px; text-transform: uppercase; }
         .nav-brand span span { color: var(--gold-primary); }
         
@@ -57,99 +56,94 @@
         .desktop-menu a:hover { color: var(--gold-primary); }
         .menu-btn { display: none; color: var(--gold-primary); font-size: 28px; cursor: pointer; }
 
-        /* Gold Button */
-        .btn-gold { display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: var(--gradient-gold); color: var(--navy-dark); padding: 16px 40px; border-radius: 4px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; border: 1px solid transparent; position: relative; overflow: hidden; z-index: 1; }
-        .btn-gold::before { content: ''; position: absolute; top: 0; left: 0; width: 0%; height: 100%; background: var(--text-white); transition: 0.4s; z-index: -1; }
-        .btn-gold:hover::before { width: 100%; }
-        .btn-gold:hover { color: var(--gold-dark); border-color: var(--gold-primary); box-shadow: var(--shadow-gold); }
+        /* Buttons */
+        .btn-gold { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--gold-primary); color: var(--navy-dark); padding: 16px 35px; border-radius: 4px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.4s; border: 1px solid var(--gold-primary); }
+        .btn-gold:hover { background: transparent; color: var(--gold-primary); box-shadow: var(--shadow-gold); }
 
-        .btn-outline { background: transparent; color: var(--gold-primary); border: 1px solid var(--gold-primary); }
-        .btn-outline::before { background: var(--gold-primary); }
-        .btn-outline:hover { color: var(--navy-dark); }
-
-        /* Sections */
-        .dc-section { max-width: 1300px; margin: 100px auto; padding: 0 20px; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .kicker { display: block; color: var(--gold-primary); font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 15px; }
-        .section-header h2 { font-size: 48px; color: var(--navy-dark); margin-bottom: 20px; }
-        .section-header p { color: #555; font-size: 16px; max-width: 700px; margin: 0 auto; line-height: 1.8; }
-        .section-header.dark h2 { color: var(--text-white); }
-        .section-header.dark p { color: var(--text-muted); }
-
-        /* Hero Section */
-        .hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: -85px; padding: 20px; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,10,21,0.6), rgba(5,10,21,0.95)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80') center/cover fixed; z-index: -1; }
-        .hero-content { max-width: 900px; z-index: 1; }
-        .hero h1 { font-size: 72px; color: var(--text-white); margin-bottom: 25px; line-height: 1.1; letter-spacing: 2px; }
-        .hero h1 i { color: var(--gold-primary); font-size: 60px; display: block; margin-bottom: 20px; }
-        .hero p { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; font-weight: 300; line-height: 1.6; letter-spacing: 1px; }
-
-        /* About / The Royal Standard */
-        .standard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .standard-img { position: relative; border-radius: 10px; padding: 20px; }
-        .standard-img::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid var(--gold-primary); border-radius: 10px; transform: translate(20px, 20px); z-index: -1; }
-        .standard-img img { width: 100%; border-radius: 10px; box-shadow: var(--shadow-dark); }
+        /* Sections General */
+        .dc-section { padding: 100px 20px; }
+        .section-header { text-align: center; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .kicker { display: inline-block; color: var(--gold-primary); font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--gold-primary); padding-bottom: 5px; }
+        .section-header h2 { font-size: 46px; color: var(--navy-dark); margin-bottom: 20px; font-weight: 600; }
+        .section-header p { color: #555; font-size: 16px; line-height: 1.8; }
         
-        .feature-list { margin-top: 40px; display: grid; gap: 30px; }
-        .feat-item { display: flex; gap: 20px; }
-        .feat-icon { width: 60px; height: 60px; flex-shrink: 0; background: var(--navy-light); border: 1px solid var(--gold-primary); color: var(--gold-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-        .feat-text h4 { font-size: 22px; margin-bottom: 8px; color: var(--navy-dark); }
-        .feat-text p { color: #666; font-size: 15px; line-height: 1.6; }
+        /* Dark Section Variant */
+        .dark-bg { background: var(--navy-dark); color: var(--text-white); }
+        .dark-bg .section-header h2 { color: var(--text-white); }
+        .dark-bg .section-header p { color: var(--text-muted); }
 
-        /* Destinations (Mega Grid) */
-        .dest-wrapper { background: var(--navy-dark); padding: 100px 0; }
-        .mega-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1300px; margin: 0 auto; padding: 0 20px; }
-        .dest-card { position: relative; height: 350px; border-radius: 8px; overflow: hidden; cursor: pointer; group; }
-        .dest-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
-        .dest-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,10,21,0.95) 0%, rgba(5,10,21,0.2) 50%, transparent 100%); transition: 0.4s; }
-        .dest-card:hover img { transform: scale(1.1); }
-        .dest-card:hover::after { background: linear-gradient(to top, rgba(5,10,21,0.95) 0%, rgba(5,10,21,0.6) 100%); }
-        .dest-info { position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 2; transition: 0.4s; }
-        .dest-info h3 { color: var(--gold-primary); font-size: 28px; margin-bottom: 10px; }
-        .dest-info p { color: var(--text-white); font-size: 14px; opacity: 0; transform: translateY(20px); transition: 0.4s; }
-        .dest-card:hover .dest-info p { opacity: 1; transform: translateY(0); }
+        /* ================= HERO SECTION ================= */
+        .hero { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: -85px; padding: 20px; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(5,10,21,0.5), rgba(5,10,21,0.95)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80') center/cover fixed; z-index: -1; }
+        .hero-content { max-width: 900px; z-index: 1; }
+        .hero h1 { font-size: 70px; color: var(--text-white); margin-bottom: 20px; line-height: 1.1; letter-spacing: 1px; }
+        .hero h1 span { color: var(--gold-primary); font-style: italic; }
+        .hero p { font-size: 18px; color: var(--gold-light); margin-bottom: 40px; font-weight: 300; line-height: 1.6; letter-spacing: 1px; }
 
-        /* Fleet Section */
-        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-        .fleet-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        .fleet-img { height: 250px; background: #f8f9fa; padding: 20px; display: flex; align-items: center; justify-content: center; position: relative; }
-        .fleet-img img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; transition: 0.5s; }
-        .fleet-card:hover .fleet-img img { transform: scale(1.08); }
-        .fleet-content { padding: 35px; text-align: center; }
-        .fleet-content h3 { font-size: 26px; color: var(--navy-dark); margin-bottom: 10px; }
-        .fleet-class { display: inline-block; color: var(--gold-primary); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 1px solid var(--gold-primary); padding-bottom: 5px; }
-        .fleet-specs { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
-        .f-spec { color: #555; font-size: 14px; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+        /* ================= FLEET SECTION (MOVED UP & REDESIGNED) ================= */
+        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+        .fleet-card { background: var(--navy-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(212,175,55,0.2); transition: 0.4s; position: relative; }
+        .fleet-card:hover { transform: translateY(-10px); border-color: var(--gold-primary); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        
+        .fleet-img { height: 250px; background: linear-gradient(to bottom, #f8f9fa, #eef2f5); display: flex; align-items: center; justify-content: center; position: relative; padding: 20px; }
+        .fleet-img img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; transition: transform 0.6s; }
+        .fleet-card:hover .fleet-img img { transform: scale(1.1); }
+        
+        .fleet-badge { position: absolute; top: 20px; right: 20px; background: var(--navy-dark); color: var(--gold-primary); padding: 5px 15px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 1px; border: 1px solid var(--gold-primary); }
+        
+        .fleet-content { padding: 35px 30px; text-align: center; }
+        .fleet-content h3 { font-size: 26px; color: var(--text-white); margin-bottom: 5px; }
+        .fleet-content p { color: var(--text-muted); font-size: 14px; margin-bottom: 25px; }
+        
+        .fleet-specs { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 15px 0; }
+        .f-spec { color: var(--text-white); font-size: 13px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
         .f-spec i { color: var(--gold-primary); font-size: 18px; }
 
-        /* VIP Testimonials */
-        .testimonial-sec { background: linear-gradient(135deg, #f8f9fa, #eef1f5); padding: 100px 0; }
-        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1300px; margin: 0 auto; padding: 0 20px;}
-        .test-card { background: #fff; padding: 40px; border-radius: 10px; box-shadow: var(--shadow-soft); position: relative; }
-        .test-card::before { content: '\201C'; position: absolute; top: 20px; left: 30px; font-family: 'Playfair Display', serif; font-size: 80px; color: rgba(212,175,55,0.15); line-height: 1; }
-        .test-card p { font-size: 16px; color: #555; line-height: 1.8; font-style: italic; margin-bottom: 25px; position: relative; z-index: 1; }
-        .client-info { display: flex; align-items: center; gap: 15px; }
-        .client-info img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold-primary); }
-        .client-info h5 { font-size: 16px; color: var(--navy-dark); margin-bottom: 2px; }
-        .stars { color: var(--gold-primary); font-size: 12px; }
+        /* ================= DESTINATIONS SECTION ================= */
+        .mega-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .dest-card { position: relative; height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid transparent; }
+        .dest-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .dest-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,10,21,0.95) 0%, rgba(5,10,21,0.1) 60%); z-index: 1; transition: 0.4s; }
+        
+        .dest-card:hover { border-color: var(--gold-primary); box-shadow: var(--shadow-gold); }
+        .dest-card:hover img { transform: scale(1.08); }
+        .dest-card:hover::before { background: linear-gradient(to top, rgba(5,10,21,0.98) 0%, rgba(5,10,21,0.5) 100%); }
+        
+        .dest-info { position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 2; text-align: left; }
+        .dest-tag { display: inline-block; background: var(--gold-primary); color: var(--navy-dark); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+        .dest-info h3 { color: var(--text-white); font-size: 26px; margin-bottom: 10px; font-weight: 500; }
+        .dest-info p { color: var(--text-muted); font-size: 14px; opacity: 0; transform: translateY(15px); transition: 0.4s; line-height: 1.6; }
+        .dest-card:hover .dest-info p { opacity: 1; transform: translateY(0); }
 
-        /* Contact & Map */
-        .contact-box { background: var(--navy-dark); border-radius: 15px; overflow: hidden; display: flex; box-shadow: var(--shadow-dark); margin-top: 50px; }
-        .contact-details { flex: 1; padding: 60px; color: var(--text-white); }
+        /* ================= USP / WHY CHOOSE US ================= */
+        .standard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; align-items: center; }
+        .standard-box { background: #fff; padding: 50px; border-radius: 16px; box-shadow: var(--shadow-dark); border: 1px solid rgba(212,175,55,0.2); position: relative; }
+        .standard-box::after { content: ''; position: absolute; top: -15px; right: -15px; bottom: 15px; left: 15px; border: 2px solid var(--gold-primary); border-radius: 16px; z-index: -1; }
+        
+        .feat-item { display: flex; gap: 25px; margin-bottom: 35px; }
+        .feat-item:last-child { margin-bottom: 0; }
+        .feat-icon { width: 65px; height: 65px; flex-shrink: 0; background: var(--bg-light); border: 1px solid var(--gold-primary); color: var(--gold-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 5px 15px rgba(212,175,55,0.2); }
+        .feat-text h4 { font-size: 22px; margin-bottom: 8px; color: var(--navy-dark); }
+        .feat-text p { color: #666; font-size: 15px; line-height: 1.7; }
+
+        /* ================= CONTACT & MAP ================= */
+        .contact-box { max-width: 1200px; margin: 0 auto; background: #fff; border-radius: 16px; overflow: hidden; display: flex; box-shadow: var(--shadow-dark); border: 1px solid rgba(212,175,55,0.3); }
+        .contact-details { flex: 1; padding: 60px 50px; background: var(--navy-dark); color: var(--text-white); }
         .contact-map { flex: 1.2; min-height: 500px; }
+        
         .c-item { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px; }
-        .c-item i { width: 50px; height: 50px; background: rgba(212,175,55,0.1); color: var(--gold-primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 20px; border: 1px solid rgba(212,175,55,0.3); }
-        .c-text h4 { font-size: 20px; margin-bottom: 8px; color: var(--gold-light); }
+        .c-item i { width: 55px; height: 55px; background: rgba(212,175,55,0.1); color: var(--gold-primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 22px; border: 1px solid rgba(212,175,55,0.3); }
+        .c-text h4 { font-size: 20px; margin-bottom: 5px; color: var(--gold-primary); font-family: 'Playfair Display', serif; }
         .c-text p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
 
-        /* Footer */
-        footer { background: #02050a; color: var(--text-white); padding: 80px 20px 30px; border-top: 1px solid rgba(212,175,55,0.2); }
-        .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; }
-        .footer-brand h3 { color: var(--text-white); font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 20px; letter-spacing: 2px; }
+        /* ================= FOOTER ================= */
+        footer { background: #02050a; color: var(--text-white); padding: 80px 20px 30px; border-top: 1px solid rgba(212,175,55,0.3); }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; }
+        .footer-brand h3 { color: var(--text-white); font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px; letter-spacing: 1px; }
         .footer-brand h3 span { color: var(--gold-primary); }
-        .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 25px; max-width: 400px; }
+        .footer-brand p { color: var(--text-muted); font-size: 14px; line-height: 1.8; margin-bottom: 25px; max-width: 350px; }
         
-        .footer-col h4 { color: var(--gold-primary); font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-col h4 { color: var(--text-white); font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 25px; letter-spacing: 1px; }
         .footer-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 15px; transition: 0.3s; }
         .footer-col a:hover { color: var(--gold-primary); transform: translateX(5px); }
         
@@ -157,10 +151,11 @@
         .social-links a { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(212,175,55,0.3); border-radius: 50%; color: var(--gold-primary); transition: 0.4s; font-size: 18px; }
         .social-links a:hover { background: var(--gold-primary); color: var(--navy-dark); transform: translateY(-5px); }
         
-        .footer-bottom { max-width: 1300px; margin: 60px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; color: #666; font-size: 13px; }
+        .footer-bottom { max-width: 1200px; margin: 60px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; color: #666; font-size: 13px; }
 
         @media (max-width: 992px) {
             .contact-box { flex-direction: column; }
+            .standard-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
@@ -168,7 +163,6 @@
             .desktop-menu { display: none; }
             .menu-btn { display: block; }
             .hero h1 { font-size: 45px; }
-            .standard-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -179,15 +173,16 @@
     <!-- ================= NAVBAR ================= -->
     <nav id="navbar">
         <a href="#home" class="nav-brand">
+            <i class="fas fa-chess-knight" style="color: var(--gold-primary); font-size: 28px;"></i>
             <span>Dest<span>ination</span></span>
         </a>
         <div class="desktop-menu">
             <a href="#home">Home</a>
-            <a href="#standard">The Royal Standard</a>
-            <a href="#destinations">Destinations</a>
             <a href="#fleet">Our Fleet</a>
-            <a href="#contact">Concierge</a>
-            <a href="tel:+919999900000" class="btn-gold" style="padding: 10px 25px; font-size: 12px;"><i class="fas fa-phone"></i> Call</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#standard">Our Standard</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:+919999900000" class="btn-gold" style="padding: 10px 25px; font-size: 12px; border-radius: 30px;"><i class="fas fa-phone-alt"></i> Call Us</a>
         </div>
         <div class="menu-btn" onclick="openMenu()"><i class="fas fa-bars"></i></div>
     </nav>
@@ -195,68 +190,94 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobileMenu" style="display: none; position: fixed; inset: 0; background: rgba(5,10,21,0.98); z-index: 9999; flex-direction: column; justify-content: center; align-items: center; gap: 30px;">
         <i class="fas fa-times" onclick="closeMenu()" style="position: absolute; top: 30px; right: 30px; color: var(--gold-primary); font-size: 35px; cursor: pointer;"></i>
-        <a href="#home" style="color: #fff; font-size: 24px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Home</a>
-        <a href="#standard" style="color: #fff; font-size: 24px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">The Royal Standard</a>
-        <a href="#destinations" style="color: #fff; font-size: 24px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Destinations</a>
-        <a href="#fleet" style="color: #fff; font-size: 24px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Our Fleet</a>
-        <a href="#contact" style="color: #fff; font-size: 24px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Contact Concierge</a>
-        <a href="tel:+919999900000" class="btn-gold" style="margin-top: 20px;"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="#home" style="color: #fff; font-size: 22px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Home</a>
+        <a href="#fleet" style="color: #fff; font-size: 22px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Our Fleet</a>
+        <a href="#destinations" style="color: #fff; font-size: 22px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Destinations</a>
+        <a href="#standard" style="color: #fff; font-size: 22px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Our Standard</a>
+        <a href="#contact" style="color: #fff; font-size: 22px; text-decoration: none; font-family: 'Playfair Display', serif;" onclick="closeMenu()">Contact Us</a>
+        <a href="tel:+919999900000" class="btn-gold" style="margin-top: 20px;"><i class="fas fa-phone-alt"></i> Call Now</a>
     </div>
 
     <!-- ================= HERO SECTION ================= -->
     <section id="home" class="hero">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
-            <i class="fas fa-crown" style="color: var(--gold-primary); font-size: 50px; margin-bottom: 25px;"></i>
-            <h1 class="royal-font">The Pinnacle of <br><span style="color: var(--gold-primary); font-style: italic;">Luxury Travel</span></h1>
-            <p>Destination Cabs Zirakpur curates bespoke journeys across India's most majestic landscapes. Travel with unparalleled elegance, elite chauffeurs, and absolute privacy.</p>
+            <h1 class="royal-font">The Pinnacle of <br><span>Luxury Travel</span></h1>
+            <p>Experience unmatched elegance with Destination Cabs Zirakpur. We craft bespoke outstation journeys with elite chauffeur-driven fleets across North India.</p>
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/919999900000?text=I want to inquire about a luxury ride." class="btn-gold"><i class="fab fa-whatsapp" style="font-size: 20px;"></i> Reserve Now</a>
-                <a href="#destinations" class="btn-gold btn-outline">View Collection</a>
+                <a href="https://wa.me/919999900000?text=I want to book a luxury ride." class="btn-gold"><i class="fab fa-whatsapp" style="font-size: 20px;"></i> Reserve Now</a>
+                <a href="#fleet" class="btn-gold" style="background: transparent; color: var(--gold-primary);"><i class="fas fa-car"></i> View Fleet</a>
             </div>
         </div>
     </section>
 
-    <!-- ================= THE ROYAL STANDARD (USP) ================= -->
-    <section id="standard" class="dc-section">
-        <div class="standard-grid">
-            <div data-aos="fade-right">
-                <span class="kicker">Why Choose Us</span>
-                <h2 class="royal-font" style="font-size: 42px; color: var(--navy-dark); margin-bottom: 20px;">The Royal Standard of Chauffeuring</h2>
-                <p style="color: #555; font-size: 16px; line-height: 1.8;">We don't just provide cabs; we deliver an exclusive travel experience. Every vehicle in our fleet is meticulously maintained, and every journey is crafted to perfection to ensure your absolute comfort and security.</p>
-                
-                <div class="feature-list">
-                    <div class="feat-item">
-                        <div class="feat-icon"><i class="fas fa-user-secret"></i></div>
-                        <div class="feat-text">
-                            <h4 class="royal-font">Master Chauffeurs</h4>
-                            <p>Highly verified, discreet, and expert drivers trained to navigate both smooth highways and treacherous Himalayan terrains safely.</p>
-                        </div>
+    <!-- ================= OUR FLEET SECTION (MOVED UP FOR LUXURY IMPACT) ================= -->
+    <section id="fleet" class="dc-section dark-bg">
+        <div class="section-header" data-aos="fade-up">
+            <span class="kicker">Uncompromised Comfort</span>
+            <h2 class="royal-font">The Royal Fleet</h2>
+            <p>Every vehicle in our collection is handpicked and meticulously maintained to provide you with supreme safety and absolute luxury on the road.</p>
+        </div>
+        
+        <div class="fleet-grid">
+            <!-- Sedan -->
+            <div class="fleet-card" data-aos="fade-up">
+                <div class="fleet-badge">Executive</div>
+                <div class="fleet-img">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Sedan">
+                </div>
+                <div class="fleet-content">
+                    <h3 class="royal-font">Premium Sedans</h3>
+                    <p>Swift Dzire / Toyota Glanza</p>
+                    <div class="fleet-specs">
+                        <div class="f-spec"><i class="fas fa-user-tie"></i> 4 Pax</div>
+                        <div class="f-spec"><i class="fas fa-briefcase"></i> 2 Bags</div>
+                        <div class="f-spec"><i class="fas fa-snowflake"></i> AC</div>
                     </div>
-                    <div class="feat-item">
-                        <div class="feat-icon"><i class="fas fa-gem"></i></div>
-                        <div class="feat-text">
-                            <h4 class="royal-font">Immaculate Fleet</h4>
-                            <p>Our vehicles undergo rigorous deep-cleaning and technical inspections before every single journey. Pure comfort guaranteed.</p>
-                        </div>
-                    </div>
-                    <div class="feat-item">
-                        <div class="feat-icon"><i class="fas fa-headset"></i></div>
-                        <div class="feat-text">
-                            <h4 class="royal-font">24/7 Concierge</h4>
-                            <p>A dedicated support team tracking your ride and assisting you round-the-clock for itinerary changes or emergencies.</p>
-                        </div>
-                    </div>
+                    <a href="https://wa.me/919999900000?text=Book Executive Sedan" class="btn-gold" style="width: 100%; font-size: 13px; padding: 12px; background: transparent; color: var(--gold-primary);">Book Now</a>
                 </div>
             </div>
-            <div class="standard-img" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Luxury Interior">
+
+            <!-- SUV -->
+            <div class="fleet-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="fleet-badge">Signature</div>
+                <div class="fleet-img">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="SUV">
+                </div>
+                <div class="fleet-content">
+                    <h3 class="royal-font">Comfort SUVs</h3>
+                    <p>Innova Crysta / Maruti Ertiga</p>
+                    <div class="fleet-specs">
+                        <div class="f-spec"><i class="fas fa-users"></i> 6 Pax</div>
+                        <div class="f-spec"><i class="fas fa-suitcase-rolling"></i> 4 Bags</div>
+                        <div class="f-spec"><i class="fas fa-couch"></i> Plush</div>
+                    </div>
+                    <a href="https://wa.me/919999900000?text=Book Signature SUV" class="btn-gold" style="width: 100%; font-size: 13px; padding: 12px; background: transparent; color: var(--gold-primary);">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Traveller -->
+            <div class="fleet-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="fleet-badge">Grand</div>
+                <div class="fleet-img">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Traveller">
+                </div>
+                <div class="fleet-content">
+                    <h3 class="royal-font">Group Cruisers</h3>
+                    <p>Force Urbania / Tempo Traveller</p>
+                    <div class="fleet-specs">
+                        <div class="f-spec"><i class="fas fa-users-cog"></i> 12-17 Pax</div>
+                        <div class="f-spec"><i class="fas fa-box-open"></i> Max</div>
+                        <div class="f-spec"><i class="fas fa-tv"></i> Ent.</div>
+                    </div>
+                    <a href="https://wa.me/919999900000?text=Book Grand Cruiser" class="btn-gold" style="width: 100%; font-size: 13px; padding: 12px; background: transparent; color: var(--gold-primary);">Book Now</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= MEGA DESTINATIONS GRID ================= -->
-    <section id="destinations" class="dest-wrapper">
-        <div class="section-header dark" data-aos="fade-up">
+    <!-- ================= DESTINATIONS SECTION ================= -->
+    <section id="destinations" class="dc-section" style="background: #fff;">
+        <div class="section-header" data-aos="fade-up">
             <span class="kicker">Curated Journeys</span>
             <h2 class="royal-font">Explore The Extraordinary</h2>
             <p>From the snow-capped peaks of Leh to the divine temples of Char Dham and the royal forts of Jaipur, discover India's crown jewels with us.</p>
@@ -264,230 +285,112 @@
 
         <div class="mega-grid">
             <!-- 1. Leh Ladakh -->
-            <div class="dest-card hover-lift" data-aos="fade-up" onclick="window.open('https://wa.me/919999900000?text=I want to book the Leh Ladakh Tour','_blank')">
+            <div class="dest-card hover-lift" data-aos="fade-up">
                 <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=600&q=80" alt="Leh Ladakh">
                 <div class="dest-info">
+                    <span class="dest-tag">9 Days Safari</span>
                     <h3 class="royal-font">Leh Ladakh</h3>
-                    <p>Conquer the world's highest passes and camp by the crystal blue Pangong Lake. The ultimate rugged luxury.</p>
+                    <p>Conquer the highest passes and camp by the crystal blue Pangong Lake. The ultimate rugged luxury.</p>
                 </div>
             </div>
 
             <!-- 2. Char Dham -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://wa.me/919999900000?text=I want to book the Char Dham Yatra','_blank')">
+            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://images.unsplash.com/photo-1626714486801-9037142718e8?auto=format&fit=crop&w=600&q=80" alt="Char Dham">
                 <div class="dest-info">
+                    <span class="dest-tag">11 Days Yatra</span>
                     <h3 class="royal-font">Char Dham Yatra</h3>
-                    <p>A divine pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath with paramount safety and peace.</p>
+                    <p>A divine and highly secure pilgrimage to Yamunotri, Gangotri, Kedarnath, and Badrinath.</p>
                 </div>
             </div>
 
             <!-- 3. Manali -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://wa.me/919999900000?text=I want to book the Manali Tour','_blank')">
+            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://images.unsplash.com/photo-1605649487212-4d4ce38d24b6?auto=format&fit=crop&w=600&q=80" alt="Manali">
                 <div class="dest-info">
+                    <span class="dest-tag">4 Days / 3 Nights</span>
                     <h3 class="royal-font">Magical Manali</h3>
                     <p>Experience the snow-capped peaks of Rohtang and the thrilling adventure of Solang Valley.</p>
                 </div>
             </div>
 
             <!-- 4. Shimla -->
-            <div class="dest-card hover-lift" data-aos="fade-up" onclick="window.open('https://wa.me/919999900000?text=I want to book the Shimla Tour','_blank')">
+            <div class="dest-card hover-lift" data-aos="fade-up">
                 <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80" alt="Shimla">
                 <div class="dest-info">
+                    <span class="dest-tag">3 Days / 2 Nights</span>
                     <h3 class="royal-font">Queen of Hills</h3>
                     <p>Walk down the historic Ridge and enjoy the colonial heritage of Shimla and Kufri.</p>
                 </div>
             </div>
 
-            <!-- 5. Spiti Valley -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://wa.me/919999900000?text=I want to book the Spiti Valley Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1616016147407-1bfa2b3238fc?auto=format&fit=crop&w=600&q=80" alt="Spiti Valley">
-                <div class="dest-info">
-                    <h3 class="royal-font">Spiti Valley</h3>
-                    <p>Explore the mystical middle land. Ancient monasteries, Key Gompa, and Chandratal lake await.</p>
-                </div>
-            </div>
-
-            <!-- 6. Jaipur -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://wa.me/919999900000?text=I want to book the Jaipur Tour','_blank')">
+            <!-- 5. Jaipur -->
+            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=600&q=80" alt="Jaipur">
                 <div class="dest-info">
+                    <span class="dest-tag">4 Days / 3 Nights</span>
                     <h3 class="royal-font">Royal Jaipur</h3>
-                    <p>Experience the grandeur of Amber Fort, Hawa Mahal, and the rich Rajputana culture in the Pink City.</p>
+                    <p>Experience the grandeur of Amber Fort, Hawa Mahal, and the rich Rajputana culture.</p>
                 </div>
             </div>
 
-            <!-- 7. Braj Bhoomi (Mathura) -->
-            <div class="dest-card hover-lift" data-aos="fade-up" onclick="window.open('https://wa.me/919999900000?text=I want to book the Mathura Vrindavan Tour','_blank')">
+            <!-- 6. Braj Bhoomi -->
+            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80" alt="Mathura Vrindavan">
                 <div class="dest-info">
+                    <span class="dest-tag">Spiritual Journey</span>
                     <h3 class="royal-font">Braj Bhoomi</h3>
                     <p>A divine trip to Lord Krishna's birthplace. Visit Banke Bihari, Prem Mandir, and Gokul.</p>
-                </div>
-            </div>
-
-            <!-- 8. Kashmir -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://wa.me/919999900000?text=I want to book the Kashmir Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=600&q=80" alt="Kashmir">
-                <div class="dest-info">
-                    <h3 class="royal-font">Paradise Kashmir</h3>
-                    <p>Glide on Dal Lake in a Shikara, and witness the unparalleled beauty of Gulmarg and Pahalgam.</p>
-                </div>
-            </div>
-
-            <!-- 9. Agra & Taj Mahal -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://wa.me/919999900000?text=I want to book the Agra Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1564507592224-2fc1606a5068?auto=format&fit=crop&w=600&q=80" alt="Taj Mahal">
-                <div class="dest-info">
-                    <h3 class="royal-font">Agra City</h3>
-                    <p>Witness the symbol of eternal love, the magnificent Taj Mahal, in absolute luxury.</p>
-                </div>
-            </div>
-            
-            <!-- 10. Amritsar -->
-            <div class="dest-card hover-lift" data-aos="fade-up" onclick="window.open('https://wa.me/919999900000?text=I want to book the Amritsar Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1588694082236-4d2bc3391763?auto=format&fit=crop&w=600&q=80" alt="Amritsar">
-                <div class="dest-info">
-                    <h3 class="royal-font">Golden Amritsar</h3>
-                    <p>Seek blessings at the Golden Temple and feel the patriotic fervor at the Wagah Border.</p>
-                </div>
-            </div>
-            
-            <!-- 11. Mussoorie -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://wa.me/919999900000?text=I want to book the Mussoorie Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1626014903706-53896dfa428d?auto=format&fit=crop&w=600&q=80" alt="Mussoorie">
-                <div class="dest-info">
-                    <h3 class="royal-font">Mussoorie & Dehradun</h3>
-                    <p>Relax in the Queen of the Hills. Explore Kempty Falls, Mall Road, and scenic viewpoints.</p>
-                </div>
-            </div>
-            
-            <!-- 12. Dalhousie & Dharamshala -->
-            <div class="dest-card hover-lift" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://wa.me/919999900000?text=I want to book the Dalhousie Dharamshala Tour','_blank')">
-                <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=600&q=80" alt="Dalhousie">
-                <div class="dest-info">
-                    <h3 class="royal-font">Dalhousie & Dharamshala</h3>
-                    <p>Discover the Mini Switzerland of India (Khajjiar) and the spiritual home of the Dalai Lama.</p>
                 </div>
             </div>
         </div>
         
         <div style="text-align: center; margin-top: 60px;">
-            <a href="https://wa.me/919999900000?text=I want to customize a tour package." class="btn-gold">Plan Custom Itinerary</a>
+            <a href="https://wa.me/919999900000?text=I want to customize a tour package." class="btn-gold">Customize Your Tour</a>
         </div>
     </section>
 
-    <!-- ================= OUR FLEET ================= -->
-    <section id="fleet" class="dc-section">
+    <!-- ================= USP / WHY CHOOSE US ================= -->
+    <section id="standard" class="dc-section" style="background: var(--bg-light);">
         <div class="section-header" data-aos="fade-up">
-            <span class="kicker">Uncompromised Luxury</span>
-            <h2 class="royal-font">The Royal Fleet</h2>
-            <p>Every vehicle in our collection is handpicked for supreme comfort, safety, and performance on Indian terrains.</p>
+            <span class="kicker">Destination Cabs Edge</span>
+            <h2 class="royal-font">The Royal Standard</h2>
+            <p>We don't just provide cabs; we deliver an exclusive travel experience. Every detail is crafted to ensure your absolute comfort and security.</p>
         </div>
-        
-        <div class="fleet-grid">
-            <!-- Sedan -->
-            <div class="fleet-card hover-lift" data-aos="fade-up">
-                <div class="fleet-img">
-                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Sedan Class">
-                </div>
-                <div class="fleet-content">
-                    <span class="fleet-class">Executive Class</span>
-                    <h3 class="royal-font">Premium Sedans</h3>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Swift Dzire / Toyota Glanza</p>
-                    <div class="fleet-specs">
-                        <div class="f-spec"><i class="fas fa-user-tie"></i> 4+1 Seats</div>
-                        <div class="f-spec"><i class="fas fa-briefcase"></i> 2 Bags</div>
-                        <div class="f-spec"><i class="fas fa-snowflake"></i> AC/Heater</div>
-                    </div>
-                    <a href="https://wa.me/919999900000?text=I want to book an Executive Sedan" class="btn-gold btn-outline" style="width: 100%; padding: 12px; font-size: 14px;">Reserve Now</a>
-                </div>
-            </div>
 
-            <!-- SUV -->
-            <div class="fleet-card hover-lift" data-aos="fade-up" data-aos-delay="100">
-                <div class="fleet-img">
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="SUV Class">
-                </div>
-                <div class="fleet-content">
-                    <span class="fleet-class">Signature Class</span>
-                    <h3 class="royal-font">Comfort SUVs</h3>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Innova Crysta / Maruti Ertiga</p>
-                    <div class="fleet-specs">
-                        <div class="f-spec"><i class="fas fa-users"></i> 6+1 Seats</div>
-                        <div class="f-spec"><i class="fas fa-suitcase-rolling"></i> 4 Bags</div>
-                        <div class="f-spec"><i class="fas fa-couch"></i> Captain Seats</div>
+        <div class="standard-grid">
+            <div class="standard-box" data-aos="fade-right">
+                <div class="feat-item">
+                    <div class="feat-icon"><i class="fas fa-user-secret"></i></div>
+                    <div class="feat-text">
+                        <h4 class="royal-font">Master Chauffeurs</h4>
+                        <p>Highly verified, discreet, and expert drivers trained to navigate both smooth highways and treacherous Himalayan terrains safely.</p>
                     </div>
-                    <a href="https://wa.me/919999900000?text=I want to book a Signature SUV" class="btn-gold btn-outline" style="width: 100%; padding: 12px; font-size: 14px;">Reserve Now</a>
                 </div>
-            </div>
-
-            <!-- Traveller -->
-            <div class="fleet-card hover-lift" data-aos="fade-up" data-aos-delay="200">
-                <div class="fleet-img">
-                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="Traveller Class">
-                </div>
-                <div class="fleet-content">
-                    <span class="fleet-class">Grand Class</span>
-                    <h3 class="royal-font">Group Cruisers</h3>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Force Urbania / Tempo Traveller</p>
-                    <div class="fleet-specs">
-                        <div class="f-spec"><i class="fas fa-users-cog"></i> 12-17 Seats</div>
-                        <div class="f-spec"><i class="fas fa-box-open"></i> Max Luggage</div>
-                        <div class="f-spec"><i class="fas fa-tv"></i> Ent. System</div>
+                <div class="feat-item">
+                    <div class="feat-icon"><i class="fas fa-gem"></i></div>
+                    <div class="feat-text">
+                        <h4 class="royal-font">Immaculate Hygiene</h4>
+                        <p>Our vehicles undergo rigorous deep-cleaning and technical inspections before every single journey. Pure comfort guaranteed.</p>
                     </div>
-                    <a href="https://wa.me/919999900000?text=I want to book a Grand Cruiser" class="btn-gold btn-outline" style="width: 100%; padding: 12px; font-size: 14px;">Reserve Now</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= VIP TESTIMONIALS ================= -->
-    <section class="testimonial-sec">
-        <div class="section-header" data-aos="fade-up">
-            <span class="kicker">Words of Royalty</span>
-            <h2 class="royal-font">Client Experiences</h2>
-            <p>Don't just take our word for it. Read what our esteemed clients have to say about their journeys with Destination Cabs.</p>
-        </div>
-        
-        <div class="test-grid">
-            <div class="test-card hover-lift" data-aos="fade-up">
-                <p>"Absolutely phenomenal service. Our 9-day Leh Ladakh expedition was flawless. The Innova Crysta was spotless, and our driver was incredibly skilled on the high passes. A true luxury experience."</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                    <div>
-                        <h5 class="royal-font">Vikram S.</h5>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="feat-item">
+                    <div class="feat-icon"><i class="fas fa-headset"></i></div>
+                    <div class="feat-text">
+                        <h4 class="royal-font">24/7 Concierge</h4>
+                        <p>A dedicated support team tracking your ride and assisting you round-the-clock for itinerary changes or emergencies.</p>
                     </div>
                 </div>
             </div>
             
-            <div class="test-card hover-lift" data-aos="fade-up" data-aos-delay="100">
-                <p>"We booked the Char Dham Yatra package for our parents. The 24/7 concierge support and the polite nature of the chauffeur gave us absolute peace of mind. Destination Cabs sets the gold standard."</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
-                    <div>
-                        <h5 class="royal-font">Priya K.</h5>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="test-card hover-lift" data-aos="fade-up" data-aos-delay="200">
-                <p>"Frequent business traveler here. Using their airport transfer and one-way drop services from Chandigarh to Delhi. Always punctual, vehicles smell great, and the drivers are highly professional."</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Client">
-                    <div>
-                        <h5 class="royal-font">Rahul M.</h5>
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    </div>
-                </div>
+            <div data-aos="fade-left" style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-dark); border: 2px solid var(--gold-primary);">
+                <img src="https://images.unsplash.com/photo-1568314413697-3914a222384b?auto=format&fit=crop&w=800&q=80" alt="Luxury Travel" style="width: 100%; display: block; filter: brightness(0.9);">
             </div>
         </div>
     </section>
 
-    <!-- ================= CONTACT CONCIERGE ================= -->
-    <section id="contact" class="dc-section" style="margin-top: 50px;">
+    <!-- ================= CONTACT & MAP ================= -->
+    <section id="contact" class="dc-section">
         <div class="section-header" data-aos="fade-up">
             <span class="kicker">At Your Service</span>
             <h2 class="royal-font">Contact The Concierge</h2>
@@ -509,7 +412,7 @@
                     <i class="fas fa-phone-alt"></i>
                     <div class="c-text">
                         <h4>24/7 Helpline</h4>
-                        <p>+91 99999 00000<br>+91 88888 00000</p>
+                        <p>+91 99999 00000</p>
                     </div>
                 </div>
                 
@@ -517,15 +420,15 @@
                     <i class="fas fa-envelope"></i>
                     <div class="c-text">
                         <h4>Email Us</h4>
-                        <p>info@destinationcabs.com<br>bookings@destinationcabs.com</p>
+                        <p>info@destinationcabs.com</p>
                     </div>
                 </div>
                 
-                <a href="https://wa.me/919999900000" class="btn-gold" style="margin-top: 20px;"><i class="fab fa-whatsapp"></i> Chat with Us</a>
+                <a href="https://wa.me/919999900000" class="btn-gold" style="margin-top: 10px; width: 100%;"><i class="fab fa-whatsapp"></i> Chat with Us</a>
             </div>
             
             <div class="contact-map">
-                <!-- Edge to Edge Map Embed -->
+                <!-- Edge to Edge Live Map pointing to Zirakpur -->
                 <iframe src="https://maps.google.com/maps?q=Zirakpur,%20Punjab&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
@@ -547,9 +450,9 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <a href="#home">Home</a>
+                <a href="#fleet">Our Fleet</a>
+                <a href="#destinations">Destinations</a>
                 <a href="#standard">Our Standard</a>
-                <a href="#fleet">The Fleet</a>
-                <a href="#contact">Contact</a>
             </div>
             
             <div class="footer-col">
@@ -593,18 +496,6 @@
         // Mobile Menu Logic
         function openMenu() { document.getElementById('mobileMenu').style.display = 'flex'; }
         function closeMenu() { document.getElementById('mobileMenu').style.display = 'none'; }
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            var navbar = document.getElementById('navbar');
-            if(window.scrollY > 50) {
-                navbar.style.background = 'rgba(5, 10, 21, 0.98)';
-                navbar.style.padding = '12px 40px';
-            } else {
-                navbar.style.background = 'rgba(5, 10, 21, 0.85)';
-                navbar.style.padding = '18px 40px';
-            }
-        });
     </script>
 </body>
 </html>
