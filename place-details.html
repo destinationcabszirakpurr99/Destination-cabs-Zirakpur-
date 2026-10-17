@@ -752,6 +752,44 @@
     @media (max-width: 520px) {
       .bc-footer-grid { grid-template-columns: 1fr; }
     }
+    /* =========================================
+   iPHONE DATE INPUT & MOBILE NAVBAR FIX
+   ========================================= */
+.icon-input-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.premium-pill-input,
+input[type="date"].premium-pill-input,
+select.premium-pill-input {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  display: block;
+  box-sizing: border-box !important;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left !important;
+  min-height: 56px;
+}
+
+/* iPhone Date Text Left-Align Fix */
+input[type="date"].premium-pill-input::-webkit-date-and-time-value {
+  text-align: left;
+  margin: 0;
+}
+
+/* Mobile Navbar Compact Fix */
+@media (max-width: 520px) {
+  nav {
+    padding: 10px 14px !important;
+  }
+  .back-home-pill {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+  }
   </style>
 </head>
 
