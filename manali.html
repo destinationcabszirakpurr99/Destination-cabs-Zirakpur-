@@ -291,7 +291,9 @@
       .day-badge { display: inline-block; padding: 10px 24px; width: fit-content; }
     }
 
-    /* Booking Box & iPhone Date Fix */
+    /* =========================================
+       iPHONE DATE BOX & FORM CONTAINER FIX
+       ========================================= */
     .manali-booking-box {
       max-width: 650px; margin: 0 auto; background: var(--off-white);
       padding: 42px 35px; border-radius: 34px; border: 1.5px solid rgba(7,22,44,0.1);
@@ -982,7 +984,6 @@
       document.getElementById('mDate').valueAsDate = tomorrow;
 
       const popupObserver = new IntersectionObserver((entries) => {
-        entries.querySelectorAll ? null : null;
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
