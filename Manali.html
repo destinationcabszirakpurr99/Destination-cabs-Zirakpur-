@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manali & Solang Valley Royal Tour | Destination Cabs Zirakpur</title>
-  <meta name="description" content="Book Luxury Chauffeur Cabs from Zirakpur & Chandigarh to Manali, Solang Valley, Atal Tunnel & Rohtang Pass. Fully detailed itinerary & fleet fares.">
+  <title>Manali & Solang Valley Luxury Tour | Destination Cabs Zirakpur</title>
+  <meta name="description" content="Book Luxury Chauffeur Cabs from Zirakpur & Chandigarh to Manali, Solang Valley, Atal Tunnel & Rohtang Pass. Best One-Way & Round-Trip Fares.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -78,6 +78,7 @@
       box-shadow: 0 20px 40px rgba(7, 22, 44, 0.45);
     }
 
+    /* 3D Popup Scroll Animation */
     .popup-reveal {
       opacity: 0;
       transform: scale(0.84) translateY(45px);
@@ -103,6 +104,7 @@
       100% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0); }
     }
 
+    /* Floating Navbar */
     nav {
       position: fixed !important;
       top: 15px !important;
@@ -123,27 +125,51 @@
       border: 1px solid rgba(7, 22, 44, 0.12);
     }
 
-    .brand-logo-img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal); }
+    .brand-logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--navy-royal);
+    }
 
     .back-home-pill {
-      display: inline-flex; align-items: center; gap: 6px; background: var(--off-white);
-      color: var(--navy-royal); padding: 10px 18px; border-radius: 50px; text-decoration: none;
-      font-weight: 800; font-size: 13px; white-space: nowrap; border: 1px solid rgba(7, 22, 44, 0.12);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--off-white);
+      color: var(--navy-royal);
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+      white-space: nowrap;
+      border: 1px solid rgba(7, 22, 44, 0.12);
       transition: 0.35s var(--spring-easing);
     }
-    .back-home-pill:hover { background: var(--navy-royal); color: var(--pure-white); }
 
+    /* Manali Hero Banner */
     .manali-hero { max-width: 1240px; margin: 10px auto 40px; padding: 0 20px; }
     .manali-hero-card {
-      position: relative; border-radius: 42px; overflow: hidden; min-height: 540px;
-      display: flex; align-items: flex-end; padding: 55px 45px; background: var(--navy-deepest);
-      box-shadow: var(--shadow-navy-glow); border: 3px solid var(--pure-white);
+      position: relative;
+      border-radius: 42px;
+      overflow: hidden;
+      min-height: 540px;
+      display: flex;
+      align-items: flex-end;
+      padding: 55px 45px;
+      background: var(--navy-deepest);
+      box-shadow: var(--shadow-navy-glow);
+      border: 3px solid var(--pure-white);
     }
     .manali-hero-bg {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%;
       background-image: url('IMG_3722.jpeg'), url('IMG_4748.jpeg');
       background-size: cover; background-position: center; opacity: 0.65;
+      transition: transform 8s ease;
     }
+    .manali-hero-card:hover .manali-hero-bg { transform: scale(1.06); }
     .manali-hero-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(180deg, rgba(3,11,23,0.20) 0%, rgba(7,22,44,0.72) 55%, rgba(3,11,23,0.96) 100%);
@@ -153,13 +179,15 @@
       display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap;
     }
     .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.14);
-      backdrop-filter: blur(12px); color: var(--pure-white); padding: 8px 20px; border-radius: 50px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.14); backdrop-filter: blur(12px);
+      color: var(--pure-white); padding: 8px 20px; border-radius: 50px;
       font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
       border: 1px solid rgba(255,255,255,0.25); margin-bottom: 16px;
     }
     .manali-hero h1 { font-size: clamp(34px, 5vw, 58px); color: var(--pure-white); line-height: 1.12; margin-bottom: 14px; font-weight: 900; }
 
+    /* Quick Route Stats Strip */
     .quick-stats-bar { max-width: 1160px; margin: -65px auto 55px; padding: 0 20px; position: relative; z-index: 5; }
     .quick-stats-grid {
       background: var(--pure-white); border-radius: 30px; padding: 28px 30px;
@@ -185,6 +213,7 @@
       .back-home-pill { padding: 8px 12px !important; font-size: 11px !important; }
     }
 
+    /* Sections */
     .bc-section {
       max-width: 1200px; margin: 50px auto; padding: 70px 35px;
       background: var(--pure-white); border: 1px solid rgba(7,22,44,0.08);
@@ -206,6 +235,7 @@
     .bc-section-head p { max-width: 680px; margin: auto; color: var(--text-muted); font-size: 16px; line-height: 1.7; }
     .bc-section-navy .bc-section-head p { color: #cbd5e1; }
 
+    /* Sightseeing Spots Grid */
     .spots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 30px; }
     .spot-card {
       background: var(--off-white); border-radius: 30px; overflow: hidden;
@@ -226,6 +256,7 @@
     .spot-body p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; }
     .spot-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid rgba(7,22,44,0.08); }
 
+    /* Fleet Pricing Grid */
     .fleet-pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; }
     .fleet-price-card {
       background: rgba(255,255,255,0.07); backdrop-filter: blur(18px);
@@ -241,6 +272,7 @@
       border: 1px solid rgba(255,255,255,0.08);
     }
 
+    /* Itinerary Timeline */
     .itinerary-timeline { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
     .day-card {
       background: var(--off-white); border: 1.5px solid rgba(7,22,44,0.08);
@@ -259,6 +291,7 @@
       .day-badge { display: inline-block; padding: 10px 24px; width: fit-content; }
     }
 
+    /* Booking Box & iPhone Date Fix */
     .manali-booking-box {
       max-width: 650px; margin: 0 auto; background: var(--off-white);
       padding: 42px 35px; border-radius: 34px; border: 1.5px solid rgba(7,22,44,0.1);
@@ -274,14 +307,28 @@
     .premium-pill-input,
     input[type="date"].premium-pill-input,
     select.premium-pill-input {
-      width: 100% !important; max-width: 100% !important; min-width: 0 !important;
-      display: block !important; box-sizing: border-box !important; padding: 18px 20px 18px 54px !important;
-      border-radius: 50px !important; border: 1.5px solid rgba(7, 22, 44, 0.12) !important;
-      background: var(--pure-white) !important; color: var(--navy-deepest) !important;
-      font-size: 15px !important; font-weight: 600 !important; font-family: 'Plus Jakarta Sans', sans-serif !important;
-      -webkit-appearance: none !important; appearance: none !important; text-align: left !important; min-height: 58px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      display: block !important;
+      box-sizing: border-box !important;
+      padding: 18px 20px 18px 54px !important;
+      border-radius: 50px !important;
+      border: 1.5px solid rgba(7, 22, 44, 0.12) !important;
+      background: var(--pure-white) !important;
+      color: var(--navy-deepest) !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+      text-align: left !important;
+      min-height: 58px !important;
     }
-    input[type="date"].premium-pill-input::-webkit-date-and-time-value { text-align: left !important; margin: 0 !important; }
+    input[type="date"].premium-pill-input::-webkit-date-and-time-value {
+      text-align: left !important;
+      margin: 0 !important;
+    }
     .form-row { display: flex; gap: 16px; width: 100%; }
 
     @media (max-width: 600px) {
@@ -290,6 +337,7 @@
       .bc-section { padding: 45px 18px; margin: 28px 12px; }
     }
 
+    /* Modals */
     .luxury-modal-backdrop {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(3,11,23,0.80); backdrop-filter: blur(12px);
@@ -303,6 +351,7 @@
       animation: modalPopIn 0.5s var(--spring-easing) forwards;
     }
 
+    /* Footer */
     .bc-footer-new { background: var(--navy-deepest); color: #cbd5e1; padding: 75px 25px 35px; margin-top: 70px; border-top: 4px solid var(--navy-royal); }
     .bc-footer-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; }
     .bc-footer-new h3 { color: var(--pure-white); font-size: 18px; margin: 0 0 20px; border-bottom: 2px solid var(--sky-glow); padding-bottom: 10px; display: inline-block; }
@@ -314,6 +363,7 @@
 
 <body>
 
+  <!-- Floating Luxury Navbar -->
   <nav>
     <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
       <img src="IMG_5388.jpeg" alt="Logo" class="brand-logo-img">
@@ -333,7 +383,7 @@
     </div>
   </nav>
 
-  <!-- MANALI HERO -->
+  <!-- CINEMATIC MANALI HERO -->
   <section class="manali-hero popup-reveal">
     <div class="manali-hero-card">
       <div class="manali-hero-bg"></div>
@@ -370,7 +420,7 @@
     </div>
   </section>
 
-  <!-- QUICK STATS BAR -->
+  <!-- QUICK ROUTE STATS STRIP -->
   <div class="quick-stats-bar popup-reveal">
     <div class="quick-stats-grid">
       <div class="q-stat-item popup-card-item">
@@ -380,6 +430,7 @@
           <div style="font-size: 18px; font-weight: 800; color: var(--navy-deepest);">275 KM <span style="font-size: 12px; font-weight: 600; color: var(--royal-accent);">(New Tunnels)</span></div>
         </div>
       </div>
+
       <div class="q-stat-item popup-card-item">
         <div class="q-stat-icon"><i class="fas fa-clock"></i></div>
         <div>
@@ -387,6 +438,7 @@
           <div style="font-size: 18px; font-weight: 800; color: var(--navy-deepest);">6.5 Hours <span style="font-size: 12px; font-weight: 600; color: var(--royal-accent);">4-Lane Express</span></div>
         </div>
       </div>
+
       <div class="q-stat-item popup-card-item">
         <div class="q-stat-icon"><i class="fas fa-snowflake"></i></div>
         <div>
@@ -394,6 +446,7 @@
           <div style="font-size: 18px; font-weight: 800; color: var(--navy-deepest);">10,040 Feet <span style="font-size: 12px; font-weight: 600; color: var(--royal-accent);">Snow Point</span></div>
         </div>
       </div>
+
       <div class="q-stat-item popup-card-item">
         <div class="q-stat-icon"><i class="fas fa-user-shield"></i></div>
         <div>
@@ -404,70 +457,75 @@
     </div>
   </div>
 
-  <!-- TOP SIGHTSEEING SPOTS -->
+  <!-- TOP 6 SIGHTSEEING SPOTS IN MANALI (WITH CLICK POPUP) -->
   <section class="bc-section popup-reveal" id="manali-spots">
     <div class="bc-section-head">
       <span class="bc-kicker">Must-Visit Attractions</span>
       <h2>Top Sightseeing Spots in Manali</h2>
-      <p>Tap any attraction card below to open its Interactive Sightseeing Popup.</p>
+      <p>Tap any attraction card below to open its <strong>Interactive Sightseeing Popup</strong> with timings, highlights, and instant cab inclusion.</p>
     </div>
 
     <div class="spots-grid">
-      <div class="spot-card popup-card-item" onclick="openSpotPopup('Solang Snow & Adventure Valley', '14 KM from Manali • Paragliding & Skiing', 'Manali’s ultimate adventure hub offering aerial cable cars, snow scooters, skiing, zorbing, and tandem paragliding surrounded by towering glaciers.', '8:00 AM – 5:30 PM', 'Private cab parking right at the Solang Ropeway base.', 'IMG_3722.jpeg')">
+
+      <!-- Spot 1: Solang Valley -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Solang Snow & Adventure Valley', '14 KM from Manali • Paragliding, Skiing & Ropeway', 'Manali’s ultimate adventure hub offering aerial cable cars, snow scooters, skiing, zorbing, and tandem paragliding surrounded by towering glaciers.', '8:00 AM – 5:30 PM', 'Private cab parking right at the Solang Ropeway base.', 'IMG_3722.jpeg')">
         <div>
           <div class="spot-img-box">
-            <span class="spot-tag"><i class="fas fa-snowflake" style="color: var(--sky-glow);"></i> #1 Adventure</span>
-            <img src="IMG_3722.jpeg" alt="Solang Valley">
+            <span class="spot-tag"><i class="fas fa-snowflake" style="color: var(--sky-glow);"></i> #1 Snow & Adventure</span>
+            <img src="IMG_3722.jpeg" alt="Solang Valley Manali">
           </div>
           <div class="spot-body">
             <h3>Solang Snow Valley</h3>
             <p>Experience paragliding, mountain ropeway, ATV rides, and winter skiing surrounded by white glaciers.</p>
             <div class="spot-footer">
-              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-mountain"></i> 8,400 Ft</span>
-              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap Popup <i class="fas fa-external-link-alt"></i></span>
+              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-mountain"></i> 8,400 Ft Altitude</span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="spot-card popup-card-item" onclick="openSpotPopup('Atal Tunnel & Sissu Waterfall', '10,040 Ft Altitude • Lahaul Valley', 'Drive through the world’s longest highway tunnel above 10,000 feet into Lahaul valley to witness Sissu Lake and roaring waterfall.', '8:00 AM – 6:00 PM', 'Covered in our SUV / Innova Crysta snow excursion.', 'IMG_3891.jpeg')">
+      <!-- Spot 2: Atal Tunnel & Sissu -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Atal Tunnel & Sissu Waterfall', '10,040 Ft Altitude • Gateway to Lahaul Valley', 'Drive through the world’s longest highway tunnel above 10,000 feet into the breathtaking Lahaul valley to witness Sissu Lake, hanging glaciers, and the roaring Sissu Waterfall.', '8:00 AM – 6:00 PM', 'Covered in our SUV / Innova Crysta snow excursion.', 'IMG_3891.jpeg')">
         <div>
           <div class="spot-img-box">
-            <span class="spot-tag"><i class="fas fa-road" style="color: var(--gold-accent);"></i> World Record</span>
-            <img src="IMG_3891.jpeg" alt="Atal Tunnel">
+            <span class="spot-tag"><i class="fas fa-road" style="color: var(--gold-accent);"></i> World Record Tunnel</span>
+            <img src="IMG_3891.jpeg" alt="Atal Tunnel Sissu">
           </div>
           <div class="spot-body">
             <h3>Atal Tunnel & Sissu</h3>
-            <p>Cross the 9.02 KM engineering marvel into Lahaul Valley to witness Sissu Lake and snow peaks.</p>
+            <p>Cross the 9.02 KM engineering marvel into Lahaul Valley to witness Sissu Lake and snow-draped peaks.</p>
             <div class="spot-footer">
-              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-water"></i> Lahaul</span>
-              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap Popup <i class="fas fa-external-link-alt"></i></span>
+              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-water"></i> Lahaul Valley</span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="spot-card popup-card-item" onclick="openSpotPopup('Hadimba Devi Temple', 'Built in 1553 • Pagoda Architecture', 'Surrounded by giant Dhungri deodar cedar trees, this 4-tiered wooden pagoda temple is the iconic landmark of Manali.', '8:00 AM – 6:00 PM', 'Included in Day-1 Manali Sightseeing.', 'IMG_4748.jpeg')">
+      <!-- Spot 3: Hadimba Devi Temple -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Hadimba Devi Cedar Temple', 'Built in 1553 • Ancient Pagoda Architecture', 'Surrounded by giant Dhungri deodar cedar trees, this 4-tiered wooden pagoda temple dedicated to Hidimba Devi is the spiritual and photographic icon of Manali.', '8:00 AM – 6:00 PM', 'Included in Day-1 Manali Local Sightseeing.', 'IMG_4748.jpeg')">
         <div>
           <div class="spot-img-box">
             <span class="spot-tag"><i class="fas fa-om" style="color: var(--gold-accent);"></i> 1553 Heritage</span>
-            <img src="IMG_4748.jpeg" alt="Hadimba Temple">
+            <img src="IMG_4748.jpeg" alt="Hadimba Temple Manali">
           </div>
           <div class="spot-body">
             <h3>Hadimba Devi Temple</h3>
             <p>Marvel at the ancient 4-storey wooden pagoda shrine nestled deep inside the sacred Dhungri cedar forest.</p>
             <div class="spot-footer">
               <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-tree"></i> Dhungri Forest</span>
-              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap Popup <i class="fas fa-external-link-alt"></i></span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="spot-card popup-card-item" onclick="openSpotPopup('Old Manali & Vashisht Hot Springs', 'Riverside Cafes & Geothermal Springs', 'Explore apple orchards, riverside cafes of Old Manali, and relax by natural hot water springs of Vashisht Village.', '9:00 AM – 9:00 PM', 'Chauffeur drops right at Old Manali bridge.', 'IMG_4503.jpeg')">
+      <!-- Spot 4: Old Manali & Jogini Falls -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Old Manali, Manu Temple & Vashisht', 'Riverside Cafes, Hot Sulphur Springs & Waterfalls', 'Explore the charming apple orchards and riverside cafes of Old Manali, seek blessings at Manu Maharishi Temple, and relax by the natural hot water springs of Vashisht Village.', '9:00 AM – 9:00 PM', 'Chauffeur drops right at Old Manali bridge & Vashisht Chowk.', 'IMG_4503.jpeg')">
         <div>
           <div class="spot-img-box">
-            <span class="spot-tag"><i class="fas fa-mug-hot"></i> Cafes & Springs</span>
+            <span class="spot-tag"><i class="fas fa-mug-hot"></i> Riverside Vibes</span>
             <img src="IMG_4503.jpeg" alt="Old Manali">
           </div>
           <div class="spot-body">
@@ -475,23 +533,62 @@
             <p>Discover vibrant riverside cafes, apple orchards, Manu Temple, and natural geothermal hot water springs.</p>
             <div class="spot-footer">
               <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-fire"></i> Hot Springs</span>
-              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap Popup <i class="fas fa-external-link-alt"></i></span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Spot 5: Rohtang La Pass -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Rohtang Pass Snow Point', '13,058 Ft Altitude • Eternal Himalayan Glaciers', 'One of the most legendary high-mountain passes in the Himalayas offering walls of snow, sledging, and breathtaking views of the Chandra and Beas river basins.', '6:00 AM – 4:00 PM (Subject to Permit)', 'Our team assists with Rohtang NGT Permit formalities.', 'IMG_4504.jpeg')">
+        <div>
+          <div class="spot-img-box">
+            <span class="spot-tag"><i class="fas fa-icicles" style="color: var(--sky-glow);"></i> 13,058 Ft Pass</span>
+            <img src="IMG_4504.jpeg" alt="Rohtang Pass">
+          </div>
+          <div class="spot-body">
+            <h3>Rohtang Snow Pass</h3>
+            <p>Touch towering snow walls at 13,058 feet with panoramic views of twin Himalayan river valleys.</p>
+            <div class="spot-footer">
+              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-Compass"></i> High Pass</span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spot 6: Kullu Rafting & Kasol Manikaran -->
+      <div class="spot-card popup-card-item" onclick="openSpotPopup('Kullu River Rafting, Kasol & Manikaran', 'Beas River Rapids & Parvati Valley Excursion', 'Enjoy thrilling white-water river rafting on the Beas River in Kullu, visit Naggar Castle, and take a scenic detour to Kasol and the holy Manikaran Sahib Gurudwara.', '8:00 AM – 7:00 PM', 'Can be covered en route or on a dedicated day excursion.', 'IMG_3731.jpeg')">
+        <div>
+          <div class="spot-img-box">
+            <span class="spot-tag"><i class="fas fa-water"></i> Rafting & Parvati Valley</span>
+            <img src="IMG_3731.jpeg" alt="Kullu Kasol">
+          </div>
+          <div class="spot-body">
+            <h3>Kullu, Kasol & Manikaran</h3>
+            <p>Experience thrilling Beas River rafting, Kullu shawl factories, Parvati Valley pines, and Manikaran Sahib.</p>
+            <div class="spot-footer">
+              <span style="font-size: 12px; font-weight: 800; color: var(--royal-accent);"><i class="fas fa-life-ring"></i> River Adventure</span>
+              <span style="font-size: 13px; font-weight: 800; color: var(--navy-deepest);">Tap for Popup <i class="fas fa-up-right-from-square" style="margin-left: 4px;"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- FLEET FARE CHART -->
+  <!-- MANALI FLEET & FARE CHART (All 5 Vehicles Preserved) -->
   <section class="bc-section bc-section-navy popup-reveal">
     <div class="bc-section-head">
       <span class="bc-kicker">Zirakpur & Chandigarh to Manali</span>
       <h2>Select Your Luxury Cab for Manali</h2>
-      <p>Choose from our 5 signature fleet options with mountain chauffeurs.</p>
+      <p>Choose from our 5 signature fleet options. Transparent pricing with experienced mountain chauffeurs.</p>
     </div>
 
     <div class="fleet-pricing-grid">
+
+      <!-- 1. Swift Dzire -->
       <div class="fleet-price-card popup-card-item">
         <div>
           <div class="fleet-car-img"><img src="IMG_5788.jpeg" alt="Swift Dzire"></div>
@@ -511,9 +608,33 @@
             </div>
           </div>
         </div>
-        <button onclick="prefillCarAndScroll('Sedan (Swift Dzire)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer;">Book Swift Dzire →</button>
+        <button onclick="prefillCarAndScroll('Sedan (Swift Dzire)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Book Swift Dzire →</button>
       </div>
 
+      <!-- 2. Toyota Glanza -->
+      <div class="fleet-price-card popup-card-item">
+        <div>
+          <div class="fleet-car-img"><img src="IMG_5790.jpeg" alt="Toyota Glanza"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 22px; color: #fff;">Toyota Glanza</h3>
+            <span style="background: var(--sky-glow); color: var(--navy-deepest); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800;">4+1 SEATS</span>
+          </div>
+          <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Smooth Highway & Tunnel Cruiser</p>
+          <div class="price-row-box">
+            <div>
+              <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase;">One-Way Drop</div>
+              <div style="font-size: 20px; font-weight: 800; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,299*</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase;">4-Day Tour</div>
+              <div style="font-size: 20px; font-weight: 800; color: var(--sky-glow); font-family: 'Cinzel', serif;">₹10,999*</div>
+            </div>
+          </div>
+        </div>
+        <button onclick="prefillCarAndScroll('Hatchback (Toyota Glanza)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Book Toyota Glanza →</button>
+      </div>
+
+      <!-- 3. Maruti Ertiga -->
       <div class="fleet-price-card popup-card-item">
         <div>
           <div class="fleet-car-img"><img src="IMG_5789.jpeg" alt="Maruti Ertiga"></div>
@@ -533,9 +654,10 @@
             </div>
           </div>
         </div>
-        <button onclick="prefillCarAndScroll('SUV (Maruti Ertiga)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer;">Book Maruti Ertiga →</button>
+        <button onclick="prefillCarAndScroll('SUV (Maruti Ertiga)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Book Maruti Ertiga →</button>
       </div>
 
+      <!-- 4. Innova Crysta -->
       <div class="fleet-price-card popup-card-item">
         <div>
           <div class="fleet-car-img"><img src="IMG_5791.jpeg" alt="Innova Crysta"></div>
@@ -543,7 +665,7 @@
             <h3 style="font-size: 22px; color: #fff;">Innova Crysta</h3>
             <span style="background: var(--gold-accent); color: var(--navy-deepest); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800;">7+1 LUXURY</span>
           </div>
-          <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Captain Seats & King-Class Comfort</p>
+          <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">King of Hills • Captain Seats & High Power</p>
           <div class="price-row-box">
             <div>
               <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase;">One-Way Drop</div>
@@ -555,12 +677,36 @@
             </div>
           </div>
         </div>
-        <button onclick="prefillCarAndScroll('MPV (Innova Crysta)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer;">Book Innova Crysta →</button>
+        <button onclick="prefillCarAndScroll('MPV (Innova Crysta)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Book Innova Crysta →</button>
       </div>
+
+      <!-- 5. Force Urbania -->
+      <div class="fleet-price-card popup-card-item">
+        <div>
+          <div class="fleet-car-img"><img src="IMG_5998.jpeg" alt="Force Urbania"></div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 22px; color: #fff;">Force Urbania</h3>
+            <span style="background: var(--sky-glow); color: var(--navy-deepest); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 800;">GROUP VIP</span>
+          </div>
+          <p style="font-size: 13px; color: #cbd5e1; margin-top: 4px;">Panoramic Windows & Recliner Pushback Seats</p>
+          <div class="price-row-box">
+            <div>
+              <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase;">Group Charter</div>
+              <div style="font-size: 18px; font-weight: 800; color: var(--pure-white); font-family: 'Cinzel', serif;">Custom Quote</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 11px; color: #94a3b8; text-transform: uppercase;">Capacity</div>
+              <div style="font-size: 17px; font-weight: 800; color: var(--sky-glow);">12 to 17 Pax</div>
+            </div>
+          </div>
+        </div>
+        <button onclick="prefillCarAndScroll('Force Urbania Traveller')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--pure-white); color: var(--navy-deepest); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">Book Force Urbania →</button>
+      </div>
+
     </div>
   </section>
 
-  <!-- ITINERARY -->
+  <!-- RECOMMENDED 4-DAY MANALI TOUR ITINERARY -->
   <section class="bc-section popup-reveal">
     <div class="bc-section-head">
       <span class="bc-kicker">Curated Travel Plan</span>
@@ -570,42 +716,65 @@
 
     <div class="itinerary-timeline">
       <div class="day-card popup-card-item">
-        <div class="day-badge"><span>Day</span><strong>01</strong></div>
+        <div class="day-badge">
+          <span>Day</span>
+          <strong>01</strong>
+        </div>
         <div>
-          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Zirakpur / Chandigarh to Manali • 5-Tunnel Drive</h3>
-          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">Morning pickup from your home or airport. Drive along Bilaspur lake and Mandi through the new 4-lane highway tunnels. Evening walk at Manali Mall Road.</p>
+          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Zirakpur / Chandigarh to Manali • Scenic 5-Tunnel Drive</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            Morning pickup from your home, Chandigarh Airport, or Railway Station. Drive along the scenic Bilaspur lake, Mandi, and Pandoh Dam through the new 4-lane highway tunnels. Evening check-in at Manali and leisure walk at <strong>Manali Mall Road</strong>.
+          </p>
         </div>
       </div>
+
       <div class="day-card popup-card-item">
-        <div class="day-badge"><span>Day</span><strong>02</strong></div>
+        <div class="day-badge">
+          <span>Day</span>
+          <strong>02</strong>
+        </div>
         <div>
-          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Solang Valley, Atal Tunnel & Sissu Waterfall</h3>
-          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">Full-day snow excursion! Adventure at Solang Valley (ropeway, paragliding) and drive through Atal Tunnel (10,040 ft) to Sissu Waterfall.</p>
+          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Solang Snow Valley, Atal Tunnel & Sissu Waterfall</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            Full-day snow excursion! Morning adventure at <strong>Solang Valley</strong> (ropeway, paragliding, snow activities). Continue through the 9.02 km <strong>Atal Tunnel (10,040 ft)</strong> into Lahaul Valley to visit <strong>Sissu Lake & Waterfall</strong>.
+          </p>
         </div>
       </div>
+
       <div class="day-card popup-card-item">
-        <div class="day-badge"><span>Day</span><strong>03</strong></div>
+        <div class="day-badge">
+          <span>Day</span>
+          <strong>03</strong>
+        </div>
         <div>
-          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Hadimba Temple & Old Manali Cafes</h3>
-          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">Explore Hadimba Devi cedar temple, Tibetan Monastery, Old Manali riverside cafes, and Vashisht hot springs.</p>
+          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Hadimba Temple, Old Manali Cafes & Vashisht Springs</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            Explore Manali’s heritage gems: <strong>Hadimba Devi Cedar Temple</strong>, <strong>Club House</strong>, vibrant <strong>Old Manali riverside cafes</strong>, <strong>Tibetan Monastery</strong>, and the natural hot water springs of <strong>Vashisht Temple</strong>.
+          </p>
         </div>
       </div>
+
       <div class="day-card popup-card-item">
-        <div class="day-badge"><span>Day</span><strong>04</strong></div>
+        <div class="day-badge">
+          <span>Day</span>
+          <strong>04</strong>
+        </div>
         <div>
-          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Kullu Rafting & Return Drop</h3>
-          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">Stop at Kullu Valley for thrilling Beas River white-water rafting and shawl shopping before evening drop at Chandigarh.</p>
+          <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Kullu River Rafting, Vaishno Devi Temple & Return Drop</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7;">
+            After checkout, stop at <strong>Kullu Valley</strong> for thrilling Beas River white-water rafting, Kullu shawl weaving factories, and <strong>Hanogi Mata Viewpoint</strong> before a comfortable evening drop at Zirakpur or Chandigarh.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING FORM SECTION -->
+  <!-- MANALI INSTANT BOOKING SECTION -->
   <section class="bc-section popup-reveal" id="manali-book">
     <div class="bc-section-head" style="margin-bottom: 35px;">
       <span class="bc-kicker">Instant Reservation</span>
       <h2>Book Your Manali Cab Now</h2>
-      <p>Fill out your details below to confirm instantly on WhatsApp.</p>
+      <p>Fill out your preferences below to open your instant WhatsApp booking confirmation.</p>
     </div>
 
     <div class="manali-booking-box popup-card-item">
@@ -626,15 +795,19 @@
             <i class="fas fa-route"></i>
             <select id="mPackage" class="premium-pill-input" required>
               <option value="One-Way Drop to Manali">One-Way Drop to Manali</option>
-              <option value="4 Days / 3 Nights Manali Tour" selected>4 Days / 3 Nights Manali Tour</option>
+              <option value="3 Days / 2 Nights Manali Tour">3 Days / 2 Nights Manali Tour</option>
+              <option value="4 Days / 3 Nights Manali + Solang + Atal Tunnel" selected>4 Days / 3 Nights Manali & Atal Tunnel</option>
+              <option value="5 Days / 4 Nights Manali + Kasol Manikaran">5 Days / 4 Nights Manali + Kasol</option>
             </select>
           </div>
           <div class="icon-input-wrapper">
             <i class="fas fa-car"></i>
             <select id="mVehicle" class="premium-pill-input" required>
               <option value="Sedan (Swift Dzire)">Sedan (Swift Dzire)</option>
+              <option value="Hatchback (Toyota Glanza)">Hatchback (Toyota Glanza)</option>
               <option value="SUV (Maruti Ertiga)">SUV (Maruti Ertiga)</option>
               <option value="MPV (Innova Crysta)">MPV (Innova Crysta)</option>
+              <option value="Force Urbania Traveller">Force Urbania Traveller</option>
             </select>
           </div>
         </div>
@@ -659,7 +832,7 @@
 
   <!-- Floating Contact Buttons -->
   <div style="position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
-    <a href="https://wa.me/916280544730?text=Hello,%20I%20want%20to%20book%20a%20Manali%20cab." style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; border: 2px solid #fff;">
+    <a href="https://wa.me/916280544730?text=Hello,%20I%20want%20to%20book%20a%20Manali%20tour%20cab." style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; border: 2px solid #fff;">
       <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
     </a>
     <a href="tel:+916280544730" class="navy-luxury-btn" style="width: 58px; height: 58px; border-radius: 50%; border: 2px solid #fff; animation: pulseRing 2.5s infinite;">
@@ -667,33 +840,73 @@
     </a>
   </div>
 
-  <!-- Spot Detail Popup Modal -->
+  <!-- Footer -->
+  <footer class="bc-footer-new">
+    <div class="bc-footer-grid">
+      <div>
+        <div style="font-family:'Cinzel',serif;font-size:26px;font-weight:800;color:var(--pure-white);margin-bottom:12px;">DESTINATION CABS</div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--sky-glow); letter-spacing: 4px; margin-top: -10px; margin-bottom: 20px;">ZIRAKPUR</div>
+        <p style="font-size:14px;line-height:1.7;color:#94a3b8;">Premium taxi and tour services with comfort, safety and reliable support across North India.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="all-tours.html">Tours</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Top Destinations</h3>
+        <a href="place-details.html?place=Shimla">Shimla & Kufri</a>
+        <a href="place-details.html?place=Manali">Manali & Solang</a>
+        <a href="place-details.html?place=SpitiValley">Spiti Valley</a>
+        <a href="place-details.html?place=Amritsar">Amritsar Golden Temple</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <a href="tel:+916280544730"><i class="fas fa-phone-alt" style="color:var(--sky-glow);"></i> &nbsp; +91 62805 44730</a>
+        <a href="mailto:info@destinationcabs.com"><i class="fas fa-envelope" style="color:var(--sky-glow);"></i> &nbsp; info@destinationcabs.com</a>
+        <a href="https://wa.me/916280544730" target="_blank"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; WhatsApp Support</a>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 45px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; color: #64748b;">
+      © 2026 Destination Cabs Zirakpur. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- POPUP MODAL 1: SIGHTSEEING SPOT DETAIL POPUP -->
   <div id="spotDetailModal" class="luxury-modal-backdrop" onclick="if(event.target===this) closeSpotPopup()">
     <div class="luxury-modal-box" style="padding: 24px;">
-      <div style="position: relative; height: 210px; border-radius: 22px; overflow: hidden; margin-bottom: 18px;">
-        <img id="spotModalImg" src="" alt="Spot" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: relative; height: 220px; border-radius: 22px; overflow: hidden; margin-bottom: 18px;">
+        <img id="spotModalImg" src="" alt="Manali Spot" style="width: 100%; height: 100%; object-fit: cover;">
         <span id="spotModalSubtitle" style="position: absolute; bottom: 12px; left: 12px; background: var(--navy-royal); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800;"></span>
       </div>
       <h3 id="spotModalTitle" style="font-size: 24px; color: var(--navy-deepest); margin-bottom: 10px;"></h3>
       <p id="spotModalDesc" style="font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px;"></p>
+
+      <div style="background: var(--off-white); border-radius: 18px; padding: 14px; text-align: left; font-size: 13px; color: var(--navy-deepest); margin-bottom: 22px; border: 1px solid rgba(7,22,44,0.08);">
+        <div style="margin-bottom: 6px;"><i class="fas fa-clock" style="color: var(--royal-accent); width: 20px;"></i> <strong>Visiting Hours:</strong> <span id="spotModalTime"></span></div>
+        <div><i class="fas fa-car-side" style="color: var(--royal-accent); width: 20px;"></i> <strong>Chauffeur Note:</strong> <span id="spotModalNote"></span></div>
+      </div>
+
       <div style="display: flex; gap: 12px;">
         <button onclick="closeSpotPopup()" style="flex: 1; padding: 14px; border-radius: 50px; border: 1.5px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Close</button>
-        <a href="#manali-book" onclick="closeSpotPopup()" class="navy-luxury-btn" style="flex: 1.5; padding: 14px; border-radius: 50px; font-weight: 800; font-size: 14px;">Include in Trip →</a>
+        <a href="#manali-book" onclick="closeSpotPopup()" class="navy-luxury-btn" style="flex: 1.5; padding: 14px; border-radius: 50px; font-weight: 800; font-size: 14px;">Include in My Trip →</a>
       </div>
     </div>
   </div>
 
-  <!-- Confirmation Modal -->
-  <div id="manaliConfirmModal" class="luxury-modal-backdrop" onclick="if(event.target===this) manaliConfirmModal.classList.remove('show')">
+  <!-- POPUP MODAL 2: MANALI BOOKING WHATSAPP CONFIRMATION -->
+  <div id="manaliConfirmModal" class="luxury-modal-backdrop" onclick="if(event.target===this) closeManaliConfirm()">
     <div class="luxury-modal-box">
       <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--navy-royal); color: var(--gold-accent); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 18px;">
         <i class="fas fa-check"></i>
       </div>
       <h3 style="font-size: 24px; color: var(--navy-deepest); margin-bottom: 8px;">Manali Cab Request Ready!</h3>
-      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Review your trip details and send to WhatsApp:</p>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Review your Manali itinerary details and tap below to get instant confirmation on WhatsApp:</p>
       <div id="manaliSummaryText" style="background: var(--off-white); padding: 18px; border-radius: 20px; text-align: left; font-size: 14px; line-height: 1.8; color: var(--navy-deepest); margin-bottom: 22px; border: 1px solid rgba(7,22,44,0.1);"></div>
       <div style="display: flex; gap: 12px;">
-        <button onclick="manaliConfirmModal.classList.remove('show')" style="flex: 1; padding: 15px; border-radius: 50px; border: 1.5px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Edit</button>
+        <button onclick="closeManaliConfirm()" style="flex: 1; padding: 15px; border-radius: 50px; border: 1.5px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Edit</button>
         <a id="manaliWaBtn" href="#" target="_blank" class="navy-luxury-btn" style="flex: 2; padding: 15px; border-radius: 50px; font-weight: 800;">
           <i class="fab fa-whatsapp" style="font-size: 18px;"></i> Send on WhatsApp
         </a>
@@ -701,69 +914,91 @@
     </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script>
-    function openSpotPopup(title, subtitle, desc, img) {
+    // 1. Sightseeing Spot Popup Functions
+    function openSpotPopup(title, subtitle, desc, timing, note, img) {
       document.getElementById('spotModalTitle').textContent = title;
       document.getElementById('spotModalSubtitle').textContent = subtitle;
       document.getElementById('spotModalDesc').textContent = desc;
+      document.getElementById('spotModalTime').textContent = timing;
+      document.getElementById('spotModalNote').textContent = note;
       document.getElementById('spotModalImg').src = img;
       document.getElementById('spotDetailModal').classList.add('show');
     }
-    function closeSpotPopup() { document.getElementById('spotDetailModal').classList.remove('show'); }
 
+    function closeSpotPopup() {
+      document.getElementById('spotDetailModal').classList.remove('show');
+    }
+
+    // 2. Select Vehicle from Fare Card & Scroll to Booking Form
     function prefillCarAndScroll(carName) {
-      document.getElementById('mVehicle').value = carName;
+      const selectEl = document.getElementById('mVehicle');
+      if (selectEl) {
+        selectEl.value = carName;
+      }
       document.getElementById('manali-book').scrollIntoView({ behavior: 'smooth' });
     }
 
-    document.getElementById('manaliBookingForm').addEventListener('submit', function(e) {
+    // 3. Manali Booking Form Submission Popup
+    document.getElementById('manaliBookingForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const pickup = document.getElementById('mPickup').value;
       const drop = document.getElementById('mDrop').value;
       const pkg = document.getElementById('mPackage').value;
-      const vehicle = document.getElementById('mVehicle').value;
+      const car = document.getElementById('mVehicle').value;
       const date = document.getElementById('mDate').value;
       const phone = document.getElementById('mPhone').value;
 
       document.getElementById('manaliSummaryText').innerHTML = `
         <div><strong>Route:</strong> ${pickup} ➔ ${drop}</div>
         <div><strong>Package:</strong> ${pkg}</div>
-        <div><strong>Vehicle:</strong> ${vehicle}</div>
-        <div><strong>Date:</strong> ${date}</div>
-        <div><strong>Phone:</strong> ${phone}</div>
+        <div><strong>Luxury Vehicle:</strong> ${car}</div>
+        <div><strong>Travel Date:</strong> ${date}</div>
+        <div><strong>Customer Phone:</strong> ${phone}</div>
       `;
 
-      const waText = encodeURIComponent(
-        `*Manali Cab Booking*\n\n` +
-        `• Pickup: ${pickup}\n` +
-        `• Drop: ${drop}\n` +
-        `• Package: ${pkg}\n` +
-        `• Vehicle: ${vehicle}\n` +
-        `• Date: ${date}\n` +
-        `• Phone: ${phone}`
+      const waMsg = encodeURIComponent(
+        `*Manali Snow Tour Booking - Destination Cabs Zirakpur*\n\n` +
+        `• *Pickup:* ${pickup}\n` +
+        `• *Destination:* ${drop}\n` +
+        `• *Package:* ${pkg}\n` +
+        `• *Vehicle:* ${car}\n` +
+        `• *Date:* ${date}\n` +
+        `• *Phone:* ${phone}`
       );
-      document.getElementById('manaliWaBtn').href = `https://wa.me/916280544730?text=${waText}`;
+      document.getElementById('manaliWaBtn').href = `https://wa.me/916280544730?text=${waMsg}`;
       document.getElementById('manaliConfirmModal').classList.add('show');
     });
 
+    function closeManaliConfirm() {
+      document.getElementById('manaliConfirmModal').classList.remove('show');
+    }
+
+    // 4. Global 3D Spring Scroll Popup Observer + Fallback
     document.addEventListener("DOMContentLoaded", function () {
       const tomorrow = new Date();
       tomorrow.setDate(tomorrow.getDate() + 1);
       document.getElementById('mDate').valueAsDate = tomorrow;
 
-      const observer = new IntersectionObserver((entries) => {
+      const popupObserver = new IntersectionObserver((entries) => {
+        entries.querySelectorAll ? null : null;
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            entry.target.querySelectorAll('.popup-card-item').forEach((card, idx) => {
-              setTimeout(() => card.classList.add('active'), idx * 90);
+            const cards = entry.target.querySelectorAll('.popup-card-item');
+            cards.forEach((card, idx) => {
+              setTimeout(() => {
+                card.classList.add('active');
+              }, idx * 95);
             });
           }
         });
       }, { threshold: 0.1 });
 
-      document.querySelectorAll('.popup-reveal').forEach(el => observer.observe(el));
+      document.querySelectorAll('.popup-reveal').forEach(el => popupObserver.observe(el));
     });
   </script>
+
 </body>
 </html>
