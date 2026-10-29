@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khatkar Travel Company | Royal Navy Luxury Travel & Tours</title>
   <meta name="description" content="Ultra-Premium Taxi, Chauffeur & Tour Services in Zirakpur & Chandigarh by Khatkar Travel Company">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css)">
   <link rel="icon" type="image/jpeg" href="IMG_5388.jpeg">
 
   <style>
@@ -45,7 +45,7 @@
       color: var(--text-dark);
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
-      padding-top: 105px;
+      padding-top: 90px;
       -webkit-font-smoothing: antialiased;
       position: relative;
     }
@@ -136,8 +136,8 @@
     }
 
     .navy-luxury-btn:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(7, 22, 44, 0.45);
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 18px 36px rgba(7, 22, 44, 0.42);
     }
 
     /* =========================================
@@ -145,8 +145,8 @@
        ========================================= */
     .popup-reveal {
       opacity: 0;
-      transform: scale(0.82) translateY(45px);
-      transition: opacity 0.75s var(--smooth-easing), transform 0.85s var(--spring-easing);
+      transform: scale(0.88) translateY(35px);
+      transition: opacity 0.7s var(--smooth-easing), transform 0.8s var(--spring-easing);
       will-change: opacity, transform;
     }
 
@@ -157,18 +157,13 @@
 
     .popup-card-item {
       opacity: 0;
-      transform: scale(0.78) translateY(35px);
-      transition: opacity 0.65s var(--smooth-easing), transform 0.75s var(--spring-easing);
+      transform: scale(0.84) translateY(28px);
+      transition: opacity 0.6s var(--smooth-easing), transform 0.7s var(--spring-easing);
     }
 
     .popup-card-item.active {
       opacity: 1;
       transform: scale(1) translateY(0);
-    }
-
-    @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
     }
 
     @keyframes pulseRing {
@@ -233,38 +228,38 @@
        ========================================= */
     nav {
       position: fixed !important;
-      top: 16px !important;
+      top: 12px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       width: 94% !important;
       max-width: 1240px;
       z-index: 1000 !important;
-      background: rgba(255, 255, 255, 0.92) !important;
+      background: rgba(255, 255, 255, 0.94) !important;
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      padding: 12px 20px !important;
+      padding: 10px 18px !important;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-radius: 60px;
-      box-shadow: 0 15px 40px rgba(3, 11, 23, 0.12);
+      box-shadow: 0 12px 32px rgba(3, 11, 23, 0.1);
       border: 1px solid rgba(7, 22, 44, 0.12);
       transition: all 0.4s ease;
     }
 
     .brand-logo-img {
-      width: 46px !important;
-      height: 46px !important;
+      width: 42px !important;
+      height: 42px !important;
       border-radius: 50% !important;
       object-fit: cover !important;
       border: 2px solid var(--navy-royal) !important;
-      box-shadow: 0 4px 14px rgba(7, 22, 44, 0.25);
+      box-shadow: 0 4px 12px rgba(7, 22, 44, 0.2);
       flex-shrink: 0;
     }
 
     .nav-brand-title {
       font-weight: 900;
-      font-size: clamp(13.5px, 3.6vw, 17px);
+      font-size: clamp(13px, 3.5vw, 16.5px);
       font-family: 'Cinzel', serif;
       line-height: 1.15;
     }
@@ -272,7 +267,7 @@
     .nav-links-desktop {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
     }
 
     .nav-links-desktop a {
@@ -307,126 +302,65 @@
     }
 
     /* =========================================
-       HERO & ULTRA SEXY BOOKING ENGINE
+       COMPACT HERO & SMALL SLEEK BOOKING FORM
        ========================================= */
-    .hero-wrapper {
-      max-width: 1240px;
-      margin: 20px auto 50px;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 46px;
-      align-items: center;
+    .hero-compact-section {
+      max-width: 1180px;
+      margin: 4px auto 35px;
+      padding: 0 14px;
     }
 
-    @media (max-width: 960px) {
-      .hero-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 35px;
-      }
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--navy-royal);
-      color: var(--pure-white);
-      padding: 10px 22px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      box-shadow: 0 10px 25px rgba(7, 22, 44, 0.25);
-    }
-
-    .hero-badge i {
-      color: var(--gold-accent);
-    }
-
-    .hero-title {
-      font-size: clamp(34px, 5vw, 54px);
-      color: var(--navy-deepest);
-      line-height: 1.15;
-      font-weight: 900;
+    .hero-mini-header {
+      text-align: center;
       margin-bottom: 20px;
     }
 
-    .hero-subtitle {
-      font-size: 17px;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 32px;
-      max-width: 580px;
-    }
-
-    @media (max-width: 960px) {
-      .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    .hero-trust-pills {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 960px) {
-      .hero-trust-pills {
-        justify-content: center;
-      }
-    }
-
-    .trust-pill {
-      background: var(--pure-white);
-      border: 1px solid rgba(7, 22, 44, 0.1);
-      padding: 12px 20px;
-      border-radius: 20px;
-      display: flex;
+    .hero-mini-badge {
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy-royal);
-      box-shadow: 0 10px 25px rgba(3, 11, 23, 0.05);
-      transition: 0.4s var(--spring-easing);
+      gap: 6px;
+      background: var(--navy-royal);
+      color: var(--pure-white);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      box-shadow: 0 6px 16px rgba(7, 22, 44, 0.2);
     }
 
-    .trust-pill:hover {
-      transform: translateY(-5px) scale(1.04);
-      border-color: var(--navy-royal);
+    .hero-mini-badge i {
+      color: var(--gold-accent);
     }
 
-    .trust-pill i {
-      color: var(--royal-accent);
-      font-size: 16px;
+    .hero-mini-title {
+      font-size: clamp(21px, 4.4vw, 34px);
+      color: var(--navy-deepest);
+      line-height: 1.18;
+      font-weight: 900;
+      margin: 0;
     }
 
-    /* Upgraded Sexy Booking Form Card */
-    .booking-container {
-      background: linear-gradient(165deg, #ffffff 0%, #f4f8ff 100%);
-      border-radius: 40px;
-      padding: 46px 34px 34px;
+    .booking-compact-card {
+      background: linear-gradient(165deg, #ffffff 0%, #f5f9ff 100%);
+      border-radius: 26px;
+      padding: 24px 16px 18px;
       width: 100%;
-      max-width: 575px;
+      max-width: 430px;
       margin: 0 auto;
-      border: 2px solid rgba(29, 78, 216, 0.16);
-      box-shadow: 0 35px 90px rgba(7, 22, 44, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+      border: 1.5px solid rgba(29, 78, 216, 0.16);
+      box-shadow: 0 20px 50px rgba(7, 22, 44, 0.15);
       position: relative;
-      transition: all 0.5s var(--spring-easing);
     }
 
-    .booking-container::before {
+    .booking-compact-card::before {
       content: '';
       position: absolute;
-      inset: -2px;
-      border-radius: 42px;
-      padding: 2px;
+      inset: -1.5px;
+      border-radius: 27px;
+      padding: 1.5px;
       background: linear-gradient(135deg, var(--navy-royal), var(--sky-glow), var(--gold-accent), var(--navy-royal));
       background-size: 300% 300%;
       animation: wateryFlow 6s ease infinite;
@@ -436,59 +370,54 @@
       pointer-events: none;
     }
 
-    .booking-container:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 42px 100px rgba(7, 22, 44, 0.26);
-    }
-
-    .booking-top-tag {
+    .compact-top-badge {
       position: absolute;
-      top: -18px;
+      top: -12px;
       left: 50%;
       transform: translateX(-50%);
       background: linear-gradient(135deg, var(--navy-deepest), var(--navy-royal));
       color: var(--pure-white);
-      padding: 10px 28px;
+      padding: 5px 16px;
       border-radius: 30px;
-      font-size: 11.5px;
+      font-size: 9.5px;
       font-weight: 800;
-      letter-spacing: 2.2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      box-shadow: 0 10px 25px rgba(7, 22, 44, 0.35);
-      border: 2px solid var(--pure-white);
+      border: 1.5px solid var(--pure-white);
       white-space: nowrap;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      box-shadow: 0 6px 14px rgba(7, 22, 44, 0.25);
     }
 
     .live-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background: #22c55e;
       border-radius: 50%;
       display: inline-block;
-      box-shadow: 0 0 10px #22c55e;
+      box-shadow: 0 0 8px #22c55e;
     }
 
-    .trip-toggle-box {
+    .compact-trip-tabs {
       display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 5px;
+      margin-bottom: 10px;
       background: var(--off-white);
-      padding: 6px;
-      border-radius: 50px;
-      border: 1px solid rgba(7, 22, 44, 0.1);
+      padding: 4px;
+      border-radius: 40px;
+      border: 1px solid rgba(7, 22, 44, 0.09);
     }
 
     .trip-btn {
       flex: 1;
-      padding: 12px 10px;
-      border-radius: 50px;
+      padding: 7px 6px;
+      border-radius: 40px;
       font-weight: 800;
       cursor: pointer;
-      transition: all 0.4s var(--spring-easing);
-      font-size: 13.5px;
+      transition: all 0.35s var(--spring-easing);
+      font-size: 11.5px;
       border: none;
       background: transparent;
       color: var(--navy-royal);
@@ -498,58 +427,55 @@
     .trip-btn.active {
       background: linear-gradient(135deg, var(--navy-royal), var(--royal-accent));
       color: var(--pure-white);
-      box-shadow: 0 8px 20px rgba(7, 22, 44, 0.28);
-      transform: scale(1.02);
+      box-shadow: 0 5px 14px rgba(7, 22, 44, 0.22);
     }
 
-    .quick-route-chips {
+    .compact-chips-bar {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
       justify-content: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
-    .route-chip {
-      font-size: 11.5px;
+    .compact-chip {
+      font-size: 10px;
       font-weight: 700;
-      padding: 6px 13px;
-      border-radius: 30px;
+      padding: 4px 9px;
+      border-radius: 20px;
       background: rgba(7, 22, 44, 0.05);
       color: var(--navy-royal);
-      border: 1px solid rgba(7, 22, 44, 0.12);
+      border: 1px solid rgba(7, 22, 44, 0.1);
       cursor: pointer;
-      transition: 0.3s var(--spring-easing);
+      transition: 0.25s ease;
     }
 
-    .route-chip:hover {
+    .compact-chip:hover {
       background: var(--navy-royal);
       color: var(--pure-white);
-      transform: translateY(-2px);
     }
 
-    .icon-input-wrapper {
+    .compact-field {
       position: relative;
-      margin-bottom: 15px;
+      margin-bottom: 9px;
       width: 100%;
       min-width: 0;
       overflow: hidden;
     }
 
-    .icon-input-wrapper i {
+    .compact-field i {
       position: absolute;
       top: 50%;
-      left: 20px;
+      left: 13px;
       transform: translateY(-50%);
       color: var(--navy-royal);
-      font-size: 16px;
+      font-size: 12.5px;
       z-index: 2;
       pointer-events: none;
-      transition: 0.35s var(--spring-easing);
     }
 
-    .premium-pill-input {
+    .compact-input {
       width: 100%;
       max-width: 100%;
       min-width: 0;
@@ -557,84 +483,114 @@
       box-sizing: border-box;
       -webkit-appearance: none;
       appearance: none;
-      padding: 16px 18px 16px 50px;
-      border-radius: 22px;
-      border: 1.5px solid rgba(7, 22, 44, 0.12);
+      height: 40px;
+      padding: 7px 10px 7px 34px;
+      border-radius: 13px;
+      border: 1.2px solid rgba(7, 22, 44, 0.12);
       background: var(--pure-white);
       color: var(--navy-deepest);
-      font-size: 14.5px;
+      font-size: 12px;
       font-weight: 600;
       font-family: inherit;
       text-align: left;
-      transition: 0.35s var(--spring-easing);
-      box-shadow: 0 4px 14px rgba(3, 11, 23, 0.03);
+      transition: 0.25s ease;
     }
 
-    /* iPhone / iOS Safari Date Input Overflow Fix */
-    input[type="date"].premium-pill-input {
-      min-height: 54px;
-      line-height: 1.4;
+    input[type="date"].compact-input {
+      line-height: 24px;
       text-align: left !important;
-      display: flex;
-      align-items: center;
     }
 
-    input[type="date"].premium-pill-input::-webkit-date-and-time-value {
+    input[type="date"].compact-input::-webkit-date-and-time-value {
       text-align: left;
       margin: 0;
     }
 
-    .premium-pill-input:focus {
-      background: var(--pure-white);
+    .compact-input:focus {
       outline: none;
       border-color: var(--royal-accent);
-      box-shadow: 0 10px 25px rgba(29, 78, 216, 0.15);
-      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(29, 78, 216, 0.12);
     }
 
-    .icon-input-wrapper:focus-within i {
-      color: var(--royal-accent);
-      transform: translateY(-50%) scale(1.2);
-    }
-
-    .form-row {
-      display: flex;
-      gap: 14px;
+    .compact-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
       width: 100%;
     }
 
-    .form-row > .icon-input-wrapper {
-      flex: 1 1 0%;
-      min-width: 0;
+    .compact-submit-btn {
+      width: 100%;
+      height: 42px;
+      border-radius: 40px;
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-top: 2px;
     }
 
-    .booking-perks-strip {
+    .compact-perks-footer {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px dashed rgba(7, 22, 44, 0.14);
-      font-size: 11.5px;
+      margin-top: 11px;
+      padding-top: 9px;
+      border-top: 1px dashed rgba(7, 22, 44, 0.12);
+      font-size: 9.8px;
       font-weight: 700;
       color: var(--text-muted);
-      flex-wrap: wrap;
-      gap: 8px;
     }
 
-    .booking-perks-strip span i {
+    .compact-perks-footer span i {
       color: var(--royal-accent);
-      margin-right: 4px;
+      margin-right: 3px;
     }
 
-    @media (max-width: 600px) {
-      .form-row {
-        flex-direction: column;
-        gap: 0;
-      }
-      .booking-container {
-        padding: 40px 20px 30px;
-      }
+    /* Relocated Welcome Strip Below Booking Card */
+    .relocated-intro-strip {
+      max-width: 760px;
+      margin: 18px auto 0;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(7, 22, 44, 0.08);
+      border-radius: 20px;
+      padding: 14px 16px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(3, 11, 23, 0.05);
+    }
+
+    .relocated-intro-text {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .relocated-pills-row {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .mini-trust-pill {
+      background: var(--off-white);
+      border: 1px solid rgba(7, 22, 44, 0.09);
+      padding: 5px 11px;
+      border-radius: 30px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--navy-royal);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .mini-trust-pill i {
+      color: var(--royal-accent);
+      font-size: 11px;
     }
 
     /* =========================================
@@ -1540,11 +1496,11 @@
 
   <!-- Floating Royal Navy & White Navbar -->
   <nav>
-    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px; min-width: 0;">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 10px; min-width: 0;">
       <img src="IMG_5388.jpeg" alt="Khatkar Travel Company Logo" class="brand-logo-img">
       <div style="display: flex; flex-direction: column; min-width: 0;">
         <span class="watery-text nav-brand-title">Khatkar Travel Company</span>
-        <span style="font-size: 10px; letter-spacing: 2px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR • LUXURY FLEET</span>
+        <span style="font-size: 9.5px; letter-spacing: 2px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR • LUXURY FLEET</span>
       </div>
     </a>
 
@@ -1560,132 +1516,127 @@
       </a>
     </div>
 
-    <div onclick="openMenu()" style="width: 44px; height: 44px; flex-shrink: 0; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; box-shadow: 0 6px 16px rgba(7, 22, 44, 0.25); transition: 0.3s; font-size: 18px;">
+    <div onclick="openMenu()" style="width: 42px; height: 42px; flex-shrink: 0; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; box-shadow: 0 6px 16px rgba(7, 22, 44, 0.25); transition: 0.3s; font-size: 17px;">
       <i class="fas fa-bars"></i>
     </div>
   </nav>
 
-  <!-- HERO + ULTRA-SEXY BOOKING SECTION -->
-  <section id="book" class="hero-wrapper popup-reveal">
-    <!-- Left Luxury Intro Column -->
-    <div>
-      <div class="hero-badge">
-        <i class="fas fa-crown"></i> #1 Executive Chauffeur Service in Tricity
+  <!-- COMPACT HERO + SMALL SLEEK BOOKING SECTION (BOOKING FORM RIGHT AT THE TOP) -->
+  <section id="book" class="hero-compact-section popup-reveal">
+    <!-- Tiny 2-Line Header Above Form -->
+    <div class="hero-mini-header">
+      <div class="hero-mini-badge">
+        <i class="fas fa-crown"></i> #1 Chauffeur Service in Tricity
       </div>
-      <h1 class="hero-title">
-        Travel Across North India in <span class="watery-text">Royal Navy Elegance.</span>
+      <h1 class="hero-mini-title">
+        Travel in <span class="watery-text">Royal Navy Elegance</span>
       </h1>
-      <p class="hero-subtitle">
-        Welcome to <strong>Khatkar Travel Company</strong>. Experience spotless luxury sedans, SUVs, and Force Urbania cruisers driven by verified, uniformed chauffeurs with zero surge pricing.
-      </p>
-
-      <div class="hero-trust-pills">
-        <div class="trust-pill popup-card-item">
-          <i class="fas fa-shield-halved"></i> 100% Verified Chauffeurs
-        </div>
-        <div class="trust-pill popup-card-item">
-          <i class="fas fa-clock"></i> 24/7 On-Time Airport Pickup
-        </div>
-        <div class="trust-pill popup-card-item">
-          <i class="fas fa-map-location-dot"></i> VIP Road, Zirakpur Hub
-        </div>
-      </div>
     </div>
 
-    <!-- Right Upgraded Sexy Booking Engine Card -->
-    <div class="booking-container popup-card-item">
-      <div class="booking-top-tag">
+    <!-- Sleek, Small & Beautiful Booking Form right at the top -->
+    <div class="booking-compact-card popup-card-item">
+      <div class="compact-top-badge">
         <span class="live-dot"></span> Instant VIP Dispatch
       </div>
 
-      <div style="text-align: center; margin-bottom: 20px; margin-top: 6px;">
-        <h2 style="font-size: 27px; font-weight: 800; color: var(--navy-deepest); margin: 0; font-family: 'Cinzel', serif;">
+      <div style="text-align: center; margin-bottom: 12px; margin-top: 2px;">
+        <h2 style="font-size: 20px; font-weight: 800; color: var(--navy-deepest); margin: 0; font-family: 'Cinzel', serif;">
           Reserve Your <span class="watery-text">Luxury Cab</span>
         </h2>
-        <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 5px; font-weight: 600;">
-          Instant WhatsApp & Chauffeur Confirmation in 60 Seconds
+        <p style="font-size: 11.5px; color: var(--text-muted); margin-top: 2px; font-weight: 600;">
+          60-Second WhatsApp & Call Confirmation
         </p>
       </div>
 
-      <div class="trip-toggle-box">
+      <div class="compact-trip-tabs">
         <button type="button" class="trip-btn active" data-trip="One Way">One Way</button>
         <button type="button" class="trip-btn" data-trip="Round Trip">Round Trip</button>
         <button type="button" class="trip-btn" data-trip="Airport Transfer">Airport VIP</button>
       </div>
 
-      <!-- One-Tap Popular Destination Chips -->
-      <div class="quick-route-chips">
-        <span style="font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Quick Fill:</span>
-        <span class="route-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Shimla')">🏔️ Shimla</span>
-        <span class="route-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Manali')">❄️ Manali</span>
-        <span class="route-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Delhi IGI Airport')">✈️ Delhi IGI</span>
-        <span class="route-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Amritsar')">✨ Amritsar</span>
+      <div class="compact-chips-bar">
+        <span class="compact-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Shimla')">🏔️ Shimla</span>
+        <span class="compact-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Manali')">❄️ Manali</span>
+        <span class="compact-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Delhi IGI Airport')">✈️ Delhi IGI</span>
+        <span class="compact-chip" onclick="fillQuickRoute('Zirakpur / Chandigarh', 'Amritsar')">✨ Amritsar</span>
       </div>
 
       <form id="bookingForm">
         <input type="hidden" id="tripTypeInput" name="TripType" value="One Way">
 
-        <div class="icon-input-wrapper">
+        <div class="compact-field">
           <i class="fas fa-map-marker-alt"></i>
-          <input type="text" id="pickupInput" name="Pickup" placeholder="Pickup Location (Zirakpur / Airport / Hotel)" class="premium-pill-input" required>
+          <input type="text" id="pickupInput" name="Pickup" placeholder="Pickup City / Airport / Hotel" class="compact-input" required>
         </div>
 
-        <div class="icon-input-wrapper">
+        <div class="compact-field">
           <i class="fas fa-location-arrow"></i>
-          <input type="text" id="dropInput" name="Drop" placeholder="Destination City (Shimla, Manali, Delhi...)" class="premium-pill-input" required>
+          <input type="text" id="dropInput" name="Drop" placeholder="Drop City (Shimla, Manali, Delhi...)" class="compact-input" required>
         </div>
 
-        <div class="form-row">
-          <div class="icon-input-wrapper">
+        <div class="compact-grid-2">
+          <div class="compact-field">
             <i class="fas fa-calendar-alt"></i>
-            <input type="date" id="dateInput" name="PickupDate" class="premium-pill-input" required>
+            <input type="date" id="dateInput" name="PickupDate" class="compact-input" required>
           </div>
-          <div class="icon-input-wrapper">
+          <div class="compact-field">
             <i class="fas fa-users"></i>
-            <select id="passengersInput" name="Passengers" class="premium-pill-input" required>
-              <option value="" disabled selected>Passengers</option>
-              <option value="1 - 2 Persons">1 - 2 Persons</option>
-              <option value="3 - 4 Persons">3 - 4 Persons</option>
-              <option value="5 - 7 Persons">5 - 7 Persons</option>
-              <option value="8 - 16 Persons (Urbania)">8+ Persons (VIP Group)</option>
+            <select id="passengersInput" name="Passengers" class="compact-input" required>
+              <option value="" disabled selected>Pax</option>
+              <option value="1 - 2 Persons">1-2 Pax</option>
+              <option value="3 - 4 Persons">3-4 Pax</option>
+              <option value="5 - 7 Persons">5-7 Pax</option>
+              <option value="8+ Persons (Urbania)">8+ Group</option>
             </select>
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="icon-input-wrapper">
+        <div class="compact-grid-2">
+          <div class="compact-field">
             <i class="fas fa-car-side"></i>
-            <select id="vehicleInput" name="Vehicle_Type" class="premium-pill-input" required>
-              <option value="" disabled selected>Select Royal Car</option>
-              <option value="Sedan (Swift Dzire)">Sedan (Swift Dzire)</option>
-              <option value="SUV (Maruti Ertiga)">SUV (Maruti Ertiga)</option>
-              <option value="Hatchback (Toyota Glanza)">Hatchback (Glanza)</option>
-              <option value="MPV (Innova Crysta)">Executive (Innova Crysta)</option>
-              <option value="Force Urbania Traveller">Luxury Cruiser (Urbania)</option>
+            <select id="vehicleInput" name="Vehicle_Type" class="compact-input" required>
+              <option value="" disabled selected>Select Car</option>
+              <option value="Sedan (Swift Dzire)">Swift Dzire</option>
+              <option value="SUV (Maruti Ertiga)">Maruti Ertiga</option>
+              <option value="Hatchback (Toyota Glanza)">Toyota Glanza</option>
+              <option value="MPV (Innova Crysta)">Innova Crysta</option>
+              <option value="Force Urbania Traveller">Force Urbania</option>
             </select>
           </div>
-          <div class="icon-input-wrapper">
+          <div class="compact-field">
             <i class="fas fa-phone-alt"></i>
-            <input type="tel" id="phoneInput" name="Phone" placeholder="Your Mobile Number" class="premium-pill-input" required>
+            <input type="tel" id="phoneInput" name="Phone" placeholder="Mobile No." class="compact-input" required>
           </div>
         </div>
 
-        <button type="submit" class="navy-luxury-btn" style="width: 100%; padding: 18px; border-radius: 50px; font-size: 15.5px; font-weight: 800; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px;">
-          Get Instant Royal Quote <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+        <button type="submit" class="navy-luxury-btn compact-submit-btn">
+          Get Instant Quote <i class="fas fa-paper-plane" style="margin-left: 6px;"></i>
         </button>
 
-        <div class="booking-perks-strip">
-          <span><i class="fas fa-check-circle"></i> Zero Cancellation Fee</span>
-          <span><i class="fas fa-shield-virus"></i> Sanitized Royal Cabin</span>
-          <span><i class="fas fa-headset"></i> 24/7 Dispatch</span>
+        <div class="compact-perks-footer">
+          <span><i class="fas fa-check-circle"></i> Zero Surge</span>
+          <span><i class="fas fa-shield-virus"></i> Sanitized Cabin</span>
+          <span><i class="fas fa-headset"></i> 24/7 Support</span>
         </div>
       </form>
+    </div>
+
+    <!-- Relocated Welcome Text & Badges (Compact & Neat Below Form) -->
+    <div class="relocated-intro-strip popup-card-item">
+      <p class="relocated-intro-text">
+        Welcome to <strong>Khatkar Travel Company</strong>. Experience spotless luxury sedans, SUVs & Force Urbania cruisers driven by verified chauffeurs across North India.
+      </p>
+      <div class="relocated-pills-row">
+        <span class="mini-trust-pill"><i class="fas fa-shield-halved"></i> Verified Chauffeurs</span>
+        <span class="mini-trust-pill"><i class="fas fa-clock"></i> 24/7 Airport Pickup</span>
+        <span class="mini-trust-pill"><i class="fas fa-map-location-dot"></i> VIP Road, Zirakpur</span>
+      </div>
     </div>
   </section>
 
   <!-- Floating Contact Buttons -->
   <div style="position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
-    <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20a%20premium%20taxi." target="_blank" rel="noopener" style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; transition: 0.35s var(--spring-easing); border: 2px solid #fff;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+    <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20a%20premium%20taxi](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20a%20premium%20taxi)." target="_blank" rel="noopener" style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; transition: 0.35s var(--spring-easing); border: 2px solid #fff;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
       <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
     </a>
     <a href="tel:+917696299855" class="navy-luxury-btn" style="width: 58px; height: 58px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; border: 2px solid #fff; animation: pulseRing 2.5s infinite;">
@@ -1694,7 +1645,7 @@
   </div>
 
   <!-- Round Auto-Sliding Trending Locations (All 9 Original Destinations Preserved) -->
-  <section class="popup-reveal" style="padding: 60px 20px; text-align: center; max-width: 1240px; margin: 0 auto;">
+  <section class="popup-reveal" style="padding: 40px 20px 60px; text-align: center; max-width: 1240px; margin: 0 auto;">
     <span class="bc-kicker">North India Gems</span>
     <h2 style="color: var(--navy-deepest); font-size: 36px; margin-bottom: 12px; font-family: 'Cinzel', serif; font-weight: 800;">Trending <span class="watery-text">Destinations</span></h2>
     <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 30px;">Tap any destination circle to explore curated sightseeing packages by Khatkar Travel Company.</p>
@@ -1949,7 +1900,7 @@
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
           <span id="itinVehicleBadge" style="background: rgba(255,255,255,0.1); padding: 10px 18px; border-radius: 30px; font-size: 13px; font-weight: 700; color: #e2e8f0;"><i class="fas fa-car" style="color: var(--sky-glow); margin-right: 6px;"></i> Recommended: Innova Crysta / Dzire</span>
-          <a id="itinWhatsappBtn" href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20the%20Shimla%20Royal%20Itinerary." target="_blank" rel="noopener" style="background: var(--pure-white); color: var(--navy-deepest); padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Book This Plan →</a>
+          <a id="itinWhatsappBtn" href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20the%20Shimla%20Royal%20Itinerary](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20the%20Shimla%20Royal%20Itinerary)." target="_blank" rel="noopener" style="background: var(--pure-white); color: var(--navy-deepest); padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Book This Plan →</a>
         </div>
       </div>
 
@@ -2149,7 +2100,7 @@
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Sedan%20Swift%20Dzire" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Sedan%20Swift%20Dzire](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Sedan%20Swift%20Dzire)" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
@@ -2163,7 +2114,7 @@
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-user-friends"></i> 6+1 Seats</span>
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20SUV%20Maruti%20Ertiga" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20SUV%20Maruti%20Ertiga](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20SUV%20Maruti%20Ertiga)" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
@@ -2177,7 +2128,7 @@
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Hatchback%20Toyota%20Glanza" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Hatchback%20Toyota%20Glanza](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Hatchback%20Toyota%20Glanza)" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
@@ -2194,7 +2145,7 @@
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-user-friends"></i> 7+1 Seats</span>
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20MPV%20Innova%20Crysta" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20MPV%20Innova%20Crysta](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20MPV%20Innova%20Crysta)" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
@@ -2208,7 +2159,7 @@
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-couch"></i> Pushback Seats</span>
               <span style="background: var(--off-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; border: 1px solid rgba(7,22,44,0.15);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Tempo%20Traveller%20Force%20Urbania" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Tempo%20Traveller%20Force%20Urbania](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Tempo%20Traveller%20Force%20Urbania)" target="_blank" rel="noopener" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
@@ -2240,7 +2191,7 @@
           <p style="font-size: 13px; color: #cbd5e1;">One-Way Highway Express • Sedan / SUV Available</p>
           <div class="route-price-tag">₹2,999* <span style="font-size:12px; color:#94a3b8; font-family:'Plus Jakarta Sans',sans-serif;">Onwards</span></div>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Delhi%20Airport%20Cab" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
+        <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Delhi%20Airport%20Cab](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Delhi%20Airport%20Cab)" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
       </div>
 
       <div class="route-card popup-card-item">
@@ -2253,7 +2204,7 @@
           <p style="font-size: 13px; color: #cbd5e1;">Scenic Himalayan Drive • Experienced Hill Driver</p>
           <div class="route-price-tag">₹2,499* <span style="font-size:12px; color:#94a3b8; font-family:'Plus Jakarta Sans',sans-serif;">Onwards</span></div>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Shimla%20Cab" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
+        <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Shimla%20Cab](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Shimla%20Cab)" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
       </div>
 
       <div class="route-card popup-card-item">
@@ -2266,7 +2217,7 @@
           <p style="font-size: 13px; color: #cbd5e1;">Direct Four-Lane Tunnel Route • Zero Hidden Cost</p>
           <div class="route-price-tag">₹4,499* <span style="font-size:12px; color:#94a3b8; font-family:'Plus Jakarta Sans',sans-serif;">Onwards</span></div>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Manali%20Cab" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
+        <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Manali%20Cab](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Chandigarh%20to%20Manali%20Cab)" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
       </div>
 
       <div class="route-card popup-card-item">
@@ -2279,7 +2230,7 @@
           <p style="font-size: 13px; color: #cbd5e1;">Golden Temple & Wagah Same-Day / One-Way</p>
           <div class="route-price-tag">₹3,299* <span style="font-size:12px; color:#94a3b8; font-family:'Plus Jakarta Sans',sans-serif;">Onwards</span></div>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Amritsar%20Cab" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
+        <a href="[https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Amritsar%20Cab](https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Zirakpur%20to%20Amritsar%20Cab)" target="_blank" rel="noopener" style="display:block; text-align:center; padding:12px; border-radius:30px; background:var(--pure-white); color:var(--navy-royal); text-decoration:none; font-weight:800; font-size:13px; text-transform:uppercase;">Book Route</a>
       </div>
     </div>
   </section>
@@ -2509,7 +2460,7 @@
     </div>
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
       <a href="#book" style="display:inline-block; background: var(--pure-white); color: var(--navy-deepest); text-decoration:none; padding:19px 40px; border-radius:50px; font-weight:800; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 15px 35px rgba(0,0,0,0.3); transition: 0.4s var(--spring-easing);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">Book Your Journey</a>
-      <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background: rgba(255,255,255,0.12); color: var(--pure-white); border: 1px solid rgba(255,255,255,0.28); text-decoration:none; padding:19px 34px; border-radius:50px; font-weight:800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; transition: 0.4s var(--spring-easing);"><i class="fas fa-map-marked-alt" style="color: var(--sky-glow);"></i> Locate Our Office</a>
+      <a href="[https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb](https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb)" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background: rgba(255,255,255,0.12); color: var(--pure-white); border: 1px solid rgba(255,255,255,0.28); text-decoration:none; padding:19px 34px; border-radius:50px; font-weight:800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; transition: 0.4s var(--spring-easing);"><i class="fas fa-map-marked-alt" style="color: var(--sky-glow);"></i> Locate Our Office</a>
     </div>
   </section>
 
@@ -2520,7 +2471,7 @@
         <div class="watery-text-light" style="font-family:'Cinzel',serif;font-size:24px;font-weight:800;margin-bottom:12px;">KHATKAR TRAVEL COMPANY</div>
         <div style="font-size: 12px; font-weight: 800; color: var(--sky-glow); letter-spacing: 3.5px; margin-top: -6px; margin-bottom: 18px;">ZIRAKPUR • PUNJAB</div>
         <p style="font-size:14px;line-height:1.7;color:#94a3b8;margin-bottom:18px;">Premium taxi, executive chauffeur and luxury tour services with comfort, safety and 24/7 support across North India.</p>
-        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color: var(--sky-glow); font-weight: 700;"><i class="fas fa-location-dot"></i> Open on Google Maps ➔</a>
+        <a href="[https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb](https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb)" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color: var(--sky-glow); font-weight: 700;"><i class="fas fa-location-dot"></i> Open on Google Maps ➔</a>
       </div>
       <div>
         <h3>Quick Links</h3>
@@ -2543,8 +2494,8 @@
         <h3>Contact Our Hub</h3>
         <a href="tel:+917696299855"><i class="fas fa-phone-alt" style="color:var(--sky-glow);"></i> &nbsp; +91 76962 99855</a>
         <a href="mailto:satnamsingh.chotian@gmail.com"><i class="fas fa-envelope" style="color:var(--sky-glow);"></i> &nbsp; satnamsingh.chotian@gmail.com</a>
-        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener"><i class="fas fa-building" style="color:var(--sky-glow);"></i> &nbsp; Office No. 08, VIP Road, opposite Rail Vihar, Zirakpur, Punjab 140603</a>
-        <a href="https://wa.me/917696299855" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; 24/7 WhatsApp Dispatch</a>
+        <a href="[https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb](https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb)" target="_blank" rel="noopener"><i class="fas fa-building" style="color:var(--sky-glow);"></i> &nbsp; Office No. 08, VIP Road, opposite Rail Vihar, Zirakpur, Punjab 140603</a>
+        <a href="[https://wa.me/917696299855](https://wa.me/917696299855)" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; 24/7 WhatsApp Dispatch</a>
       </div>
     </div>
     <div class="bc-footer-bottom">© 2026 Khatkar Travel Company. All rights reserved. | Office No. 08, VIP Road, opposite Rail Vihar, Zirakpur, Punjab 140603</div>
@@ -2569,7 +2520,7 @@
         <a href="#royal-itinerary" onclick="closeMenu()" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 700; text-decoration: none; border-radius: 16px; border: 1px solid #e2e8f0;">Royal Itinerary</a>
         <a href="#royal-cabin" onclick="closeMenu()" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 700; text-decoration: none; border-radius: 16px; border: 1px solid #e2e8f0;">Inside Your Royal Cabin</a>
         <a href="all-tours.html" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 700; text-decoration: none; border-radius: 16px; border: 1px solid #e2e8f0;">Tour Packages</a>
-        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 700; text-decoration: none; border-radius: 16px; border: 1px solid #e2e8f0;"><i class="fas fa-map-marker-alt" style="color: var(--royal-accent); margin-right: 6px;"></i> VIP Road Zirakpur Office</a>
+        <a href="[https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb](https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb)" target="_blank" rel="noopener" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 700; text-decoration: none; border-radius: 16px; border: 1px solid #e2e8f0;"><i class="fas fa-map-marker-alt" style="color: var(--royal-accent); margin-right: 6px;"></i> VIP Road Zirakpur Office</a>
       </div>
       <a href="tel:+917696299855" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 18px; border-radius: 50px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px;">Call +91 76962 99855</a>
     </div>
@@ -2680,7 +2631,7 @@
         `• *Vehicle:* ${car}\n` +
         `• *Customer Phone:* ${phone}`
       );
-      document.getElementById('whatsappConfirmLink').href = `https://wa.me/917696299855?text=${waText}`;
+      document.getElementById('whatsappConfirmLink').href = `[https://wa.me/917696299855?text=$](https://wa.me/917696299855?text=$){waText}`;
       document.getElementById('bookingPopupModal').classList.add('show');
     });
 
@@ -2822,7 +2773,7 @@
       document.getElementById('itinStep3Desc').textContent = data.step3Desc;
 
       const waMsg = encodeURIComponent(`Hello Khatkar Travel Company, I want to book the ${place} Royal Itinerary (${data.duration}).`);
-      document.getElementById('itinWhatsappBtn').href = `https://wa.me/917696299855?text=${waMsg}`;
+      document.getElementById('itinWhatsappBtn').href = `[https://wa.me/917696299855?text=$](https://wa.me/917696299855?text=$){waMsg}`;
     }
 
     // 7. Tour Quick-View Popup Modal
