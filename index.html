@@ -20,12 +20,14 @@
       --navy-royal: #071936;
       --navy-mid: #0d2b59;
       --navy-bright: #16448c;
-      --navy-water: #1e56b0;
+      --navy-water: #2563eb;
       --pure-white: #ffffff;
       --ice-white: #f4f8ff;
       --frost-white: #e6f0ff;
       --text-dark: #040d1a;
       --text-muted: #3b5070;
+      --shadow-luxury: 0 25px 65px rgba(4, 13, 26, 0.14);
+      --shadow-navy-deep: 0 22px 55px rgba(4, 13, 26, 0.45);
       --spring-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
       --smooth-easing: cubic-bezier(0.22, 1, 0.36, 1);
     }
@@ -42,7 +44,7 @@
       color: var(--text-dark);
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
-      padding-top: 100px;
+      padding-top: 102px;
       -webkit-font-smoothing: antialiased;
       position: relative;
     }
@@ -54,30 +56,30 @@
     /* ============================================================
        STRICT INNER-TEXT 2-COLOR WATERY ANIMATION (NO OUTER GLOW)
        ============================================================ */
-    @keyframes innerWateryFlow {
+    @keyframes wateryWaveFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Strictly clipped inside letters on Light Backgrounds */
+    /* Strictly clipped inside letters on White Backgrounds */
     .watery-text {
       background: linear-gradient(
         110deg,
         var(--navy-deepest) 0%,
         var(--navy-royal) 22%,
         var(--pure-white) 48%,
-        var(--navy-mid) 54%,
+        var(--navy-water) 55%,
         var(--pure-white) 72%,
         var(--navy-royal) 88%,
         var(--navy-deepest) 100%
       );
-      background-size: 240% auto;
+      background-size: 250% auto;
       -webkit-background-clip: text !important;
       background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       color: transparent !important;
-      animation: innerWateryFlow 4.8s linear infinite;
+      animation: wateryWaveFlow 5s linear infinite;
       font-weight: 900;
       display: inline-block;
       filter: none !important;
@@ -95,12 +97,12 @@
         var(--navy-royal) 75%,
         var(--pure-white) 100%
       );
-      background-size: 240% auto;
+      background-size: 250% auto;
       -webkit-background-clip: text !important;
       background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       color: transparent !important;
-      animation: innerWateryFlow 4.8s linear infinite;
+      animation: wateryWaveFlow 5s linear infinite;
       font-weight: 900;
       display: inline-block;
       filter: none !important;
@@ -112,12 +114,12 @@
        ============================================================ */
     @keyframes floatUpDown {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-11px); }
     }
 
     @keyframes floatLeftRight {
       0%, 100% { transform: translateX(0px); }
-      50% { transform: translateX(10px); }
+      50% { transform: translateX(11px); }
     }
 
     @keyframes pulseNavyRing {
@@ -142,11 +144,11 @@
     }
 
     .anim-up-down {
-      animation: floatUpDown 4.2s ease-in-out infinite;
+      animation: floatUpDown 4.4s ease-in-out infinite;
     }
 
     .anim-left-right {
-      animation: floatLeftRight 4.8s ease-in-out infinite;
+      animation: floatLeftRight 5s ease-in-out infinite;
     }
 
     /* ============================================================
@@ -154,7 +156,7 @@
        ============================================================ */
     .popup-reveal {
       opacity: 0;
-      transform: scale(0.86) translateY(50px);
+      transform: scale(0.84) translateY(55px);
       transition: opacity 0.8s var(--smooth-easing), transform 0.9s var(--spring-easing);
       will-change: opacity, transform;
     }
@@ -165,7 +167,7 @@
 
     .popup-card-item {
       opacity: 0;
-      transform: scale(0.78) translateY(42px);
+      transform: scale(0.76) translateY(45px);
       transition: opacity 0.7s var(--smooth-easing), transform 0.85s var(--spring-easing);
     }
     .popup-card-item.from-left { transform: scale(0.82) translateX(-65px); }
@@ -179,7 +181,7 @@
     }
 
     /* ============================================================
-       2-COLOR LUXURY BUTTONS & REDESIGNED ARCHITECTURAL CARDS
+       2-COLOR PREMIUM CARD & BUTTON LIQUID ANIMATION
        ============================================================ */
     .navy-luxury-btn {
       background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-royal) 50%, var(--navy-mid) 100%);
@@ -214,7 +216,6 @@
       box-shadow: 0 22px 45px rgba(4, 13, 26, 0.5);
     }
 
-    /* Redesigned Architectural Card Frame */
     .two-tone-card {
       position: relative;
       overflow: hidden;
@@ -240,7 +241,7 @@
     }
 
     /* ============================================================
-       BACKGROUND SLIDESHOW WITH NAVY-WHITE MIST
+       GLOBAL BACKGROUND SLIDESHOW WITH NAVY-WHITE MIST
        ============================================================ */
     .bg-slideshow {
       position: fixed;
@@ -277,11 +278,11 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg,
-        rgba(4, 13, 26, 0.55) 0%,
-        rgba(244, 248, 255, 0.88) 45%,
-        rgba(255, 255, 255, 0.94) 100%);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+        rgba(255, 255, 255, 0.88) 0%,
+        rgba(244, 248, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0.93) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       z-index: -1;
     }
 
@@ -290,31 +291,32 @@
        ============================================================ */
     nav {
       position: fixed !important;
-      top: 14px !important;
+      top: 15px !important;
       left: 50% !important;
       transform: translateX(-50%) !important;
       width: 94% !important;
       max-width: 1260px;
       z-index: 1000 !important;
-      background: rgba(255, 255, 255, 0.94) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      padding: 11px 24px !important;
+      padding: 12px 26px !important;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-radius: 60px;
-      box-shadow: 0 18px 45px rgba(4, 13, 26, 0.18);
+      box-shadow: 0 18px 45px rgba(4, 13, 26, 0.16);
       border: 2px solid var(--navy-royal);
       transition: all 0.4s ease;
     }
 
     .brand-logo-img {
-      width: 48px !important;
-      height: 48px !important;
+      width: 50px !important;
+      height: 50px !important;
       border-radius: 50% !important;
       object-fit: cover !important;
       border: 2.5px solid var(--navy-royal) !important;
+      box-shadow: 0 4px 14px rgba(4, 13, 26, 0.25);
     }
 
     .nav-links-desktop {
@@ -333,6 +335,21 @@
       position: relative;
     }
 
+    .nav-links-desktop a:not(.navy-luxury-btn)::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: var(--navy-royal);
+      transition: 0.3s;
+    }
+
+    .nav-links-desktop a:not(.navy-luxury-btn):hover::after {
+      width: 100%;
+    }
+
     @media (max-width: 980px) {
       .nav-links-desktop {
         display: none;
@@ -340,38 +357,103 @@
     }
 
     /* ============================================================
-       1. TOP CENTER TRANSPARENT BOOKING FORM + 10 MOUNTAIN SLIDER
+       TOP HERO STAGE: TRANSPARENT BOOKING FORM WITH 10 MOUNTAIN
+       & SNOW VALLEY PICTURES RUNNING BEHIND IT
        ============================================================ */
-    .top-booking-stage {
+    .hero-mountain-stage {
       max-width: 1260px;
-      margin: 10px auto 30px;
+      margin: 10px auto 40px;
       padding: 0 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
     }
 
-    /* Transparent Glass Booking Container */
-    .transparent-booking-card {
-      width: 100%;
-      max-width: 880px;
-      background: rgba(4, 13, 26, 0.62);
-      backdrop-filter: blur(22px);
-      -webkit-backdrop-filter: blur(22px);
-      border: 2.5px solid rgba(255, 255, 255, 0.78);
-      outline: 3px solid rgba(7, 25, 54, 0.55);
-      border-radius: 42px;
-      padding: 44px 36px 36px;
-      box-shadow: 0 35px 90px rgba(2, 8, 19, 0.45);
+    .hero-mountain-frame {
       position: relative;
-      margin-bottom: 28px;
+      border-radius: 42px;
+      overflow: hidden;
+      padding: 50px 38px 42px;
+      border: 3px solid var(--navy-royal);
+      box-shadow: 0 35px 85px rgba(4, 13, 26, 0.28);
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* 10 Mountain & Snow Valley Pictures Running Behind Booking Form */
+    .hero-mountain-bg-slider {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-mtn-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.12);
+      transition: opacity 1.5s ease-in-out, transform 6.5s linear;
+    }
+
+    .hero-mtn-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Subtle Dark Navy & Clear Gradient Overlay so Mountain Photos Shine Behind Transparent Form */
+    .hero-mtn- tint {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(2, 8, 19, 0.72) 0%,
+        rgba(7, 25, 54, 0.42) 50%,
+        rgba(2, 8, 19, 0.68) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-stage-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    @media (max-width: 960px) {
+      .hero-stage-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+      }
+      .hero-mountain-frame {
+        padding: 36px 20px 30px;
+      }
+    }
+
+    /* Transparent Glass Booking Form (Sabse Upar) */
+    .booking-container-transparent {
+      background: rgba(4, 13, 26, 0.38);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 38px;
+      padding: 44px 34px 36px;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      border: 2px solid rgba(255, 255, 255, 0.78);
+      box-shadow: 0 30px 75px rgba(2, 8, 19, 0.55);
+      position: relative;
       transition: transform 0.5s var(--spring-easing), background 0.4s ease;
     }
 
-    .transparent-booking-card:hover {
-      background: rgba(4, 13, 26, 0.72);
-      transform: translateY(-4px);
+    .booking-container-transparent:hover {
+      transform: translateY(-5px);
+      background: rgba(4, 13, 26, 0.48);
     }
 
     .booking-top-tag {
@@ -383,7 +465,7 @@
       color: var(--navy-deepest);
       padding: 9px 28px;
       border-radius: 30px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -393,25 +475,23 @@
     }
 
     .trip-toggle-box {
-      display: inline-flex;
+      display: flex;
       gap: 8px;
-      margin-bottom: 24px;
-      background: rgba(255, 255, 255, 0.14);
+      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.16);
       padding: 6px;
       border-radius: 50px;
-      border: 1.5px solid rgba(255, 255, 255, 0.45);
-      width: 100%;
-      max-width: 480px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
     }
 
     .trip-btn {
       flex: 1;
-      padding: 12px 16px;
+      padding: 12px;
       border-radius: 50px;
       font-weight: 800;
       cursor: pointer;
       transition: all 0.4s var(--spring-easing);
-      font-size: 13px;
+      font-size: 13.5px;
       border: none;
       background: transparent;
       color: var(--pure-white);
@@ -421,26 +501,20 @@
     .trip-btn.active {
       background: var(--pure-white);
       color: var(--navy-deepest);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
-      transform: scale(1.03);
-    }
-
-    .transparent-form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      text-align: left;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
     }
 
     .icon-input-wrapper {
       position: relative;
+      margin-bottom: 15px;
       width: 100%;
     }
 
     .icon-input-wrapper i {
       position: absolute;
       top: 50%;
-      left: 20px;
+      left: 22px;
       transform: translateY(-50%);
       color: var(--pure-white);
       font-size: 16px;
@@ -448,35 +522,35 @@
       transition: 0.35s var(--spring-easing);
     }
 
-    .transparent-pill-input {
+    .premium-pill-input {
       width: 100%;
-      padding: 16px 18px 16px 50px;
+      padding: 16px 20px 16px 52px;
       border-radius: 50px;
-      border: 1.8px solid rgba(255, 255, 255, 0.55);
-      background: rgba(255, 255, 255, 0.14);
+      border: 1.8px solid rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.16);
       backdrop-filter: blur(10px);
       color: var(--pure-white);
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 700;
       font-family: inherit;
       transition: 0.35s var(--spring-easing);
     }
 
-    .transparent-pill-input::placeholder {
-      color: rgba(255, 255, 255, 0.85);
+    .premium-pill-input::placeholder {
+      color: rgba(255, 255, 255, 0.88);
     }
 
-    .transparent-pill-input option {
+    .premium-pill-input option {
       background: var(--navy-deepest);
       color: var(--pure-white);
     }
 
-    .transparent-pill-input:focus {
+    .premium-pill-input:focus {
       background: var(--pure-white);
       color: var(--navy-deepest);
       outline: none;
       border-color: var(--pure-white);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
       transform: translateY(-2px);
     }
 
@@ -484,154 +558,85 @@
       color: var(--navy-royal);
     }
 
-    @media (max-width: 680px) {
-      .transparent-form-grid {
-        grid-template-columns: 1fr;
+    .form-row {
+      display: flex;
+      gap: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+        gap: 0;
       }
-      .transparent-booking-card {
-        padding: 38px 20px 28px;
+      .booking-container-transparent {
+        padding: 38px 20px 30px;
       }
     }
 
-    /* ============================================================
-       10 MOVING MOUNTAIN DESTINATION PHOTOS STRIP (UNDER BOOKING)
-       ============================================================ */
-    .mountain-filmstrip-box {
-      width: 100%;
-      max-width: 1220px;
-      background: rgba(7, 25, 54, 0.88);
-      border: 2.5px solid var(--pure-white);
-      outline: 2px solid var(--navy-royal);
-      border-radius: 32px;
-      padding: 20px 0;
-      overflow: hidden;
-      box-shadow: 0 22px 50px rgba(4, 13, 26, 0.3);
-      margin-bottom: 35px;
-      position: relative;
-    }
-
-    .mountain-filmstrip-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 26px 14px;
-      color: var(--pure-white);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .mountain-track {
-      display: flex;
-      gap: 18px;
-      width: max-content;
-      animation: marqueeLeft 32s linear infinite;
-      padding: 6px 18px;
-    }
-
-    .mountain-track:hover {
-      animation-play-state: paused;
-    }
-
-    .mountain-photo-pill {
-      width: 185px;
-      height: 118px;
-      border-radius: 22px;
-      overflow: hidden;
-      position: relative;
-      border: 2.5px solid var(--pure-white);
-      flex-shrink: 0;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-      transition: 0.45s var(--spring-easing);
-      cursor: pointer;
-    }
-
-    .mountain-photo-pill:nth-child(even) {
-      transform: translateY(6px);
-    }
-
-    .mountain-photo-pill:hover {
-      transform: scale(1.1) translateY(-6px) !important;
-      z-index: 5;
-    }
-
-    .mountain-photo-pill img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s ease;
-    }
-
-    .mountain-photo-pill span {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(2, 8, 19, 0.95), transparent);
-      color: var(--pure-white);
-      font-size: 11px;
-      font-weight: 800;
-      padding: 16px 8px 6px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    /* Hero Intro Banner Below Filmstrip */
-    .hero-intro-banner {
-      background: var(--pure-white);
-      border: 2.5px solid var(--navy-royal);
-      border-radius: 34px;
-      padding: 36px 32px;
-      width: 100%;
-      max-width: 1160px;
-      box-shadow: 0 22px 55px rgba(4, 13, 26, 0.14);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
+    /* Right Hero Text Over Mountain Background */
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--navy-royal);
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
       color: var(--pure-white);
-      padding: 9px 22px;
+      padding: 10px 22px;
       border-radius: 50px;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      border: 1.5px solid var(--pure-white);
     }
 
     .hero-title {
-      font-size: clamp(28px, 4.2vw, 48px);
-      color: var(--navy-deepest);
-      line-height: 1.18;
+      font-size: clamp(32px, 4.6vw, 52px);
+      color: var(--pure-white);
+      line-height: 1.15;
       font-weight: 900;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+      font-size: 16.5px;
+      color: var(--frost-white);
+      line-height: 1.75;
+      margin-bottom: 26px;
+      max-width: 580px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 960px) {
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .hero-trust-pills {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 18px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-trust-pills {
+        justify-content: center;
+      }
     }
 
     .trust-pill {
-      background: var(--ice-white);
-      border: 2px solid var(--navy-royal);
-      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid var(--pure-white);
+      padding: 11px 18px;
       border-radius: 50px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 13px;
+      gap: 9px;
+      font-size: 12.5px;
       font-weight: 800;
       color: var(--navy-deepest);
       transition: 0.45s var(--spring-easing);
@@ -640,7 +645,71 @@
     .trust-pill:hover {
       background: var(--navy-royal);
       color: var(--pure-white);
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.04);
+    }
+
+    .hero-office-strip {
+      background: rgba(4, 13, 26, 0.78);
+      backdrop-filter: blur(12px);
+      color: var(--pure-white);
+      padding: 15px 20px;
+      border-radius: 24px;
+      border: 1.5px solid rgba(255, 255, 255, 0.65);
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      max-width: 100%;
+    }
+
+    /* Live 10-Mountain Thumbnail Indicator Strip Inside Hero Bottom */
+    .hero-mtn-thumb-bar {
+      position: relative;
+      z-index: 2;
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .mtn-thumb-list {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 4px 0;
+    }
+
+    .mtn-thumb-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .mtn-thumb-dot {
+      width: 48px;
+      height: 32px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      cursor: pointer;
+      opacity: 0.65;
+      transition: 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .mtn-thumb-dot.active {
+      opacity: 1;
+      border-color: var(--pure-white);
+      transform: scale(1.12);
+    }
+
+    .mtn-thumb-dot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* ============================================================
@@ -651,15 +720,16 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .marquee-bar {
       background: var(--navy-deepest);
       color: var(--pure-white);
-      padding: 15px 0;
+      padding: 16px 0;
       border-top: 2px solid var(--pure-white);
       border-bottom: 2px solid var(--pure-white);
+      box-shadow: 0 12px 30px rgba(4, 13, 26, 0.25);
       display: flex;
       overflow: hidden;
       white-space: nowrap;
@@ -688,22 +758,22 @@
 
     .marquee-item {
       font-family: 'Cinzel', serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 800;
       letter-spacing: 2px;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-transform: uppercase;
     }
 
     /* ============================================================
-       REDESIGNED HEX-SHIELD TRENDING DESTINATIONS
+       CLASSIC ROUND TRENDING LOCATIONS (AUTO SLIDER + WAVE FLOAT)
        ============================================================ */
     .trending-wrapper {
       display: flex;
       overflow-x: auto;
-      gap: 26px;
+      gap: 28px;
       scroll-behavior: smooth;
       scrollbar-width: none;
       padding: 28px 12px;
@@ -716,16 +786,11 @@
     .trending-circle-card {
       text-decoration: none;
       color: inherit;
-      flex: 0 0 150px;
+      flex: 0 0 144px;
       text-align: center;
       transition: all 0.5s var(--spring-easing);
       display: block;
       cursor: pointer;
-      background: var(--pure-white);
-      padding: 14px 12px 18px;
-      border-radius: 38px 14px 38px 14px;
-      border: 2.5px solid var(--navy-royal);
-      box-shadow: 0 14px 30px rgba(4, 13, 26, 0.12);
     }
 
     .trending-circle-card:nth-child(odd) {
@@ -737,24 +802,20 @@
     }
 
     .trending-circle-card:hover {
-      background: var(--navy-deepest);
-      color: var(--pure-white);
-      transform: translateY(-14px) scale(1.06) !important;
+      transform: translateY(-16px) scale(1.08) !important;
     }
 
     .trending-circle-img {
-      width: 118px;
-      height: 118px;
-      border-radius: 28px 10px 28px 10px;
+      width: 138px;
+      height: 138px;
+      border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--navy-royal);
+      border: 4px solid var(--pure-white);
+      box-shadow: 0 16px 35px rgba(4, 13, 26, 0.22);
       margin: 0 auto;
       position: relative;
       transition: 0.45s var(--spring-easing);
-    }
-
-    .trending-circle-card:hover .trending-circle-img {
-      border-color: var(--pure-white);
+      outline: 3px solid var(--navy-royal);
     }
 
     .trending-circle-img img {
@@ -768,42 +829,26 @@
       transform: scale(1.16);
     }
 
-    .trending-title-label {
-      margin-top: 12px;
-      font-weight: 800;
-      color: var(--navy-deepest);
-      font-size: 15px;
-      transition: 0.3s;
-    }
-
-    .trending-circle-card:hover .trending-title-label {
-      color: var(--pure-white);
+    .trending-circle-card:hover .trending-circle-img {
+      border-color: var(--navy-royal);
+      outline-color: var(--pure-white);
+      box-shadow: 0 22px 48px rgba(4, 13, 26, 0.42);
     }
 
     /* ============================================================
-       REDESIGNED ARCHITECTURAL TOUR CARDS (ROYAL DOUBLE-FRAME)
+       CLASSIC LUXURY MAGAZINE TOUR CARDS + QUICK VIEW
        ============================================================ */
     .luxury-tour-card {
       position: relative;
-      border-radius: 42px 14px 42px 14px;
+      border-radius: 32px;
       overflow: hidden;
-      height: 400px;
+      height: 390px;
       display: block;
       text-decoration: none;
       background: var(--navy-deepest);
-      box-shadow: 0 22px 48px rgba(4, 13, 26, 0.2);
+      box-shadow: 0 22px 48px rgba(4, 13, 26, 0.18);
       border: 3px solid var(--navy-royal);
-      padding: 8px;
       transition: all 0.55s var(--spring-easing);
-    }
-
-    .luxury-tour-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 34px 8px 34px 8px;
-      overflow: hidden;
-      position: relative;
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
     }
 
     .luxury-tour-card img {
@@ -815,75 +860,80 @@
 
     .tour-badge-top {
       position: absolute;
-      top: 18px;
-      left: 18px;
-      background: var(--pure-white);
-      color: var(--navy-deepest);
-      padding: 7px 16px;
-      border-radius: 20px 6px 20px 6px;
+      top: 20px;
+      left: 20px;
+      background: var(--navy-deepest);
+      color: var(--pure-white);
+      padding: 8px 18px;
+      border-radius: 30px;
       font-size: 11px;
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      border: 2px solid var(--navy-royal);
+      border: 1.5px solid var(--pure-white);
       z-index: 2;
     }
 
     .tour-quick-btn {
       position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: var(--navy-deepest);
-      color: var(--pure-white);
-      border: 2px solid var(--pure-white);
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--pure-white);
+      color: var(--navy-royal);
+      border: 2px solid var(--navy-royal);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       z-index: 3;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transition: 0.4s var(--spring-easing);
     }
 
     .tour-quick-btn:hover {
-      background: var(--pure-white);
-      color: var(--navy-deepest);
-      transform: scale(1.14) rotate(10deg);
+      background: var(--navy-royal);
+      color: var(--pure-white);
+      border-color: var(--pure-white);
+      transform: scale(1.15) rotate(12deg);
     }
 
     .luxury-tour-overlay {
       position: absolute;
-      bottom: 12px;
-      left: 12px;
-      right: 12px;
-      background: rgba(4, 13, 26, 0.90);
-      backdrop-filter: blur(12px);
-      border: 1.5px solid rgba(255, 255, 255, 0.35);
-      border-radius: 24px 8px 24px 8px;
-      padding: 20px 22px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, var(--navy-void) 0%, rgba(7, 25, 54, 0.86) 60%, transparent 100%);
+      padding: 48px 28px 28px;
       color: var(--pure-white);
       transition: 0.45s ease;
     }
 
     .luxury-tour-card:hover {
       transform: translateY(-14px) scale(1.02);
-      background: var(--pure-white);
-      border-color: var(--navy-deepest);
+      box-shadow: 0 32px 68px rgba(4, 13, 26, 0.42);
+      border-color: var(--pure-white);
+      outline: 3px solid var(--navy-royal);
+    }
+
+    .luxury-tour-card:hover img {
+      transform: scale(1.12);
+      opacity: 0.84;
     }
 
     /* ============================================================
-       ROYAL DARK NAVY & WHITE SECTIONS
+       ROYAL DARK NAVY & WHITE SECTIONS (CLASSIC ROUNDED 42PX)
        ============================================================ */
     .bc-section {
       max-width: 1200px;
       margin: 55px auto;
-      padding: 70px 36px;
+      padding: 75px 38px;
       background: var(--pure-white);
-      border: 2.5px solid var(--navy-royal);
-      border-radius: 48px 18px 48px 18px;
-      box-shadow: 0 25px 65px rgba(4, 13, 26, 0.14);
+      border: 2px solid var(--navy-royal);
+      border-radius: 42px;
+      box-shadow: var(--shadow-luxury);
       position: relative;
     }
 
@@ -891,27 +941,28 @@
       background: linear-gradient(145deg, var(--navy-void) 0%, var(--navy-deepest) 45%, var(--navy-royal) 100%);
       color: var(--pure-white);
       border: 3px solid var(--pure-white);
-      outline: 2.5px solid var(--navy-royal);
-      box-shadow: 0 25px 60px rgba(4, 13, 26, 0.45);
+      outline: 2px solid var(--navy-royal);
+      box-shadow: var(--shadow-navy-deep);
     }
 
     .bc-section-head {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 55px;
     }
 
     .bc-kicker {
       display: inline-block;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 14px;
       padding: 8px 22px;
-      border-radius: 20px 6px 20px 6px;
+      border-radius: 30px;
       background: var(--navy-royal);
       color: var(--pure-white);
       border: 1.5px solid var(--pure-white);
+      box-shadow: 0 8px 20px rgba(7, 25, 54, 0.18);
     }
 
     .bc-section-navy .bc-kicker {
@@ -920,9 +971,9 @@
     }
 
     .bc-section-head h2 {
-      font-size: clamp(26px, 3.8vw, 40px);
+      font-size: clamp(28px, 4vw, 42px);
       color: var(--navy-deepest);
-      margin: 0 0 14px;
+      margin: 0 0 15px;
       font-weight: 900;
     }
 
@@ -944,21 +995,20 @@
     }
 
     /* ============================================================
-       REDESIGNED BOARDING-PASS EXPRESS ROUTE CARDS
+       POPULAR INTERCITY ROUTE CARDS
        ============================================================ */
     .route-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
     }
 
     .route-card {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(16px);
-      border: 2px solid rgba(255, 255, 255, 0.35);
-      border-left: 6px solid var(--pure-white);
-      border-radius: 30px 12px 30px 12px;
-      padding: 28px 22px;
+      border: 2px solid rgba(255, 255, 255, 0.28);
+      border-radius: 28px;
+      padding: 30px 24px;
       transition: 0.5s var(--spring-easing);
       display: flex;
       flex-direction: column;
@@ -968,7 +1018,8 @@
     .route-card:hover {
       transform: translateY(-12px) scale(1.03);
       background: var(--pure-white);
-      border-color: var(--navy-royal);
+      border-color: var(--pure-white);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
     }
 
     .route-cities {
@@ -978,17 +1029,11 @@
       font-weight: 800;
       font-size: 18px;
       margin-bottom: 14px;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
       color: var(--pure-white);
       transition: 0.3s;
     }
 
-    .route-card:hover .route-cities {
-      color: var(--navy-deepest) !important;
-      border-bottom-color: var(--navy-royal);
-    }
-
+    .route-card:hover .route-cities,
     .route-card:hover .route-desc,
     .route-card:hover .route-price-tag {
       color: var(--navy-deepest) !important;
@@ -996,10 +1041,10 @@
 
     .route-price-tag {
       font-family: 'Cinzel', serif;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: 900;
       color: var(--pure-white);
-      margin: 12px 0 18px;
+      margin: 12px 0 20px;
       transition: 0.3s;
     }
 
@@ -1007,7 +1052,7 @@
       display: block;
       text-align: center;
       padding: 13px;
-      border-radius: 22px 6px 22px 6px;
+      border-radius: 50px;
       background: var(--pure-white);
       color: var(--navy-deepest);
       text-decoration: none;
@@ -1016,15 +1061,17 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: 0.35s;
+      border: 2px solid var(--pure-white);
     }
 
     .route-card:hover .route-btn {
       background: var(--navy-royal);
       color: var(--pure-white);
+      border-color: var(--navy-royal);
     }
 
     /* ============================================================
-       REDESIGNED 4-STEP ROYAL VIP CHAUFFEUR PROTOCOL CARDS
+       4-STEP ROYAL VIP CHAUFFEUR PROTOCOL
        ============================================================ */
     .protocol-grid {
       display: grid;
@@ -1035,9 +1082,8 @@
     .protocol-card {
       background: var(--ice-white);
       border: 2px solid var(--navy-royal);
-      border-top: 7px solid var(--navy-royal);
-      border-radius: 34px 12px 34px 12px;
-      padding: 32px 22px;
+      border-radius: 30px;
+      padding: 34px 24px;
       text-align: center;
       position: relative;
       transition: all 0.5s var(--spring-easing);
@@ -1046,14 +1092,14 @@
     .protocol-card:hover {
       background: var(--navy-deepest);
       color: var(--pure-white);
-      border-top-color: var(--pure-white);
       transform: translateY(-14px) scale(1.03);
+      box-shadow: 0 24px 50px rgba(4, 13, 26, 0.35);
     }
 
     .protocol-step-num {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px 6px 18px 6px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
       background: var(--navy-royal);
       color: var(--pure-white);
       font-family: 'Cinzel', serif;
@@ -1062,19 +1108,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 18px;
+      margin: 0 auto 20px;
       border: 2px solid var(--pure-white);
+      box-shadow: 0 10px 22px rgba(4, 13, 26, 0.25);
       transition: 0.4s var(--spring-easing);
     }
 
     .protocol-card:hover .protocol-step-num {
       background: var(--pure-white);
       color: var(--navy-deepest);
-      transform: rotate(12deg) scale(1.1);
+      transform: scale(1.15) rotate(360deg);
     }
 
     .protocol-card h3 {
-      font-size: 18px;
+      font-size: 19px;
       margin-bottom: 10px;
       font-weight: 800;
     }
@@ -1096,14 +1143,14 @@
     .amenities-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 26px;
     }
 
     .amenity-box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid rgba(255, 255, 255, 0.25);
-      border-radius: 32px 10px 32px 10px;
-      padding: 28px 24px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      border-radius: 28px;
+      padding: 32px 26px;
       display: flex;
       align-items: flex-start;
       gap: 18px;
@@ -1114,35 +1161,37 @@
       background: var(--pure-white);
       color: var(--navy-deepest);
       transform: translateX(8px) translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
     }
 
     .amenity-icon {
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       flex-shrink: 0;
-      border-radius: 18px 6px 18px 6px;
+      border-radius: 18px;
       background: var(--pure-white);
       color: var(--navy-royal);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 23px;
+      font-size: 24px;
       transition: 0.4s;
     }
 
     .amenity-box:hover .amenity-icon {
       background: var(--navy-royal);
       color: var(--pure-white);
+      transform: rotate(-10deg) scale(1.1);
     }
 
     .amenity-box h4 {
-      font-size: 17px;
+      font-size: 18px;
       margin-bottom: 6px;
       font-weight: 800;
     }
 
     .amenity-box p {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--frost-white);
       line-height: 1.6;
       transition: 0.3s;
@@ -1153,12 +1202,12 @@
     }
 
     /* ============================================================
-       FEATURES & REVIEWS REDESIGNED CARDS
+       FEATURES & REVIEWS CARDS
        ============================================================ */
     .bc-feature-grid, .bc-review-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 25px;
     }
 
     .bc-feature-card {
@@ -1167,10 +1216,9 @@
       color: var(--text-dark);
       background: var(--ice-white);
       border: 2px solid var(--navy-royal);
-      border-bottom: 6px solid var(--navy-royal);
-      border-radius: 34px 12px 34px 12px;
-      padding: 30px 22px;
-      min-height: 230px;
+      border-radius: 28px;
+      padding: 32px 24px;
+      min-height: 235px;
       transition: all 0.45s var(--spring-easing);
     }
 
@@ -1178,18 +1226,20 @@
       transform: translateY(-14px) scale(1.03);
       background: var(--navy-deepest);
       color: var(--pure-white);
-      border-bottom-color: var(--pure-white);
+      box-shadow: 0 24px 48px rgba(4, 13, 26, 0.35);
     }
 
     .bc-feature-card h3 {
-      font-size: 18px;
+      font-size: 19px;
       margin-bottom: 10px;
+      transition: 0.3s;
     }
 
     .bc-feature-card p {
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
+      transition: 0.3s;
     }
 
     .bc-feature-card:hover p {
@@ -1197,16 +1247,16 @@
     }
 
     .bc-feature-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px 6px 18px 6px;
+      width: 62px;
+      height: 62px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--navy-royal);
       color: var(--pure-white);
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 25px;
+      margin-bottom: 22px;
       transition: 0.45s var(--spring-easing);
     }
 
@@ -1219,9 +1269,8 @@
     .bc-review-card {
       background: var(--ice-white);
       border: 2px solid var(--navy-royal);
-      border-top: 6px solid var(--navy-royal);
-      border-radius: 34px 12px 34px 12px;
-      padding: 30px 24px;
+      border-radius: 28px;
+      padding: 32px 25px;
       transition: 0.45s var(--spring-easing);
       position: relative;
     }
@@ -1230,6 +1279,7 @@
       transform: translateY(-12px) scale(1.03);
       background: var(--navy-deepest);
       color: var(--pure-white);
+      box-shadow: 0 22px 45px rgba(4, 13, 26, 0.3);
     }
 
     .bc-stars {
@@ -1237,6 +1287,7 @@
       font-size: 18px;
       letter-spacing: 2px;
       margin-bottom: 14px;
+      transition: 0.3s;
     }
 
     .bc-review-card:hover .bc-stars,
@@ -1251,23 +1302,24 @@
        ============================================================ */
     .premium-stats-wrapper {
       background: linear-gradient(135deg, var(--navy-void), var(--navy-royal));
-      border-radius: 48px 18px 48px 18px;
-      padding: 70px 30px;
+      border-radius: 42px;
+      padding: 75px 32px;
       position: relative;
       overflow: hidden;
       border: 3px solid var(--pure-white);
-      outline: 2.5px solid var(--navy-royal);
+      outline: 2px solid var(--navy-royal);
+      box-shadow: var(--shadow-navy-deep);
       text-align: center;
       max-width: 1200px;
-      margin: 55px auto;
+      margin: 60px auto;
     }
 
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      gap: 25px;
       max-width: 1080px;
-      margin: 42px auto 0;
+      margin: 45px auto 0;
       position: relative;
       z-index: 2;
     }
@@ -1275,37 +1327,40 @@
     .stat-glass-card {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 32px 10px 32px 10px;
-      padding: 34px 18px;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      border-radius: 28px;
+      padding: 38px 20px;
       transition: 0.45s var(--spring-easing);
     }
 
     .stat-glass-card:hover {
       background: var(--pure-white);
-      transform: translateY(-12px) scale(1.04);
+      transform: translateY(-14px) scale(1.04);
     }
 
     .stat-icon {
-      font-size: 34px;
+      font-size: 36px;
       color: var(--pure-white);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
+      transition: 0.3s;
     }
 
     .stat-num {
-      font-size: 40px;
+      font-size: 42px;
       font-weight: 900;
       color: var(--pure-white);
       font-family: 'Cinzel', serif;
       margin-bottom: 6px;
+      transition: 0.3s;
     }
 
     .stat-label {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 800;
       color: var(--frost-white);
       text-transform: uppercase;
       letter-spacing: 1.5px;
+      transition: 0.3s;
     }
 
     .stat-glass-card:hover .stat-icon,
@@ -1315,58 +1370,49 @@
     }
 
     /* ============================================================
-       NEW COMPACT 360° MOUNTAIN VIEW + MOVING INNOVA CRYSTA VIDEO POD
+       COMPACT 360° AERIAL DRONE SHOT CAR MOUNTAIN VIDEO POD
        ============================================================ */
-    @keyframes pan360Horizon {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
+    @keyframes droneOrbitMotion {
+      0%   { transform: scale(1.04) translate(0px, 0px); }
+      50%  { transform: scale(1.12) translate(-12px, -6px); }
+      100% { transform: scale(1.04) translate(0px, 0px); }
     }
 
-    @keyframes roadLinesMove {
-      0% { background-position: 0 0; }
-      100% { background-position: -240px 0; }
-    }
-
-    @keyframes innovaDriveBounce {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-4px) rotate(-0.4deg); }
-    }
-
-    @keyframes wheelSpin360 {
+    @keyframes radarSweep {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
 
-    .compact-360-pod-wrapper {
-      max-width: 900px;
+    .drone-360-section-wrapper {
+      max-width: 860px;
       margin: 45px auto;
       padding: 0 18px;
     }
 
-    .compact-360-pod {
-      background: var(--navy-void);
+    .drone-360-card {
+      background: linear-gradient(145deg, var(--navy-void), var(--navy-royal));
       border: 3px solid var(--pure-white);
-      outline: 3px solid var(--navy-royal);
-      border-radius: 38px 16px 38px 16px;
-      padding: 26px;
-      box-shadow: 0 28px 65px rgba(4, 13, 26, 0.35);
+      outline: 2.5px solid var(--navy-royal);
+      border-radius: 38px;
+      padding: 28px;
+      box-shadow: var(--shadow-navy-deep);
       color: var(--pure-white);
     }
 
-    .pod-top-bar {
+    .drone-top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       margin-bottom: 18px;
     }
 
-    .badge-360-live {
+    .drone-live-pill {
       background: var(--pure-white);
       color: var(--navy-deepest);
       padding: 7px 16px;
-      border-radius: 30px;
+      border-radius: 50px;
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 1.5px;
@@ -1376,189 +1422,120 @@
       gap: 8px;
     }
 
-    .viewport-360-window {
+    .drone-video-viewport {
       position: relative;
       width: 100%;
-      height: 295px;
-      border-radius: 26px 10px 26px 10px;
+      height: 310px;
+      border-radius: 28px;
       overflow: hidden;
-      border: 2.5px solid rgba(255, 255, 255, 0.8);
-      background: var(--navy-deepest);
-      cursor: grab;
+      border: 2.5px solid var(--pure-white);
+      background: var(--navy-void);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
     }
 
-    /* 360 Panoramic Mountain Track */
-    .panorama-360-sky {
-      display: flex;
-      width: 200%;
-      height: 76%;
-      animation: pan360Horizon 24s linear infinite;
-    }
-
-    .panorama-360-sky img {
-      width: 25%;
-      height: 100%;
-      object-fit: cover;
-      filter: contrast(1.08) brightness(0.92);
-    }
-
-    /* Short Mountain Video Overlay Layer */
-    .mountain-short-video-layer {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 165px;
-      height: 96px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 2px solid var(--pure-white);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      z-index: 6;
-      background: var(--navy-deepest);
-    }
-
-    .mountain-short-video-layer video {
+    .drone-video-viewport video {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      animation: droneOrbitMotion 14s ease-in-out infinite;
     }
 
-    .video-pip-tag {
+    /* Drone Camera Telemetry Overlay (HUD) */
+    .drone-hud-top-left {
       position: absolute;
-      bottom: 5px;
-      left: 8px;
-      background: rgba(4, 13, 26, 0.85);
+      top: 14px;
+      left: 14px;
+      background: rgba(2, 8, 19, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255, 255, 255, 0.65);
       color: var(--pure-white);
-      font-size: 9px;
-      font-weight: 800;
-      padding: 3px 8px;
-      border-radius: 10px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* 360 Compass HUD Overlay */
-    .compass-hud {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: rgba(4, 13, 26, 0.82);
-      backdrop-filter: blur(8px);
-      border: 1.5px solid rgba(255, 255, 255, 0.55);
-      color: var(--pure-white);
-      padding: 7px 14px;
-      border-radius: 20px;
+      padding: 8px 16px;
+      border-radius: 30px;
       font-size: 11px;
       font-weight: 800;
-      z-index: 6;
+      letter-spacing: 1px;
+      z-index: 4;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    /* Animated Highway Road */
-    .highway-360-track {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 26%;
-      background: linear-gradient(180deg, #071936 0%, #020813 100%);
-      border-top: 3px solid var(--pure-white);
-      display: flex;
+    .drone-hud-radar {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1.5px dashed var(--pure-white);
+      display: inline-flex;
       align-items: center;
-      overflow: hidden;
+      justify-content: center;
+      animation: radarSweep 4s linear infinite;
     }
 
-    .highway-center-stripes {
-      width: 100%;
-      height: 5px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--pure-white) 0px,
-        var(--pure-white) 45px,
-        transparent 45px,
-        transparent 95px
-      );
-      animation: roadLinesMove 0.75s linear infinite;
-    }
-
-    /* Moving Innova Crysta Cruiser Unit */
-    .innova-cruiser-unit {
+    /* Innova Crysta Fleet Badge Inside Drone Video */
+    .drone-crysta-floating-card {
       position: absolute;
       bottom: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 7;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .innova-car-frame {
-      position: relative;
-      width: 225px;
-      height: 92px;
-      border-radius: 22px 28px 14px 14px;
-      background: var(--pure-white);
-      padding: 4px;
-      border: 2.5px solid var(--navy-royal);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
-      animation: innovaDriveBounce 1.2s ease-in-out infinite;
-    }
-
-    .innova-car-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 18px 24px 10px 10px;
-    }
-
-    /* Headlight Beam */
-    .innova-headlight-beam {
-      position: absolute;
-      right: -85px;
-      bottom: 12px;
-      width: 95px;
-      height: 34px;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.65), transparent);
-      clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 70%);
-      pointer-events: none;
-    }
-
-    /* Spinning Wheels */
-    .innova-wheel {
-      position: absolute;
-      bottom: -10px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--navy-void);
-      border: 3px dashed var(--pure-white);
-      box-shadow: 0 0 0 3px var(--navy-royal);
-      animation: wheelSpin360 0.55s linear infinite;
-    }
-
-    .innova-wheel.front { right: 26px; }
-    .innova-wheel.rear { left: 26px; }
-
-    .innova-tag-pill {
-      margin-top: 12px;
-      background: var(--pure-white);
+      left: 14px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
       color: var(--navy-deepest);
-      padding: 4px 14px;
-      border-radius: 20px;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
+      padding: 8px 14px 8px 8px;
+      border-radius: 50px;
+      border: 2px solid var(--navy-royal);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 4;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .drone-crysta-floating-card img {
+      width: 54px;
+      height: 38px;
+      border-radius: 30px;
+      object-fit: cover;
       border: 1.5px solid var(--navy-royal);
     }
 
+    /* Drone Shot Angle Switcher Buttons */
+    .drone-angle-controls {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      display: flex;
+      gap: 8px;
+      z-index: 4;
+    }
+
+    .drone-angle-btn {
+      background: rgba(2, 8, 19, 0.82);
+      color: var(--pure-white);
+      border: 1.5px solid var(--pure-white);
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      transition: 0.3s;
+    }
+
+    .drone-angle-btn.active,
+    .drone-angle-btn:hover {
+      background: var(--pure-white);
+      color: var(--navy-deepest);
+    }
+
     @media (max-width: 600px) {
-      .viewport-360-window { height: 260px; }
-      .innova-car-frame { width: 185px; height: 78px; }
-      .mountain-short-video-layer { width: 125px; height: 74px; }
+      .drone-video-viewport {
+        height: 250px;
+      }
+      .drone-angle-controls {
+        top: 56px;
+        bottom: auto;
+        left: 14px;
+        right: auto;
+      }
     }
 
     /* ============================================================
@@ -1567,23 +1544,23 @@
     .hq-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 32px;
+      gap: 36px;
       align-items: center;
     }
 
     .hq-info-card {
       background: var(--ice-white);
       border: 2px solid var(--navy-royal);
-      border-radius: 34px 12px 34px 12px;
-      padding: 34px 28px;
+      border-radius: 32px;
+      padding: 38px 32px;
     }
 
     .hq-contact-row {
       display: flex;
       align-items: flex-start;
       gap: 16px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
       border-bottom: 1px solid rgba(7, 25, 54, 0.12);
     }
 
@@ -1594,26 +1571,28 @@
     }
 
     .hq-icon-circle {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px 6px 16px 6px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
       background: var(--navy-royal);
       color: var(--pure-white);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
+      font-size: 20px;
       flex-shrink: 0;
     }
 
     .hq-map-showcase {
       background: linear-gradient(145deg, var(--navy-void), var(--navy-royal));
       color: var(--pure-white);
-      border-radius: 34px 12px 34px 12px;
-      padding: 42px 28px;
+      border-radius: 32px;
+      padding: 45px 32px;
       text-align: center;
-      border: 3px solid var(--pure-white);
-      outline: 2px solid var(--navy-royal);
+      border: 3px solid var(--navy-royal);
+      box-shadow: var(--shadow-navy-deep);
+      position: relative;
+      overflow: hidden;
     }
 
     /* ============================================================
@@ -1622,15 +1601,15 @@
     .faq-item {
       background: var(--ice-white);
       border: 2px solid var(--navy-royal);
-      border-radius: 24px 8px 24px 8px;
-      margin-bottom: 14px;
+      border-radius: 24px;
+      margin-bottom: 16px;
       overflow: hidden;
       transition: 0.35s ease;
     }
 
     .faq-question {
       width: 100%;
-      padding: 20px 26px;
+      padding: 22px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1647,7 +1626,7 @@
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      padding: 0 26px;
+      padding: 0 28px;
       color: var(--text-muted);
       font-size: 15px;
       line-height: 1.7;
@@ -1656,11 +1635,12 @@
 
     .faq-item.open {
       background: var(--pure-white);
+      box-shadow: 0 14px 32px rgba(7, 25, 54, 0.12);
     }
 
     .faq-item.open .faq-answer {
       max-height: 240px;
-      padding-bottom: 20px;
+      padding-bottom: 22px;
     }
 
     /* ============================================================
@@ -1689,8 +1669,8 @@
       background: var(--pure-white);
       width: 100%;
       max-width: 490px;
-      border-radius: 36px 14px 36px 14px;
-      padding: 38px 30px;
+      border-radius: 36px;
+      padding: 40px 32px;
       border: 3px solid var(--navy-royal);
       box-shadow: 0 35px 90px rgba(0, 0, 0, 0.6);
       position: relative;
@@ -1704,8 +1684,8 @@
     .bc-footer-new {
       background: var(--navy-void);
       color: var(--frost-white);
-      padding: 80px 25px 35px;
-      margin-top: 65px;
+      padding: 85px 25px 35px;
+      margin-top: 70px;
       border-top: 5px solid var(--pure-white);
       outline: 2px solid var(--navy-royal);
     }
@@ -1715,15 +1695,15 @@
       margin: auto;
       display: grid;
       grid-template-columns: 1.3fr 0.9fr 0.9fr 1.4fr;
-      gap: 38px;
+      gap: 40px;
     }
 
     .bc-footer-new h3 {
       color: var(--pure-white);
       font-size: 18px;
-      margin: 0 0 18px;
+      margin: 0 0 20px;
       border-bottom: 2px solid var(--pure-white);
-      padding-bottom: 8px;
+      padding-bottom: 10px;
       display: inline-block;
     }
 
@@ -1732,7 +1712,7 @@
       color: var(--frost-white);
       text-decoration: none;
       font-size: 14px;
-      margin: 11px 0;
+      margin: 12px 0;
       transition: 0.3s;
       font-weight: 500;
     }
@@ -1744,8 +1724,8 @@
 
     .bc-footer-bottom {
       max-width: 1200px;
-      margin: 45px auto 0;
-      padding-top: 22px;
+      margin: 50px auto 0;
+      padding-top: 25px;
       border-top: 1px solid rgba(255, 255, 255, 0.18);
       text-align: center;
       font-size: 13px;
@@ -1766,8 +1746,8 @@
 
     @media (max-width: 560px) {
       .bc-section {
-        padding: 46px 18px;
-        margin: 28px 12px;
+        padding: 50px 20px;
+        margin: 30px 12px;
       }
       .bc-feature-grid, .bc-review-grid, .stats-grid, .protocol-grid, .bc-footer-grid {
         grid-template-columns: 1fr;
@@ -1778,7 +1758,7 @@
 
 <body>
 
-  <!-- Background Slideshow (All 7 Original Images Preserved) -->
+  <!-- Global Background Slideshow (All 7 Original Images Preserved) -->
   <div class="bg-slideshow">
     <div class="bg-slide active" style="background-image: url('IMG_4500.jpeg');"></div>
     <div class="bg-slide" style="background-image: url('IMG_4502.jpeg');"></div>
@@ -1793,21 +1773,21 @@
   <!-- Loading Screen -->
   <div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--navy-void); display: flex; justify-content: center; align-items: center; z-index: 999999; transition: opacity 0.65s ease, visibility 0.65s ease;">
     <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <div class="anim-up-down" style="position: relative; margin-bottom: 22px; padding: 6px; border-radius: 50%; border: 2px dashed var(--pure-white);">
-        <img src="IMG_5388.jpeg" alt="Khatkar Travel Company" style="width: 110px; height: 110px; object-fit: cover; border-radius: 50%; border: 3px solid var(--pure-white);">
+      <div class="anim-up-down" style="position: relative; margin-bottom: 24px; padding: 6px; border-radius: 50%; border: 2px dashed var(--pure-white);">
+        <img src="IMG_5388.jpeg" alt="Khatkar Travel Company" style="width: 112px; height: 112px; object-fit: cover; border-radius: 50%; border: 3px solid var(--pure-white);">
       </div>
       <div class="watery-text-light" style="font-family: 'Cinzel', serif; font-size: 26px; font-weight: 900; letter-spacing: 3px; margin-bottom: 8px;">KHATKAR TRAVEL COMPANY</div>
-      <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 5px; color: var(--pure-white); font-weight: 800;">Zirakpur • Royal Navy Fleet</div>
+      <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 6px; color: var(--pure-white); font-weight: 800;">Zirakpur • Royal Navy Fleet</div>
     </div>
   </div>
 
   <!-- Floating Royal Navy & White Navbar -->
   <nav>
-    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 14px;">
       <img src="IMG_5388.jpeg" alt="Logo" class="brand-logo-img">
       <div style="display: flex; flex-direction: column;">
-        <span class="watery-text" style="font-size: 17px; font-family: 'Cinzel', serif; line-height: 1.1;">Khatkar Travel Company</span>
-        <span style="font-size: 10px; letter-spacing: 2.2px; color: var(--navy-royal); font-weight: 800;">VIP ROAD • ZIRAKPUR</span>
+        <span class="watery-text" style="font-size: 17.5px; font-family: 'Cinzel', serif; line-height: 1.1;">Khatkar Travel Company</span>
+        <span style="font-size: 10.5px; letter-spacing: 2.5px; color: var(--navy-royal); font-weight: 800;">VIP ROAD • ZIRAKPUR</span>
       </div>
     </a>
 
@@ -1815,147 +1795,166 @@
       <a href="#book">Book Ride</a>
       <a href="#tours">Luxury Tours</a>
       <a href="#fleet">Prestige Fleet</a>
-      <a href="#mountain-360">360° Crysta View</a>
+      <a href="#drone-360">360° Drone Shot</a>
       <a href="#office-location">Zirakpur Office</a>
-      <a href="tel:+917696299855" class="navy-luxury-btn" style="padding: 10px 22px; border-radius: 50px; color: #fff;">
+      <a href="tel:+917696299855" class="navy-luxury-btn" style="padding: 11px 24px; border-radius: 50px; color: #fff;">
         <i class="fas fa-phone-alt" style="margin-right: 6px;"></i> +91 76962 99855
       </a>
     </div>
 
-    <div onclick="openMenu()" style="width: 44px; height: 44px; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; font-size: 18px;">
+    <div onclick="openMenu()" style="width: 46px; height: 46px; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; box-shadow: 0 6px 16px rgba(4, 13, 26, 0.25); transition: 0.3s; font-size: 18px;">
       <i class="fas fa-bars"></i>
     </div>
   </nav>
 
   <!-- ============================================================
-       TOP STAGE: 1. TRANSPARENT BOOKING FORM ON TOP
-                  2. 10 MOVING MOUNTAIN PHOTOS STRIP BELOW FORM
-                  3. KHATKAR TRAVEL COMPANY INTRO BANNER
+       TOP HERO STAGE: TRANSPARENT BOOKING FORM FIRST + 10 MOUNTAIN
+       & SNOW VALLEY PICTURES RUNNING BEHIND IT
        ============================================================ -->
-  <section id="book" class="top-booking-stage popup-reveal">
+  <section id="book" class="hero-mountain-stage popup-reveal">
+    <div class="hero-mountain-frame">
 
-    <!-- 1. Transparent Glass Booking Form right at the top -->
-    <div class="transparent-booking-card two-tone-card popup-card-item from-top">
-      <div class="booking-top-tag">
-        <i class="fas fa-bolt" style="margin-right: 6px;"></i> Khatkar Travel Company • Instant Dispatch
+      <!-- 10 Mountain & Snow Valley Pictures Running Behind Booking Form -->
+      <div class="hero-mountain-bg-slider" id="heroMtnSlider">
+        <div class="hero-mtn-slide active" style="background-image: url('IMG_4748.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_3891.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_3722.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4500.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4502.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4503.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4504.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4505.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4506.jpeg');"></div>
+        <div class="hero-mtn-slide" style="background-image: url('IMG_4507.jpeg');"></div>
       </div>
+      <div class="hero-mtn-tint"></div>
 
-      <div style="margin-bottom: 20px; margin-top: 6px;">
-        <h2 style="font-size: clamp(24px, 3.5vw, 34px); font-weight: 900; color: var(--pure-white); margin: 0; font-family: 'Cinzel', serif;">
-          Reserve Your <span class="watery-text-light">Luxury Chauffeur Cab</span>
-        </h2>
-        <p style="font-size: 13.5px; color: var(--frost-white); margin-top: 6px; font-weight: 600;">
-          Transparent Zero-Surge Pricing • Instant Confirmation on +91 76962 99855
-        </p>
-      </div>
-
-      <div class="trip-toggle-box">
-        <button type="button" class="trip-btn active" data-trip="One Way">One Way</button>
-        <button type="button" class="trip-btn" data-trip="Round Trip">Round Trip</button>
-        <button type="button" class="trip-btn" data-trip="Airport Transfer">Airport</button>
-      </div>
-
-      <form id="bookingForm">
-        <input type="hidden" id="tripTypeInput" name="TripType" value="One Way">
-
-        <div class="transparent-form-grid">
-          <div class="icon-input-wrapper">
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="text" id="pickupInput" name="Pickup" placeholder="Enter Pickup City / Airport" class="transparent-pill-input" required>
+      <div class="hero-stage-grid">
+        <!-- 1. Transparent Glass Booking Form First (Top on Mobile, Left on Desktop) -->
+        <div class="booking-container-transparent two-tone-card popup-card-item from-left">
+          <div class="booking-top-tag anim-up-down">
+            <i class="fas fa-bolt" style="margin-right: 6px;"></i> Instant Dispatch Desk
           </div>
 
-          <div class="icon-input-wrapper">
-            <i class="fas fa-location-arrow"></i>
-            <input type="text" id="dropInput" name="Drop" placeholder="Enter Mountain / Destination City" class="transparent-pill-input" required>
+          <div style="text-align: center; margin-bottom: 22px; margin-top: 6px;">
+            <h2 style="font-size: 27px; font-weight: 900; color: var(--pure-white); margin: 0; font-family: 'Cinzel', serif;">
+              Reserve Your <span class="watery-text-light">Luxury Cab</span>
+            </h2>
+            <p style="font-size: 13.5px; color: var(--frost-white); margin-top: 6px; font-weight: 600;">
+              Instant WhatsApp & Call Confirmation on +91 76962 99855
+            </p>
           </div>
 
-          <div class="icon-input-wrapper">
-            <i class="fas fa-users"></i>
-            <select id="passengersInput" name="Passengers" class="transparent-pill-input" required>
-              <option value="" disabled selected>Select Passengers</option>
-              <option value="1 - 2 Persons">1 - 2 Persons</option>
-              <option value="3 - 4 Persons">3 - 4 Persons</option>
-              <option value="5 - 7 Persons">5 - 7 Persons</option>
-              <option value="8+ Persons">8+ Persons</option>
-            </select>
+          <div class="trip-toggle-box">
+            <button type="button" class="trip-btn active" data-trip="One Way">One Way</button>
+            <button type="button" class="trip-btn" data-trip="Round Trip">Round Trip</button>
+            <button type="button" class="trip-btn" data-trip="Airport Transfer">Airport</button>
           </div>
 
-          <div class="icon-input-wrapper">
-            <i class="fas fa-car"></i>
-            <select id="vehicleInput" name="Vehicle_Type" class="transparent-pill-input" required>
-              <option value="" disabled selected>Select Luxury Vehicle</option>
-              <option value="Sedan (Swift Dzire)">Sedan (Dzire)</option>
-              <option value="SUV (Maruti Ertiga)">SUV (Ertiga)</option>
-              <option value="Hatchback (Toyota Glanza)">Hatchback (Glanza)</option>
-              <option value="MPV (Innova Crysta)">MPV (Crysta)</option>
-              <option value="Force Urbania Traveller">Traveller (Urbania)</option>
-            </select>
-          </div>
+          <form id="bookingForm">
+            <input type="hidden" id="tripTypeInput" name="TripType" value="One Way">
+
+            <div class="icon-input-wrapper">
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" id="pickupInput" name="Pickup" placeholder="Enter Pickup City / Airport" class="premium-pill-input" required>
+            </div>
+
+            <div class="icon-input-wrapper">
+              <i class="fas fa-location-arrow"></i>
+              <input type="text" id="dropInput" name="Drop" placeholder="Enter Snow Valley / Destination City" class="premium-pill-input" required>
+            </div>
+
+            <div class="form-row">
+              <div class="icon-input-wrapper">
+                <i class="fas fa-users"></i>
+                <select id="passengersInput" name="Passengers" class="premium-pill-input" required>
+                  <option value="" disabled selected>Passengers</option>
+                  <option value="1 - 2 Persons">1 - 2 Persons</option>
+                  <option value="3 - 4 Persons">3 - 4 Persons</option>
+                  <option value="5 - 7 Persons">5 - 7 Persons</option>
+                  <option value="8+ Persons">8+ Persons</option>
+                </select>
+              </div>
+              <div class="icon-input-wrapper">
+                <i class="fas fa-car"></i>
+                <select id="vehicleInput" name="Vehicle_Type" class="premium-pill-input" required>
+                  <option value="" disabled selected>Select Car</option>
+                  <option value="Sedan (Swift Dzire)">Sedan (Dzire)</option>
+                  <option value="SUV (Maruti Ertiga)">SUV (Ertiga)</option>
+                  <option value="Hatchback (Toyota Glanza)">Hatchback (Glanza)</option>
+                  <option value="MPV (Innova Crysta)">MPV (Crysta)</option>
+                  <option value="Force Urbania Traveller">Traveller (Urbania)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="icon-input-wrapper" style="margin-bottom: 22px;">
+              <i class="fas fa-phone-alt"></i>
+              <input type="tel" id="phoneInput" name="Phone" placeholder="Enter Your Mobile Number" class="premium-pill-input" required>
+            </div>
+
+            <button type="submit" class="navy-luxury-btn" style="width: 100%; padding: 18px; border-radius: 50px; font-size: 15.5px; font-weight: 900; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; background: var(--pure-white); color: var(--navy-deepest);">
+              Confirm Booking <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+            </button>
+          </form>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;" class="transparent-form-grid">
-          <div class="icon-input-wrapper">
-            <i class="fas fa-phone-alt"></i>
-            <input type="tel" id="phoneInput" name="Phone" placeholder="Enter Your Mobile Number" class="transparent-pill-input" required>
+        <!-- 2. Khatkar Travel Company Hero Intro Column -->
+        <div class="popup-card-item from-right">
+          <div class="hero-badge anim-left-right">
+            <i class="fas fa-crown"></i> #1 Executive Chauffeur Service in Zirakpur & Tricity
+          </div>
+          <h1 class="hero-title">
+            Travel Across Snow Valleys with <span class="watery-text-light">Khatkar Travel Company.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Welcome to <strong>Khatkar Travel Company</strong>. Experience spotless luxury sedans, SUVs, Innova Crysta, and Force Urbania cruisers driven by verified, uniformed hill chauffeurs with zero surge pricing.
+          </p>
+
+          <div class="hero-trust-pills">
+            <div class="trust-pill">
+              <i class="fas fa-shield-halved"></i> 100% Verified Chauffeurs
+            </div>
+            <div class="trust-pill">
+              <i class="fas fa-clock"></i> 24/7 On-Time Airport Pickup
+            </div>
+            <div class="trust-pill">
+              <i class="fas fa-tags"></i> Zero-Surge Transparent Fares
+            </div>
           </div>
 
-          <button type="submit" class="navy-luxury-btn" style="width: 100%; padding: 16px; border-radius: 50px; font-size: 15px; font-weight: 900; cursor: pointer; letter-spacing: 2px; text-transform: uppercase; background: var(--pure-white); color: var(--navy-deepest);">
-            Confirm Booking <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-          </button>
+          <div class="hero-office-strip">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--pure-white); color: var(--navy-deepest); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px;">
+              <i class="fas fa-map-location-dot"></i>
+            </div>
+            <div style="font-size: 13px; line-height: 1.5;">
+              <strong style="letter-spacing: 1px; text-transform: uppercase; display: block;">Head Office: VIP Road, Zirakpur</strong>
+              <span>Office no 08, VIP Road, Opp. Rail Vihar, Zirakpur, Punjab 140603</span>
+            </div>
+          </div>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <!-- 2. 10 Moving Destination Mountain Photos Filmstrip Directly Below Booking Form -->
-    <div class="mountain-filmstrip-box popup-card-item from-bottom">
-      <div class="mountain-filmstrip-header">
-        <span><i class="fas fa-mountain"></i> 10 Live Himalayan & Mountain Destinations</span>
-        <span>Khatkar Travel Company • 24/7 Hill Expeditions</span>
+      <!-- 10 Mountain & Snow Valley Live Background Switcher Strip -->
+      <div class="hero-mtn-thumb-bar">
+        <span style="color: var(--pure-white); font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">
+          <i class="fas fa-mountain"></i> Live Snow Valley & Mountain Backdrop (10 Views):
+        </span>
+        <div class="mtn-thumb-list" id="heroThumbDots">
+          <div class="mtn-thumb-dot active" onclick="setHeroMountain(0)"><img src="IMG_4748.jpeg" alt="M1"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(1)"><img src="IMG_3891.jpeg" alt="M2"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(2)"><img src="IMG_3722.jpeg" alt="M3"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(3)"><img src="IMG_4500.jpeg" alt="M4"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(4)"><img src="IMG_4502.jpeg" alt="M5"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(5)"><img src="IMG_4503.jpeg" alt="M6"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(6)"><img src="IMG_4504.jpeg" alt="M7"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(7)"><img src="IMG_4505.jpeg" alt="M8"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(8)"><img src="IMG_4506.jpeg" alt="M9"></div>
+          <div class="mtn-thumb-dot" onclick="setHeroMountain(9)"><img src="IMG_4507.jpeg" alt="M10"></div>
+        </div>
       </div>
-      <div class="mountain-track">
-        <!-- 10 Mountain Destination Photos (Set 1) -->
-        <div class="mountain-photo-pill"><img src="IMG_4500.jpeg" alt="Mountain 1"><span>01 • Shimla Hills</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4502.jpeg" alt="Mountain 2"><span>02 • Manali Snow</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4503.jpeg" alt="Mountain 3"><span>03 • Spiti Valley</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4504.jpeg" alt="Mountain 4"><span>04 • Rohtang Pass</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4505.jpeg" alt="Mountain 5"><span>05 • Dalhousie Pines</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4506.jpeg" alt="Mountain 6"><span>06 • Mussoorie Ridge</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4507.jpeg" alt="Mountain 7"><span>07 • Leh Ladakh</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4748.jpeg" alt="Mountain 8"><span>08 • Solang Valley</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_3891.jpeg" alt="Mountain 9"><span>09 • Khardung La</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_3722.jpeg" alt="Mountain 10"><span>10 • Atal Tunnel</span></div>
-        <!-- Duplicated Set for Seamless Infinite Loop -->
-        <div class="mountain-photo-pill"><img src="IMG_4500.jpeg" alt="Mountain 1"><span>01 • Shimla Hills</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4502.jpeg" alt="Mountain 2"><span>02 • Manali Snow</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4503.jpeg" alt="Mountain 3"><span>03 • Spiti Valley</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4504.jpeg" alt="Mountain 4"><span>04 • Rohtang Pass</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4505.jpeg" alt="Mountain 5"><span>05 • Dalhousie Pines</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4506.jpeg" alt="Mountain 6"><span>06 • Mussoorie Ridge</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4507.jpeg" alt="Mountain 7"><span>07 • Leh Ladakh</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_4748.jpeg" alt="Mountain 8"><span>08 • Solang Valley</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_3891.jpeg" alt="Mountain 9"><span>09 • Khardung La</span></div>
-        <div class="mountain-photo-pill"><img src="IMG_3722.jpeg" alt="Mountain 10"><span>10 • Atal Tunnel</span></div>
-      </div>
-    </div>
 
-    <!-- 3. Khatkar Travel Company Hero Intro Card -->
-    <div class="hero-intro-banner popup-card-item from-bottom">
-      <div class="hero-badge">
-        <i class="fas fa-crown"></i> #1 Executive Chauffeur Service in Tricity
-      </div>
-      <h1 class="hero-title">
-        Travel Across North India with <span class="watery-text">Khatkar Travel Company</span>
-      </h1>
-      <p style="font-size: 16px; color: var(--text-muted); max-width: 760px; line-height: 1.7; font-weight: 500;">
-        Experience spotless luxury sedans, SUVs, Innova Crysta, and Force Urbania cruisers driven by verified, uniformed hill chauffeurs. Headquartered at <strong>Office no 08, VIP Road, Opposite Rail Vihar, Zirakpur, Punjab 140603</strong>.
-      </p>
-      <div class="hero-trust-pills">
-        <div class="trust-pill"><i class="fas fa-shield-halved"></i> 100% Verified Chauffeurs</div>
-        <div class="trust-pill"><i class="fas fa-clock"></i> 24/7 On-Time Airport Pickup</div>
-        <div class="trust-pill"><i class="fas fa-location-dot"></i> VIP Road, Opp. Rail Vihar, Zirakpur</div>
-      </div>
     </div>
-
   </section>
 
   <!-- DUAL-DIRECTION LEFT-RIGHT & RIGHT-LEFT LUXURY RIBBON -->
@@ -1986,278 +1985,266 @@
 
   <!-- Floating Contact Buttons (WhatsApp, Google Maps & Call) -->
   <div style="position: fixed; bottom: 26px; right: 22px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
-    <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" title="Locate Khatkar Travel Company on Google Maps" style="width: 54px; height: 54px; background: var(--pure-white); color: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 28px rgba(4,13,26,0.3); text-decoration: none; border: 2.5px solid var(--navy-royal);">
-      <i class="fas fa-location-dot" style="font-size: 22px;"></i>
+    <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" title="Locate Khatkar Travel Company on Google Maps" style="width: 56px; height: 56px; background: var(--pure-white); color: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 28px rgba(4,13,26,0.3); text-decoration: none; transition: 0.35s var(--spring-easing); border: 2.5px solid var(--navy-royal);" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fas fa-location-dot" style="font-size: 24px;"></i>
     </a>
-    <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20a%20premium%20taxi." target="_blank" rel="noopener" title="Chat on WhatsApp" style="width: 56px; height: 56px; background: var(--navy-deepest); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(4,13,26,0.45); text-decoration: none; border: 2.5px solid var(--pure-white);">
-      <i class="fab fa-whatsapp" style="color: white; font-size: 28px;"></i>
+    <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20a%20premium%20taxi." target="_blank" rel="noopener" title="Chat on WhatsApp" style="width: 58px; height: 58px; background: var(--navy-deepest); border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(4,13,26,0.45); text-decoration: none; transition: 0.35s var(--spring-easing); border: 2.5px solid var(--pure-white);" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">
+      <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
     </a>
-    <a href="tel:+917696299855" class="navy-luxury-btn" title="Call +91 76962 99855" style="width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; border: 2.5px solid #fff; animation: pulseNavyRing 2.5s infinite;">
-      <i class="fas fa-phone-alt" style="color: white; font-size: 21px;"></i>
+    <a href="tel:+917696299855" class="navy-luxury-btn" title="Call +91 76962 99855" style="width: 58px; height: 58px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; border: 2.5px solid #fff; animation: pulseNavyRing 2.5s infinite;">
+      <i class="fas fa-phone-alt" style="color: white; font-size: 22px;"></i>
     </a>
   </div>
 
-  <!-- Redesigned Trending Destinations (All 9 Original Destinations Preserved) -->
-  <section class="popup-reveal" style="padding: 50px 20px; text-align: center; max-width: 1260px; margin: 0 auto;">
+  <!-- Round Auto-Sliding Trending Locations (All 9 Original Destinations Preserved) -->
+  <section class="popup-reveal" style="padding: 55px 20px; text-align: center; max-width: 1260px; margin: 0 auto;">
     <span class="bc-kicker">North India Gems</span>
-    <h2 style="font-size: 38px; margin-bottom: 10px; font-family: 'Cinzel', serif; font-weight: 900;">
+    <h2 style="font-size: 38px; margin-bottom: 12px; font-family: 'Cinzel', serif; font-weight: 900;">
       Trending <span class="watery-text">Destinations</span>
     </h2>
-    <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 24px; font-weight: 500;">Tap any destination shield card to explore curated sightseeing packages.</p>
+    <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 28px; font-weight: 500;">Tap any destination circle to explore curated sightseeing packages.</p>
 
     <div id="scrollContainer" class="trending-wrapper">
       <a href="Shimla.html?place=Shimla" class="trending-circle-card popup-card-item from-left">
         <div class="trending-circle-img"><img src="3F718C1D-11EE-4842-AD29-6EA4CF1A3087.jpeg" alt="Shimla"></div>
-        <div class="trending-title-label">Shimla</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Shimla</div>
       </a>
       <a href="Manali.html?place=Manali" class="trending-circle-card popup-card-item from-bottom">
         <div class="trending-circle-img"><img src="IMG_3722.jpeg" alt="Manali"></div>
-        <div class="trending-title-label">Manali</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Manali</div>
       </a>
       <a href="Spitivalley.html?place=SpitiValley" class="trending-circle-card popup-card-item from-top">
         <div class="trending-circle-img"><img src="IMG_3891.jpeg" alt="Spiti Valley"></div>
-        <div class="trending-title-label">Spiti Valley</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Spiti Valley</div>
       </a>
       <a href="Dalhousie.html?place=Dalhousie" class="trending-circle-card popup-card-item from-bottom">
         <div class="trending-circle-img"><img src="IMG_3731.jpeg" alt="Dalhousie"></div>
-        <div class="trending-title-label">Dalhousie</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Dalhousie</div>
       </a>
       <a href="Dehradun.html?place=Dehradun" class="trending-circle-card popup-card-item from-top">
         <div class="trending-circle-img"><img src="BD266B34-FEC8-43E3-B520-A0025A333629.jpeg" alt="Dehradun"></div>
-        <div class="trending-title-label">Dehradun</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Dehradun</div>
       </a>
       <a href="Delhi.html?place=Delhi" class="trending-circle-card popup-card-item from-bottom">
         <div class="trending-circle-img"><img src="IMG_3894.jpeg" alt="Delhi"></div>
-        <div class="trending-title-label">Delhi</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Delhi</div>
       </a>
       <a href="Amritsar.html?place=Amritsar" class="trending-circle-card popup-card-item from-top">
         <div class="trending-circle-img"><img src="IMG_3895.jpeg" alt="Amritsar"></div>
-        <div class="trending-title-label">Amritsar</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Amritsar</div>
       </a>
       <a href="Mussoorie.html?place=Mussoorie" class="trending-circle-card popup-card-item from-bottom">
         <div class="trending-circle-img"><img src="IMG_4538.jpeg" alt="Mussoorie"></div>
-        <div class="trending-title-label">Mussoorie</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Mussoorie</div>
       </a>
       <a href="Jaipur.html?place=Jaipur" class="trending-circle-card popup-card-item from-right">
         <div class="trending-circle-img"><img src="IMG_3889.jpeg" alt="Jaipur"></div>
-        <div class="trending-title-label">Jaipur</div>
+        <div style="margin-top: 16px; font-weight: 800; color: var(--navy-deepest); font-size: 16px;">Jaipur</div>
       </a>
     </div>
 
-    <div style="display: flex; justify-content: center; gap: 18px; margin-top: 18px;">
-      <button onclick="scrollLeftBtn()" style="background: var(--pure-white); border: 2px solid var(--navy-royal); color: var(--navy-royal); width: 48px; height: 48px; border-radius: 16px 6px 16px 6px; cursor: pointer; font-size: 17px;"><i class="fas fa-arrow-left"></i></button>
-      <button onclick="scrollRightBtn()" style="background: var(--navy-royal); border: 2px solid var(--navy-royal); color: var(--pure-white); width: 48px; height: 48px; border-radius: 16px 6px 16px 6px; cursor: pointer; font-size: 17px;"><i class="fas fa-arrow-right"></i></button>
+    <div style="display: flex; justify-content: center; gap: 18px; margin-top: 22px;">
+      <button onclick="scrollLeftBtn()" style="background: var(--pure-white); border: 2px solid var(--navy-royal); color: var(--navy-royal); width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: 0.3s; font-size: 17px;"><i class="fas fa-arrow-left"></i></button>
+      <button onclick="scrollRightBtn()" style="background: var(--navy-royal); border: 2px solid var(--navy-royal); color: var(--pure-white); width: 50px; height: 50px; border-radius: 50%; cursor: pointer; transition: 0.3s; font-size: 17px;"><i class="fas fa-arrow-right"></i></button>
     </div>
   </section>
 
-  <!-- AMAZING TOUR PACKAGES (Redesigned Double-Frame Architectural Cards) -->
-  <section class="popup-reveal" id="tours" style="padding: 55px 20px; text-align: center; max-width: 1260px; margin: 0 auto;">
-    <div style="margin-bottom: 48px;">
-      <span class="bc-kicker">Khatkar Travel Company Specials</span>
+  <!-- AMAZING TOUR PACKAGES (Classic Luxury Rounded Cards + Quick-Preview Popup) -->
+  <section class="popup-reveal" id="tours" style="padding: 60px 20px; text-align: center; max-width: 1260px; margin: 0 auto;">
+    <div style="margin-bottom: 50px;">
+      <span class="bc-kicker">Discover Magical Destinations</span>
       <h2 style="font-size: 40px; font-weight: 900; margin: 10px 0; font-family: 'Cinzel', serif;">
         Amazing <span class="watery-text">Tour Packages</span>
       </h2>
       <p style="color: var(--text-muted); font-size: 16px; font-weight: 500;">Click any card for full itinerary or tap the <i class="fas fa-expand" style="color: var(--navy-royal);"></i> icon for an instant popup preview.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; text-align: left;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; text-align: left;">
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-left">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">5 Days / 4 Nights</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Shimla & Manali Royal Escape', 'Snow-capped Himalayan peaks, Mall Road strolls, Solang Valley adventure & private AC cab with Khatkar Travel Company.', '4 Nights / 5 Days', 'IMG_4748.jpeg', 'tour-details.html?tour=shimla-manali')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=shimla-manali" style="display:block; height:100%; text-decoration:none;">
-            <img src="IMG_4748.jpeg" alt="Shimla & Manali">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Shimla & Manali</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">Snow-capped peaks and vibrant valleys.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">5 Days / 4 Nights</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Shimla & Manali Royal Escape', 'Snow-capped Himalayan peaks, Mall Road strolls, Solang Valley adventure & private AC cab with Khatkar Travel Company.', '4 Nights / 5 Days', 'IMG_4748.jpeg', 'tour-details.html?tour=shimla-manali')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=shimla-manali" style="display:block; height:100%; text-decoration:none;">
+          <img src="IMG_4748.jpeg" alt="Shimla & Manali">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Shimla & Manali</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">Snow-capped peaks and vibrant valleys.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-bottom">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">Sacred Yatra</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Mata Vaishno Devi Darshan', 'Peaceful and comfortable family pilgrimage from Chandigarh/Zirakpur right to Katra base camp.', '2 Nights / 3 Days', 'IMG_4538.jpeg', 'tour-details.html?tour=vaishnodevi')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=vaishnodevi" style="display:block; height:100%; text-decoration:none;">
-            <img src="IMG_4538.jpeg" alt="Vaishno Devi Yatra">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Vaishno Devi Yatra</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">A sacred and peaceful divine journey.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">Sacred Yatra</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Mata Vaishno Devi Darshan', 'Peaceful and comfortable family pilgrimage from Chandigarh/Zirakpur right to Katra base camp.', '2 Nights / 3 Days', 'IMG_4538.jpeg', 'tour-details.html?tour=vaishnodevi')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=vaishnodevi" style="display:block; height:100%; text-decoration:none;">
+          <img src="IMG_4538.jpeg" alt="Vaishno Devi Yatra">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Vaishno Devi Yatra</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">A sacred and peaceful divine journey.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-right">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">Heritage Tour</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Amritsar & Wagah Border', 'Darshan at Sri Harmandir Sahib (Golden Temple), Jallianwala Bagh & high-energy Wagah Border retreat ceremony.', '1 Night / 2 Days', 'IMG_4539.jpeg', 'tour-details.html?tour=amritsar-wagah')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=amritsar-wagah" style="display:block; height:100%; text-decoration:none;">
-            <img src="IMG_4539.jpeg" alt="Amritsar & Wagah Border">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Amritsar & Wagah</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">Golden Temple and patriotic retreat.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">Heritage Tour</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Amritsar & Wagah Border', 'Darshan at Sri Harmandir Sahib (Golden Temple), Jallianwala Bagh & high-energy Wagah Border retreat ceremony.', '1 Night / 2 Days', 'IMG_4539.jpeg', 'tour-details.html?tour=amritsar-wagah')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=amritsar-wagah" style="display:block; height:100%; text-decoration:none;">
+          <img src="IMG_4539.jpeg" alt="Amritsar & Wagah Border">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Amritsar & Wagah</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">Golden Temple and patriotic retreat.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-left">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">Spiritual Quest</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Char Dham Yatra Luxury Package', 'Yamunotri, Gangotri, Kedarnath & Badrinath with experienced hill drivers and luxury SUVs/Urbania.', '9 Nights / 10 Days', 'BD266B34-FEC8-43E3-B520-A0025A333629.jpeg', 'tour-details.html?tour=chardham')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=chardham" style="display:block; height:100%; text-decoration:none;">
-            <img src="BD266B34-FEC8-43E3-B520-A0025A333629.jpeg" alt="Char Dham Yatra">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Char Dham Yatra</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">Spiritual quest across holy shrines.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">Spiritual Quest</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Char Dham Yatra Luxury Package', 'Yamunotri, Gangotri, Kedarnath & Badrinath with experienced hill drivers and luxury SUVs/Urbania.', '9 Nights / 10 Days', 'BD266B34-FEC8-43E3-B520-A0025A333629.jpeg', 'tour-details.html?tour=chardham')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=chardham" style="display:block; height:100%; text-decoration:none;">
+          <img src="BD266B34-FEC8-43E3-B520-A0025A333629.jpeg" alt="Char Dham Yatra">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Char Dham Yatra</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">Spiritual quest across holy shrines.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-bottom">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">Divine Braj</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Vrindavan & Mathura Tour', 'Prem Mandir, Banke Bihari Ji, ISKCON & Shri Krishna Janmabhoomi darshan in complete comfort.', '2 Nights / 3 Days', 'IMG_4537.jpeg', 'tour-details.html?tour=vrindavan-mathura')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=vrindavan-mathura" style="display:block; height:100%; text-decoration:none;">
-            <img src="IMG_4537.jpeg" alt="Vrindavan & Mathura">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Vrindavan & Mathura</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">Birthplace of Lord Krishna.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">Divine Braj</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Vrindavan & Mathura Tour', 'Prem Mandir, Banke Bihari Ji, ISKCON & Shri Krishna Janmabhoomi darshan in complete comfort.', '2 Nights / 3 Days', 'IMG_4537.jpeg', 'tour-details.html?tour=vrindavan-mathura')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=vrindavan-mathura" style="display:block; height:100%; text-decoration:none;">
+          <img src="IMG_4537.jpeg" alt="Vrindavan & Mathura">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Vrindavan & Mathura</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">Birthplace of Lord Krishna.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
       <div class="luxury-tour-card two-tone-card popup-card-item from-right">
-        <div class="luxury-tour-inner">
-          <span class="tour-badge-top">Expedition</span>
-          <button class="tour-quick-btn" onclick="openTourPopup('Leh Ladakh Royal Adventure', 'Khardung La, Pangong Lake, Nubra Valley & Magnetic Hill in powerful SUVs.', '6 Nights / 7 Days', 'IMG_3891.jpeg', 'tour-details.html?tour=leh-ladakh')" title="Quick Preview"><i class="fas fa-expand"></i></button>
-          <a href="tour-details.html?tour=leh-ladakh" style="display:block; height:100%; text-decoration:none;">
-            <img src="IMG_3891.jpeg" alt="Leh Ladakh Adventure">
-            <div class="luxury-tour-overlay">
-              <h3 class="watery-text-light" style="font-size: 23px; margin: 0 0 6px 0;">Leh Ladakh Adventure</h3>
-              <p style="font-size: 13.5px; color: var(--frost-white); margin-bottom: 12px;">High passes and crystal blue lakes.</p>
-              <span style="color: var(--pure-white); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
-            </div>
-          </a>
-        </div>
+        <span class="tour-badge-top">Expedition</span>
+        <button class="tour-quick-btn" onclick="openTourPopup('Leh Ladakh Royal Adventure', 'Khardung La, Pangong Lake, Nubra Valley & Magnetic Hill in powerful SUVs.', '6 Nights / 7 Days', 'IMG_3891.jpeg', 'tour-details.html?tour=leh-ladakh')" title="Quick Preview"><i class="fas fa-expand"></i></button>
+        <a href="tour-details.html?tour=leh-ladakh" style="display:block; height:100%; text-decoration:none;">
+          <img src="IMG_3891.jpeg" alt="Leh Ladakh Adventure">
+          <div class="luxury-tour-overlay">
+            <h3 class="watery-text-light" style="font-size: 25px; margin: 0 0 6px 0;">Leh Ladakh Adventure</h3>
+            <p style="font-size: 14px; color: var(--frost-white); margin-bottom: 16px;">High passes and crystal blue lakes.</p>
+            <span style="color: var(--pure-white); font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--pure-white); padding-bottom: 4px;">View Full Itinerary <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
       </div>
 
     </div>
 
-    <div style="margin-top: 50px;">
-      <a href="all-tours.html" class="navy-luxury-btn" style="text-decoration: none; padding: 19px 44px; border-radius: 30px 10px 30px 10px; font-size: 15px; font-weight: 800; display: inline-flex; align-items: center; gap: 12px; text-transform: uppercase; letter-spacing: 1.5px;">
+    <div style="margin-top: 55px;">
+      <a href="all-tours.html" class="navy-luxury-btn" style="text-decoration: none; padding: 20px 48px; border-radius: 50px; font-size: 16px; font-weight: 800; display: inline-flex; align-items: center; gap: 12px; text-transform: uppercase; letter-spacing: 1.5px;">
         View All Tours <span>➔</span>
       </a>
     </div>
   </section>
 
-  <!-- VEHICLE SLIDER (All 5 Original Vehicles Preserved with Redesigned Frame) -->
-  <section id="fleet" class="popup-reveal" style="width: 100%; max-width: 530px; margin: 55px auto; text-align: center; padding: 0 20px;">
+  <!-- VEHICLE SLIDER (A to Z ALL 5 Original Vehicles Preserved) -->
+  <section id="fleet" class="popup-reveal" style="width: 100%; max-width: 530px; margin: 60px auto; text-align: center; padding: 0 20px;">
     <span class="bc-kicker">KHATKAR TRAVEL COMPANY FLEET</span>
     <h2 style="font-size: 36px; font-weight: 900; margin: 0 0 12px 0; font-family: 'Cinzel', serif;">
       Travel in <span class="watery-text">Cinematic Luxury</span>
     </h2>
-    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 28px; font-weight: 500;">Choose from our spotless range of chauffeur-driven vehicles</p>
+    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px; font-weight: 500;">Choose from our spotless range of chauffeur-driven vehicles</p>
 
-    <div class="two-tone-card" style="position: relative; width: 100%; height: 530px; overflow: hidden; border-radius: 44px 16px 44px 16px; box-shadow: 0 32px 75px rgba(4, 13, 26, 0.24); border: 3px solid var(--navy-royal); background: var(--pure-white);">
+    <div class="two-tone-card" style="position: relative; width: 100%; height: 530px; overflow: hidden; border-radius: 40px; box-shadow: 0 32px 75px rgba(4, 13, 26, 0.24); border: 3px solid var(--navy-royal); background: var(--pure-white);">
       <div id="sliderTrack" style="display: flex; transition: transform 0.65s var(--spring-easing); height: 100%; width: 100%;">
 
         <!-- Vehicle 1: Sedan Swift Dzire -->
         <div style="min-width: 100%; height: 100%; box-sizing: border-box; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="width: 100%; height: 235px; border-radius: 30px 10px 30px 10px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5788.jpeg" alt="Swift Dzire" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="width: 100%; height: 235px; border-radius: 26px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5788.jpeg" alt="Swift Dzire" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div style="text-align: left; padding: 10px 0;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <h3 style="font-size: 25px; font-weight: 900; color: var(--navy-deepest); margin: 0;">Sedan</h3>
-              <span style="background: var(--navy-royal); color: #fff; padding: 6px 16px; border-radius: 16px 4px 16px 4px; font-size: 11px; font-weight: 800;">MOST POPULAR</span>
+              <span style="background: var(--navy-royal); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 800;">MOST POPULAR</span>
             </div>
             <p class="watery-text" style="font-size: 19px; margin: 4px 0 16px 0;">Swift Dzire</p>
             <div style="display: flex; gap: 10px; margin-bottom: 22px;">
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Sedan%20Swift%20Dzire" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 26px 8px 26px 8px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Sedan%20Swift%20Dzire" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
         <!-- Vehicle 2: SUV Maruti Ertiga -->
         <div style="min-width: 100%; height: 100%; box-sizing: border-box; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="width: 100%; height: 235px; border-radius: 30px 10px 30px 10px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5789.jpeg" alt="Maruti Ertiga" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="width: 100%; height: 235px; border-radius: 26px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5789.jpeg" alt="Maruti Ertiga" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div style="text-align: left; padding: 10px 0;">
             <h3 style="font-size: 25px; font-weight: 900; color: var(--navy-deepest); margin: 0;">SUV</h3>
             <p class="watery-text" style="font-size: 19px; margin: 4px 0 16px 0;">Maruti Ertiga</p>
             <div style="display: flex; gap: 10px; margin-bottom: 22px;">
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 6+1 Seats</span>
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 6+1 Seats</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20SUV%20Maruti%20Ertiga" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 26px 8px 26px 8px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20SUV%20Maruti%20Ertiga" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
         <!-- Vehicle 3: Hatchback Toyota Glanza -->
         <div style="min-width: 100%; height: 100%; box-sizing: border-box; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="width: 100%; height: 235px; border-radius: 30px 10px 30px 10px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5790.jpeg" alt="Toyota Glanza" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="width: 100%; height: 235px; border-radius: 26px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5790.jpeg" alt="Toyota Glanza" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div style="text-align: left; padding: 10px 0;">
             <h3 style="font-size: 25px; font-weight: 900; color: var(--navy-deepest); margin: 0;">Hatchback</h3>
             <p class="watery-text" style="font-size: 19px; margin: 4px 0 16px 0;">Toyota Glanza</p>
             <div style="display: flex; gap: 10px; margin-bottom: 22px;">
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 4+1 Seats</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Hatchback%20Toyota%20Glanza" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 26px 8px 26px 8px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Hatchback%20Toyota%20Glanza" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
         <!-- Vehicle 4: MPV Innova Crysta -->
         <div style="min-width: 100%; height: 100%; box-sizing: border-box; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="width: 100%; height: 235px; border-radius: 30px 10px 30px 10px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5791.jpeg" alt="Innova Crysta" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="width: 100%; height: 235px; border-radius: 26px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5791.jpeg" alt="Innova Crysta" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div style="text-align: left; padding: 10px 0;">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <h3 style="font-size: 25px; font-weight: 900; color: var(--navy-deepest); margin: 0;">MPV</h3>
-              <span style="background: var(--navy-deepest); color: var(--pure-white); padding: 6px 16px; border-radius: 16px 4px 16px 4px; font-size: 11px; font-weight: 800;">EXECUTIVE VIP</span>
+              <span style="background: var(--navy-deepest); color: var(--pure-white); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 800;">EXECUTIVE VIP</span>
             </div>
             <p class="watery-text" style="font-size: 19px; margin: 4px 0 16px 0;">Innova Crysta</p>
             <div style="display: flex; gap: 10px; margin-bottom: 22px;">
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 7+1 Seats</span>
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-user-friends"></i> 7+1 Seats</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20MPV%20Innova%20Crysta" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 26px 8px 26px 8px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20MPV%20Innova%20Crysta" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
         <!-- Vehicle 5: Tempo Traveller Urbania -->
         <div style="min-width: 100%; height: 100%; box-sizing: border-box; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="width: 100%; height: 235px; border-radius: 30px 10px 30px 10px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5998.jpeg" alt="Force Urbania" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="width: 100%; height: 235px; border-radius: 26px; overflow: hidden; border: 2px solid var(--navy-royal);"><img src="IMG_5998.jpeg" alt="Force Urbania" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div style="text-align: left; padding: 10px 0;">
             <h3 style="font-size: 25px; font-weight: 900; color: var(--navy-deepest); margin: 0;">Tempo Traveller</h3>
             <p class="watery-text" style="font-size: 19px; margin: 4px 0 16px 0;">Force Urbania</p>
             <div style="display: flex; gap: 10px; margin-bottom: 22px;">
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-couch"></i> Pushback Seats</span>
-              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 16px 4px 16px 4px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-couch"></i> Pushback Seats</span>
+              <span style="background: var(--ice-white); color: var(--navy-royal); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; border: 1.5px solid var(--navy-royal);"><i class="fas fa-snowflake"></i> Fully AC</span>
             </div>
-            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Tempo%20Traveller%20Force%20Urbania" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 26px 8px 26px 8px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
+            <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Tempo%20Traveller%20Force%20Urbania" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">Select Vehicle</a>
           </div>
         </div>
 
       </div>
     </div>
 
-    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 24px;">
-      <button onclick="moveVehicleSlide(-1)" style="background: var(--pure-white); border: 2.5px solid var(--navy-royal); border-radius: 16px 6px 16px 6px; width: 50px; height: 50px; color: var(--navy-royal); font-size: 18px; cursor: pointer;"><i class="fas fa-chevron-left"></i></button>
-      <button onclick="moveVehicleSlide(1)" style="background: var(--navy-royal); border: 2.5px solid var(--navy-royal); border-radius: 16px 6px 16px 6px; width: 50px; height: 50px; color: var(--pure-white); font-size: 18px; cursor: pointer;"><i class="fas fa-chevron-right"></i></button>
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 26px;">
+      <button onclick="moveVehicleSlide(-1)" style="background: var(--pure-white); border: 2.5px solid var(--navy-royal); border-radius: 50%; width: 52px; height: 52px; color: var(--navy-royal); font-size: 18px; cursor: pointer; transition: 0.3s;"><i class="fas fa-chevron-left"></i></button>
+      <button onclick="moveVehicleSlide(1)" style="background: var(--navy-royal); border: 2.5px solid var(--navy-royal); border-radius: 50%; width: 52px; height: 52px; color: var(--pure-white); font-size: 18px; cursor: pointer; transition: 0.3s;"><i class="fas fa-chevron-right"></i></button>
     </div>
   </section>
 
-  <!-- POPULAR EXPRESS ROUTES (Redesigned Boarding-Pass Cards) -->
+  <!-- POPULAR EXPRESS ROUTES -->
   <section class="bc-section bc-section-navy popup-reveal">
     <div class="bc-section-head">
       <span class="bc-kicker">Direct Highway Corridors</span>
@@ -2417,32 +2404,32 @@
   <!-- Travel Services Section (One Way / Round Trip / Outstation) -->
   <section class="popup-reveal" style="padding: 40px 20px; text-align: center; max-width: 1200px; margin: 0 auto;">
     <span class="bc-kicker">PREMIUM CHAUFFEUR SERVICES</span>
-    <h2 style="font-size: 38px; font-weight: 900; margin: 10px 0 36px; font-family: 'Cinzel', serif; color: var(--navy-deepest);">
+    <h2 style="font-size: 38px; font-weight: 900; margin: 10px 0 40px; font-family: 'Cinzel', serif; color: var(--navy-deepest);">
       Experience Travel, <span class="watery-text">Redefined.</span>
     </h2>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; text-align: left;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
       <a href="service-oneway.html" class="popup-card-item from-left" style="text-decoration: none; color: inherit;">
-        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-left: 7px solid var(--navy-royal); border-radius: 34px 12px 34px 12px; padding: 34px; height: 100%;">
-          <div style="width: 58px; height: 58px; border-radius: 16px 6px 16px 6px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;"><i class="fas fa-route"></i></div>
-          <h3 style="font-size: 21px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 10px;">One Way Trips</h3>
-          <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.65;">Direct intercity transit with dedicated chauffeurs and zero hidden return fares.</p>
+        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-radius: 30px; padding: 38px; height: 100%; transition: 0.45s var(--spring-easing); box-shadow: var(--shadow-luxury);" onmouseover="this.style.transform='translateY(-12px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 62px; height: 62px; border-radius: 18px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 22px;"><i class="fas fa-route"></i></div>
+          <h3 style="font-size: 22px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 12px;">One Way Trips</h3>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.65;">Direct intercity transit with dedicated chauffeurs and zero hidden return fares.</p>
         </div>
       </a>
 
       <a href="service-roundtrip.html" class="popup-card-item from-bottom" style="text-decoration: none; color: inherit;">
-        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-left: 7px solid var(--navy-royal); border-radius: 34px 12px 34px 12px; padding: 34px; height: 100%;">
-          <div style="width: 58px; height: 58px; border-radius: 16px 6px 16px 6px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;"><i class="fas fa-sync-alt"></i></div>
-          <h3 style="font-size: 21px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 10px;">Round Trip Voyages</h3>
-          <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.65;">Your private luxury vehicle & guide for complete multi-day holiday bliss.</p>
+        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-radius: 30px; padding: 38px; height: 100%; transition: 0.45s var(--spring-easing); box-shadow: var(--shadow-luxury);" onmouseover="this.style.transform='translateY(-12px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 62px; height: 62px; border-radius: 18px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 22px;"><i class="fas fa-sync-alt"></i></div>
+          <h3 style="font-size: 22px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 12px;">Round Trip Voyages</h3>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.65;">Your private luxury vehicle & guide for complete multi-day holiday bliss.</p>
         </div>
       </a>
 
       <a href="service-outstation.html" class="popup-card-item from-right" style="text-decoration: none; color: inherit;">
-        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-left: 7px solid var(--navy-royal); border-radius: 34px 12px 34px 12px; padding: 34px; height: 100%;">
-          <div style="width: 58px; height: 58px; border-radius: 16px 6px 16px 6px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;"><i class="fas fa-car-side"></i></div>
-          <h3 style="font-size: 21px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 10px;">Outstation Booking</h3>
-          <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.65;">Flexible, comfortable long-distance outstation rides tailored to your family schedule.</p>
+        <div class="two-tone-card" style="background: var(--pure-white); border: 2px solid var(--navy-royal); border-radius: 30px; padding: 38px; height: 100%; transition: 0.45s var(--spring-easing); box-shadow: var(--shadow-luxury);" onmouseover="this.style.transform='translateY(-12px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="width: 62px; height: 62px; border-radius: 18px; background: var(--navy-royal); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 22px;"><i class="fas fa-car-side"></i></div>
+          <h3 style="font-size: 22px; font-weight: 900; color: var(--navy-deepest); margin-bottom: 12px;">Outstation Booking</h3>
+          <p style="font-size: 15px; color: var(--text-muted); line-height: 1.65;">Flexible, comfortable long-distance outstation rides tailored to your family schedule.</p>
         </div>
       </a>
     </div>
@@ -2452,17 +2439,17 @@
   <section class="bc-section popup-reveal">
     <div style="text-align: center;">
       <span class="bc-kicker">BEYOND DESTINATIONS</span>
-      <h2 style="font-size: 36px; font-weight: 900; color: var(--navy-deepest); line-height: 1.25; margin-bottom: 18px;">
+      <h2 style="font-size: 36px; font-weight: 900; color: var(--navy-deepest); line-height: 1.25; margin-bottom: 20px;">
         A Journey of Comfort & <span class="watery-text">Royal Elegance</span>
       </h2>
-      <p style="font-size: 16px; line-height: 1.85; color: var(--text-muted); max-width: 880px; margin: 0 auto 32px auto; font-weight: 500;">
+      <p style="font-size: 16px; line-height: 1.85; color: var(--text-muted); max-width: 880px; margin: 0 auto 35px auto; font-weight: 500;">
         At <strong>Khatkar Travel Company</strong>, headquartered at Office No 08, VIP Road, Opposite Rail Vihar, Zirakpur, we believe your vacation begins the moment you step into our vehicles. Forget the hassle of driving or navigating traffic. Our highly trained chauffeurs and meticulously maintained fleet—from premium sedans to spacious Force Urbania cruisers—ensure a seamless, safe, and lavish ride across North India.
       </p>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap;">
-        <a href="about.html" class="navy-luxury-btn" style="display: inline-flex; align-items: center; gap: 12px; padding: 17px 34px; border-radius: 26px 8px 26px 8px; text-decoration: none; font-weight: 800; font-size: 15px;">
-          Explore More <span style="background: var(--pure-white); color: var(--navy-royal); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">→</span>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <a href="about.html" class="navy-luxury-btn" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 15px;">
+          Explore More <span style="background: var(--pure-white); color: var(--navy-royal); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">→</span>
         </a>
-        <div style="display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 900; color: var(--navy-deepest);">
+        <div style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 900; color: var(--navy-deepest);">
           <i class="fas fa-phone-alt" style="color: var(--navy-royal);"></i>
           <a href="tel:+917696299855" style="text-decoration: none; color: inherit;">+91 76962 99855</a>
         </div>
@@ -2525,11 +2512,11 @@
   <section class="popup-reveal" id="bc-stats" style="padding: 0 20px;">
     <div class="premium-stats-wrapper">
       <div style="text-align: center; position: relative; z-index: 2;">
-        <span style="color: var(--pure-white); font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">TRUSTED TRAVEL PARTNER</span>
-        <h2 style="font-size: 38px; color: #fff; margin: 12px 0; font-family: 'Cinzel', serif;">
+        <span style="color: var(--pure-white); font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;">TRUSTED TRAVEL PARTNER</span>
+        <h2 style="font-size: 40px; color: #fff; margin: 12px 0; font-family: 'Cinzel', serif;">
           Khatkar Travel Company <span class="watery-text-light">Stats</span>
         </h2>
-        <p style="color: var(--frost-white); font-size: 15.5px; max-width: 600px; margin: 0 auto;">Numbers that reflect our growing luxury travel community.</p>
+        <p style="color: var(--frost-white); font-size: 16px; max-width: 600px; margin: 0 auto;">Numbers that reflect our growing luxury travel community.</p>
       </div>
 
       <div class="stats-grid">
@@ -2595,6 +2582,56 @@
     </div>
   </section>
 
+  <!-- ============================================================
+       COMPACT 360° AERIAL DRONE SHOT VIDEO SECTION (CAR ON MOUNTAIN ROAD)
+       ============================================================ -->
+  <section id="drone-360" class="drone-360-section-wrapper popup-reveal">
+    <div class="drone-360-card popup-card-item from-bottom">
+      <div class="drone-top-bar">
+        <div>
+          <span class="drone-live-pill">
+            <i class="fas fa-helicopter"></i> 360° Aerial Drone Shot • Mountain Highway
+          </span>
+          <h3 style="font-size: 23px; margin-top: 8px; font-weight: 900;">
+            Innova Crysta <span class="watery-text-light">360° Drone View</span>
+          </h3>
+        </div>
+        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Innova%20Crysta%20for%20Mountain%20Trip" style="background: var(--pure-white); color: var(--navy-deepest); padding: 11px 22px; border-radius: 50px; font-weight: 900; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">
+          Book Crysta Tour →
+        </a>
+      </div>
+
+      <!-- Compact Aerial Drone Video Viewport -->
+      <div class="drone-video-viewport">
+        <!-- Real Aerial Drone Shot Video of Car Driving on Winding Mountain Highway -->
+        <video id="droneVideoPlayer" autoplay loop muted playsinline poster="IMG_4748.jpeg">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-cars-driving-on-a-mountain-road-41566-large.mp4" type="video/mp4">
+        </video>
+
+        <!-- 360° Drone Telemetry HUD -->
+        <div class="drone-hud-top-left">
+          <span class="drone-hud-radar"><i class="fas fa-location-crosshairs" style="font-size: 10px;"></i></span>
+          <span id="droneHudText">360° DRONE ORBIT • HIMALAYAN SNOW VALLEY PASS</span>
+        </div>
+
+        <!-- Floating Innova Crysta Fleet Badge -->
+        <div class="drone-crysta-floating-card">
+          <img src="IMG_5791.jpeg" alt="Innova Crysta">
+          <div style="text-align: left; line-height: 1.3;">
+            <div style="font-size: 12px; font-weight: 900;">Innova Crysta 7+1 AC</div>
+            <div style="font-size: 10px; font-weight: 800; color: var(--navy-royal);">Khatkar Travel Company</div>
+          </div>
+        </div>
+
+        <!-- Drone Camera Shot Switcher -->
+        <div class="drone-angle-controls">
+          <button type="button" class="drone-angle-btn active" onclick="switchDroneShot(this, 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-cars-driving-on-a-mountain-road-41566-large.mp4', '360° DRONE ORBIT • HIMALAYAN SNOW VALLEY PASS')">Drone Orbit 1</button>
+          <button type="button" class="drone-angle-btn" onclick="switchDroneShot(this, 'https://assets.mixkit.co/videos/preview/mixkit-car-driving-on-a-mountain-road-seen-from-above-41573-large.mp4', 'TOP-DOWN 360° DRONE TRACKING • MANALI HIGHWAY')">Top-Down Shot 2</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VIP ROAD ZIRAKPUR OFFICE & LIVE GOOGLE MAPS HUB -->
   <section id="office-location" class="bc-section popup-reveal">
     <div class="bc-section-head">
@@ -2609,7 +2646,7 @@
           <div class="hq-icon-circle"><i class="fas fa-building"></i></div>
           <div>
             <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--navy-royal);">Registered Office Address</div>
-            <div style="font-size: 15.5px; font-weight: 800; color: var(--navy-deepest); margin-top: 4px; line-height: 1.5;">
+            <div style="font-size: 16px; font-weight: 800; color: var(--navy-deepest); margin-top: 4px; line-height: 1.5;">
               Office no 08, VIP Road, Opposite Rail Vihar, Zirakpur, Punjab 40603, Zirakpur, Punjab 140603
             </div>
           </div>
@@ -2629,7 +2666,7 @@
           <div class="hq-icon-circle"><i class="fas fa-envelope-open-text"></i></div>
           <div>
             <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--navy-royal);">Official Email Desk</div>
-            <a href="mailto:satnamsingh.chotian@gmail.com" style="font-size: 15.5px; font-weight: 800; color: var(--navy-deepest); text-decoration: none; display: block; margin-top: 4px; word-break: break-all;">
+            <a href="mailto:satnamsingh.chotian@gmail.com" style="font-size: 16px; font-weight: 800; color: var(--navy-deepest); text-decoration: none; display: block; margin-top: 4px; word-break: break-all;">
               satnamsingh.chotian@gmail.com
             </a>
           </div>
@@ -2637,14 +2674,14 @@
       </div>
 
       <div class="hq-map-showcase two-tone-card popup-card-item from-right">
-        <div class="anim-up-down" style="width: 72px; height: 72px; border-radius: 22px 8px 22px 8px; background: var(--pure-white); color: var(--navy-deepest); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px;">
+        <div class="anim-up-down" style="width: 78px; height: 78px; border-radius: 50%; background: var(--pure-white); color: var(--navy-deepest); display: flex; align-items: center; justify-content: center; font-size: 34px; margin: 0 auto 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.35);">
           <i class="fas fa-map-marked-alt"></i>
         </div>
-        <h3 class="watery-text-light" style="font-size: 25px; margin-bottom: 10px;">Navigate on Google Maps</h3>
-        <p style="font-size: 14px; color: var(--frost-white); line-height: 1.7; margin-bottom: 24px;">
+        <h3 class="watery-text-light" style="font-size: 26px; margin-bottom: 12px;">Navigate on Google Maps</h3>
+        <p style="font-size: 14px; color: var(--frost-white); line-height: 1.7; margin-bottom: 28px;">
           Located conveniently at Office No 08, VIP Road, Opposite Rail Vihar, Zirakpur. Tap below for live turn-by-turn GPS navigation.
         </p>
-        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: var(--pure-white); color: var(--navy-deepest); padding: 16px 30px; border-radius: 24px 8px 24px 8px; font-weight: 900; font-size: 13.5px; text-decoration: none; letter-spacing: 1.5px; text-transform: uppercase;">
+        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: var(--pure-white); color: var(--navy-deepest); padding: 17px 34px; border-radius: 50px; font-weight: 900; font-size: 14px; text-decoration: none; letter-spacing: 1.5px; text-transform: uppercase; box-shadow: 0 12px 30px rgba(0,0,0,0.3); transition: 0.35s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
           <i class="fas fa-location-arrow"></i> Open Google Map Location
         </a>
       </div>
@@ -2682,7 +2719,7 @@
 
       <div class="faq-item popup-card-item from-bottom">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Where is Khatkar Travel Company located in Zirakpur?</span>
+          <span>Where is Khatkar Travel Company located in Zirakpur for offline booking?</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="faq-answer">
@@ -2692,76 +2729,18 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       COMPACT 360° MOUNTAIN VIEW + MOVING INNOVA CRYSTA SHORT VIDEO POD
-       ============================================================ -->
-  <section id="mountain-360" class="compact-360-pod-wrapper popup-reveal">
-    <div class="compact-360-pod popup-card-item from-bottom">
-      <div class="pod-top-bar">
-        <div>
-          <span class="badge-360-live"><i class="fas fa-compass fa-spin"></i> 360° Mountain Drive Experience</span>
-          <h3 style="font-size: 22px; margin-top: 8px; font-weight: 900;">
-            Innova Crysta <span class="watery-text-light">Himalayan Cruiser</span>
-          </h3>
-        </div>
-        <a href="https://wa.me/917696299855?text=Hello%20Khatkar%20Travel%20Company,%20I%20want%20to%20book%20Innova%20Crysta%20for%20Mountain%20Tour" style="background: var(--pure-white); color: var(--navy-deepest); padding: 10px 20px; border-radius: 20px 6px 20px 6px; font-weight: 900; font-size: 12px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px;">
-          Book Crysta Now →
-        </a>
-      </div>
-
-      <!-- Compact 360° Viewport Window -->
-      <div class="viewport-360-window" id="panoramaWindow">
-        <!-- Compass HUD -->
-        <div class="compass-hud">
-          <i class="fas fa-mountain"></i> <span>360° PANORAMA • SHIMLA - MANALI - SPITI HIGHWAY</span>
-        </div>
-
-        <!-- Short Autoplay Loop Mountain Video PiP Box (Compact Size) -->
-        <div class="mountain-short-video-layer">
-          <video autoplay loop muted playsinline poster="IMG_4748.jpeg">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-mountain-range-covered-in-snow-41575-large.mp4" type="video/mp4">
-          </video>
-          <span class="video-pip-tag"><i class="fas fa-circle" style="font-size: 7px;"></i> Live Short Clip</span>
-        </div>
-
-        <!-- 360° Moving Mountain Horizon -->
-        <div class="panorama-360-sky" id="panoramaSky">
-          <img src="IMG_4748.jpeg" alt="360 Mountain 1">
-          <img src="IMG_3891.jpeg" alt="360 Mountain 2">
-          <img src="IMG_3722.jpeg" alt="360 Mountain 3">
-          <img src="IMG_4500.jpeg" alt="360 Mountain 4">
-        </div>
-
-        <!-- Moving Highway & Animated Innova Crysta Car -->
-        <div class="highway-360-track">
-          <div class="highway-center-stripes"></div>
-        </div>
-
-        <div class="innova-cruiser-unit">
-          <div class="innova-car-frame">
-            <img src="IMG_5791.jpeg" alt="Moving Innova Crysta">
-            <div class="innova-headlight-beam"></div>
-            <div class="innova-wheel rear"></div>
-            <div class="innova-wheel front"></div>
-          </div>
-          <span class="innova-tag-pill">Khatkar Travel Company • Innova Crysta 7+1 AC</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Experience CTA -->
   <section class="bc-section bc-section-navy popup-reveal" style="text-align: center;">
-    <div class="bc-section-head" style="margin-bottom: 32px;">
+    <div class="bc-section-head" style="margin-bottom: 35px;">
       <span class="bc-kicker">Khatkar Travel Company</span>
-      <h2 style="font-size: 36px; font-weight: 900;">
+      <h2 style="font-size: 38px; font-weight: 900;">
         Experience <span class="watery-text-light">Luxury on Every Journey</span>
       </h2>
       <p>From local rides to airport transfers and outstation adventures, enjoy spotless vehicles, verified chauffeurs and 24/7 support.</p>
     </div>
     <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
-      <a href="#book" style="display:inline-block; background: var(--pure-white); color: var(--navy-deepest); text-decoration:none; padding:18px 38px; border-radius:28px 8px 28px 8px; font-weight:900; font-size: 14.5px; letter-spacing: 2px; text-transform: uppercase;">Book Your Journey</a>
-      <a href="tel:+917696299855" style="display:inline-block; background: transparent; color: var(--pure-white); border: 2px solid var(--pure-white); text-decoration:none; padding:18px 34px; border-radius:28px 8px 28px 8px; font-weight:900; font-size: 14.5px; letter-spacing: 2px; text-transform: uppercase;"><i class="fas fa-phone-alt"></i> +91 76962 99855</a>
+      <a href="#book" style="display:inline-block; background: var(--pure-white); color: var(--navy-deepest); text-decoration:none; padding:19px 42px; border-radius:50px; font-weight:900; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 15px 35px rgba(0,0,0,0.35); transition: 0.4s var(--spring-easing);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">Book Your Journey</a>
+      <a href="tel:+917696299855" style="display:inline-block; background: transparent; color: var(--pure-white); border: 2px solid var(--pure-white); text-decoration:none; padding:19px 38px; border-radius:50px; font-weight:900; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s var(--spring-easing);" onmouseover="this.style.background='var(--pure-white)'; this.style.color='var(--navy-deepest)'" onmouseout="this.style.background='transparent'; this.style.color='var(--pure-white)'"><i class="fas fa-phone-alt"></i> +91 76962 99855</a>
     </div>
   </section>
 
@@ -2769,10 +2748,10 @@
   <footer class="bc-footer-new">
     <div class="bc-footer-grid">
       <div>
-        <div class="watery-text-light" style="font-family:'Cinzel',serif;font-size:24px;font-weight:900;margin-bottom:12px;">KHATKAR TRAVEL COMPANY</div>
-        <div style="font-size: 11px; font-weight: 800; color: var(--pure-white); letter-spacing: 3.5px; margin-top: -6px; margin-bottom: 16px;">VIP ROAD • ZIRAKPUR</div>
+        <div class="watery-text-light" style="font-family:'Cinzel',serif;font-size:25px;font-weight:900;margin-bottom:12px;">KHATKAR TRAVEL COMPANY</div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--pure-white); letter-spacing: 4px; margin-top: -6px; margin-bottom: 18px;">VIP ROAD • ZIRAKPUR</div>
         <p style="font-size:14px;line-height:1.75;color:var(--frost-white);margin-bottom:16px;">Premium taxi and tour services with comfort, safety and reliable 24/7 chauffeur support across North India.</p>
-        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:var(--pure-white); color:var(--navy-deepest); padding:10px 18px; border-radius:20px 6px 20px 6px; font-weight:800; font-size:12px; text-transform:uppercase;">
+        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:var(--pure-white); color:var(--navy-deepest); padding:10px 18px; border-radius:30px; font-weight:800; font-size:12px; text-transform:uppercase;">
           <i class="fas fa-map-location-dot"></i> Google Maps Direction
         </a>
       </div>
@@ -2807,39 +2786,39 @@
   <!-- Fullscreen Mobile Menu Popup -->
   <div id="mobileNavMenu" class="luxury-modal-backdrop" onclick="if(event.target===this) closeMenu()">
     <div class="luxury-modal-box" style="text-align: left;">
-      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(7,25,54,0.12); padding-bottom: 18px; margin-bottom: 20px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid rgba(7,25,54,0.12); padding-bottom: 20px; margin-bottom: 22px;">
         <div style="display: flex; align-items: center; gap: 12px;">
-          <img src="IMG_5388.jpeg" alt="Logo" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal);">
+          <img src="IMG_5388.jpeg" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal);">
           <div>
-            <h3 style="font-size: 16px; font-weight: 900; color: var(--navy-deepest); margin: 0;">Khatkar Travel Company</h3>
-            <span style="font-size: 10px; letter-spacing: 2px; color: var(--navy-royal); font-weight: 800;">VIP ROAD • ZIRAKPUR</span>
+            <h3 style="font-size: 17px; font-weight: 900; color: var(--navy-deepest); margin: 0;">Khatkar Travel Company</h3>
+            <span style="font-size: 10.5px; letter-spacing: 2px; color: var(--navy-royal); font-weight: 800;">VIP ROAD • ZIRAKPUR</span>
           </div>
         </div>
-        <div onclick="closeMenu()" style="color: var(--navy-royal); font-size: 24px; cursor: pointer;"><i class="fas fa-times"></i></div>
+        <div onclick="closeMenu()" style="color: var(--navy-royal); font-size: 26px; cursor: pointer;"><i class="fas fa-times"></i></div>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px;">
-        <a href="index.html" class="navy-luxury-btn" style="padding: 13px 18px; font-weight: 800; text-decoration: none; border-radius: 16px;">Home</a>
-        <a href="about.html" style="padding: 13px 18px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">About Us</a>
-        <a href="all-tours.html" style="padding: 13px 18px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">Tour Packages</a>
-        <a href="#mountain-360" onclick="closeMenu()" style="padding: 13px 18px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">360° Innova Crysta View</a>
-        <a href="#office-location" onclick="closeMenu()" style="padding: 13px 18px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">VIP Road Zirakpur Office</a>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px;">
+        <a href="index.html" class="navy-luxury-btn" style="padding: 14px 20px; font-weight: 800; text-decoration: none; border-radius: 16px;">Home</a>
+        <a href="about.html" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">About Us</a>
+        <a href="all-tours.html" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">Tour Packages</a>
+        <a href="#drone-360" onclick="closeMenu()" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">360° Drone Shot View</a>
+        <a href="#office-location" onclick="closeMenu()" style="padding: 14px 20px; color: var(--navy-deepest); font-weight: 800; text-decoration: none; border-radius: 16px; border: 1.5px solid var(--navy-royal);">VIP Road Zirakpur Office</a>
       </div>
-      <a href="tel:+917696299855" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 16px; border-radius: 50px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px;">Call +91 76962 99855</a>
+      <a href="tel:+917696299855" class="navy-luxury-btn" style="display: block; width: 100%; text-align: center; padding: 18px; border-radius: 50px; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px;">Call +91 76962 99855</a>
     </div>
   </div>
 
   <!-- INTERACTIVE POPUP 1: BOOKING CONFIRMATION MODAL -->
   <div id="bookingPopupModal" class="luxury-modal-backdrop" onclick="if(event.target===this) closeBookingPopup()">
     <div class="luxury-modal-box">
-      <div style="width: 68px; height: 68px; border-radius: 50%; background: var(--navy-royal); color: var(--pure-white); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 18px;">
+      <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--navy-royal); color: var(--pure-white); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px; box-shadow: 0 12px 30px rgba(7,25,54,0.35);">
         <i class="fas fa-check"></i>
       </div>
-      <h3 style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 8px;">Ride Request Ready!</h3>
-      <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 20px;">Review your luxury trip summary below & send to Khatkar Travel Company on WhatsApp:</p>
-      <div id="bookingSummaryBox" style="background: var(--ice-white); padding: 16px; border-radius: 18px; text-align: left; font-size: 14px; line-height: 1.8; color: var(--navy-deepest); margin-bottom: 22px; border: 2px solid var(--navy-royal);"></div>
+      <h3 style="font-size: 24px; color: var(--navy-deepest); margin-bottom: 8px;">Ride Request Ready!</h3>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 22px;">Review your luxury trip summary below & send to Khatkar Travel Company on WhatsApp:</p>
+      <div id="bookingSummaryBox" style="background: var(--ice-white); padding: 18px; border-radius: 20px; text-align: left; font-size: 14px; line-height: 1.8; color: var(--navy-deepest); margin-bottom: 24px; border: 2px solid var(--navy-royal);"></div>
       <div style="display: flex; gap: 12px;">
-        <button onclick="closeBookingPopup()" style="flex: 1; padding: 14px; border-radius: 50px; border: 2px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Edit</button>
-        <a id="whatsappConfirmLink" href="#" target="_blank" class="navy-luxury-btn" style="flex: 2; padding: 14px; border-radius: 50px; text-decoration: none; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="closeBookingPopup()" style="flex: 1; padding: 15px; border-radius: 50px; border: 2px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Edit</button>
+        <a id="whatsappConfirmLink" href="#" target="_blank" class="navy-luxury-btn" style="flex: 2; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;">
           <i class="fab fa-whatsapp" style="font-size: 18px;"></i> Send on WhatsApp
         </a>
       </div>
@@ -2849,15 +2828,15 @@
   <!-- INTERACTIVE POPUP 2: TOUR QUICK PREVIEW MODAL -->
   <div id="tourPopupModal" class="luxury-modal-backdrop" onclick="if(event.target===this) closeTourPopup()">
     <div class="luxury-modal-box" style="padding: 24px;">
-      <div style="position: relative; height: 210px; border-radius: 22px; overflow: hidden; margin-bottom: 18px; border: 2px solid var(--navy-royal);">
+      <div style="position: relative; height: 215px; border-radius: 22px; overflow: hidden; margin-bottom: 20px; border: 2px solid var(--navy-royal);">
         <img id="tourPopupImg" src="" alt="Tour" style="width: 100%; height: 100%; object-fit: cover;">
         <span id="tourPopupDuration" style="position: absolute; bottom: 12px; left: 12px; background: var(--navy-deepest); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; border: 1px solid #fff;"></span>
       </div>
-      <h3 id="tourPopupTitle" style="font-size: 21px; color: var(--navy-deepest); margin-bottom: 8px;"></h3>
-      <p id="tourPopupDesc" style="font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 22px;"></p>
+      <h3 id="tourPopupTitle" style="font-size: 22px; color: var(--navy-deepest); margin-bottom: 10px;"></h3>
+      <p id="tourPopupDesc" style="font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 24px;"></p>
       <div style="display: flex; gap: 12px;">
-        <button onclick="closeTourPopup()" style="flex: 1; padding: 13px; border-radius: 50px; border: 2px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Close</button>
-        <a id="tourPopupLink" href="#" class="navy-luxury-btn" style="flex: 1.6; padding: 13px; border-radius: 50px; text-decoration: none; font-weight: 800;">Full Itinerary →</a>
+        <button onclick="closeTourPopup()" style="flex: 1; padding: 14px; border-radius: 50px; border: 2px solid var(--navy-royal); background: transparent; color: var(--navy-royal); font-weight: 800; cursor: pointer;">Close</button>
+        <a id="tourPopupLink" href="#" class="navy-luxury-btn" style="flex: 1.6; padding: 14px; border-radius: 50px; text-decoration: none; font-weight: 800;">Full Itinerary →</a>
       </div>
     </div>
   </div>
@@ -2875,16 +2854,34 @@
       }, 850);
     });
 
-    // 2. Background Slideshow
+    // 2. Global Background Slideshow
     const bgSlides = document.querySelectorAll('.bg-slide');
     let currentBgIndex = 0;
     setInterval(() => {
       bgSlides[currentBgIndex].classList.remove('active');
       currentBgIndex = (currentBgIndex + 1) % bgSlides.length;
       bgSlides[currentBgIndex].classList.add('active');
-    }, 4200);
+    }, 4500);
 
-    // 3. Trip Type Toggle
+    // 3. 10 Mountain & Snow Valley Slideshow Running Behind Transparent Booking Form
+    const heroMtnSlides = document.querySelectorAll('.hero-mtn-slide');
+    const heroMtnDots = document.querySelectorAll('.mtn-thumb-dot');
+    let currentHeroMtn = 0;
+
+    function setHeroMountain(index) {
+      heroMtnSlides[currentHeroMtn].classList.remove('active');
+      heroMtnDots[currentHeroMtn].classList.remove('active');
+      currentHeroMtn = index;
+      heroMtnSlides[currentHeroMtn].classList.add('active');
+      heroMtnDots[currentHeroMtn].classList.add('active');
+    }
+
+    setInterval(() => {
+      let nextMtn = (currentHeroMtn + 1) % heroMtnSlides.length;
+      setHeroMountain(nextMtn);
+    }, 3400);
+
+    // 4. Trip Type Toggle
     document.querySelectorAll('.trip-btn').forEach(button => {
       button.addEventListener('click', function () {
         document.querySelectorAll('.trip-btn').forEach(btn => btn.classList.remove('active'));
@@ -2893,7 +2890,7 @@
       });
     });
 
-    // 4. Booking Form Popup Modal + WhatsApp Integration (+91 76962 99855)
+    // 5. Booking Form Popup Modal + WhatsApp Integration (+91 76962 99855)
     document.getElementById('bookingForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const trip = document.getElementById('tripTypeInput').value;
@@ -2931,7 +2928,7 @@
       document.getElementById('bookingPopupModal').classList.remove('show');
     }
 
-    // 5. Tour Quick-View Popup Modal
+    // 6. Tour Quick-View Popup Modal
     function openTourPopup(title, desc, duration, img, link) {
       document.getElementById('tourPopupTitle').textContent = title;
       document.getElementById('tourPopupDesc').textContent = desc;
@@ -2945,7 +2942,7 @@
       document.getElementById('tourPopupModal').classList.remove('show');
     }
 
-    // 6. Trending Locations Auto-Scroll
+    // 7. Trending Locations Auto-Scroll
     const scrollContainer = document.getElementById("scrollContainer");
     function scrollLeftBtn() { if (scrollContainer) scrollContainer.scrollBy({ left: -280, behavior: 'smooth' }); }
     function scrollRightBtn() { if (scrollContainer) scrollContainer.scrollBy({ left: 280, behavior: 'smooth' }); }
@@ -2960,7 +2957,7 @@
       }
     }, 3200);
 
-    // 7. Vehicle Slider (5 Vehicles)
+    // 8. Vehicle Slider (5 Vehicles)
     let vehicleIndex = 0;
     const totalVehicleSlides = 5;
     function moveVehicleSlide(direction) {
@@ -2971,17 +2968,32 @@
     }
     setInterval(() => { moveVehicleSlide(1); }, 4800);
 
-    // 8. FAQ Accordion Toggle
+    // 9. 360° Aerial Drone Video Shot Switcher
+    function switchDroneShot(btn, videoUrl, hudLabel) {
+      document.querySelectorAll('.drone-angle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const player = document.getElementById('droneVideoPlayer');
+      const hud = document.getElementById('droneHudText');
+      if (player) {
+        player.src = videoUrl;
+        player.play();
+      }
+      if (hud) {
+        hud.textContent = hudLabel;
+      }
+    }
+
+    // 10. FAQ Accordion Toggle
     function toggleFaq(btn) {
       const item = btn.parentElement;
       item.classList.toggle('open');
     }
 
-    // 9. Mobile Menu Open/Close
+    // 11. Mobile Menu Open/Close
     function openMenu() { document.getElementById('mobileNavMenu').classList.add('show'); }
     function closeMenu() { document.getElementById('mobileNavMenu').classList.remove('show'); }
 
-    // 10. Global 3D Directional Spring Popup Observer
+    // 12. Global 3D Directional Spring Popup Observer (Triggers on Scroll)
     document.addEventListener("DOMContentLoaded", function () {
       const popupObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -2991,11 +3003,11 @@
             childCards.forEach((card, index) => {
               setTimeout(() => {
                 card.classList.add('active');
-              }, index * 85);
+              }, index * 90);
             });
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.12 });
 
       document.querySelectorAll('.popup-reveal').forEach(el => popupObserver.observe(el));
 
