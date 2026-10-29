@@ -242,7 +242,7 @@
       background: rgba(255, 255, 255, 0.92) !important;
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      padding: 12px 24px !important;
+      padding: 12px 20px !important;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -253,12 +253,20 @@
     }
 
     .brand-logo-img {
-      width: 48px !important;
-      height: 48px !important;
+      width: 46px !important;
+      height: 46px !important;
       border-radius: 50% !important;
       object-fit: cover !important;
       border: 2px solid var(--navy-royal) !important;
       box-shadow: 0 4px 14px rgba(7, 22, 44, 0.25);
+      flex-shrink: 0;
+    }
+
+    .nav-brand-title {
+      font-weight: 900;
+      font-size: clamp(13.5px, 3.6vw, 17px);
+      font-family: 'Cinzel', serif;
+      line-height: 1.15;
     }
 
     .nav-links-desktop {
@@ -403,7 +411,7 @@
     .booking-container {
       background: linear-gradient(165deg, #ffffff 0%, #f4f8ff 100%);
       border-radius: 40px;
-      padding: 46px 36px 36px;
+      padding: 46px 34px 34px;
       width: 100%;
       max-width: 575px;
       margin: 0 auto;
@@ -525,6 +533,8 @@
       position: relative;
       margin-bottom: 15px;
       width: 100%;
+      min-width: 0;
+      overflow: hidden;
     }
 
     .icon-input-wrapper i {
@@ -535,11 +545,18 @@
       color: var(--navy-royal);
       font-size: 16px;
       z-index: 2;
+      pointer-events: none;
       transition: 0.35s var(--spring-easing);
     }
 
     .premium-pill-input {
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      display: block;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
       padding: 16px 18px 16px 50px;
       border-radius: 22px;
       border: 1.5px solid rgba(7, 22, 44, 0.12);
@@ -548,8 +565,23 @@
       font-size: 14.5px;
       font-weight: 600;
       font-family: inherit;
+      text-align: left;
       transition: 0.35s var(--spring-easing);
       box-shadow: 0 4px 14px rgba(3, 11, 23, 0.03);
+    }
+
+    /* iPhone / iOS Safari Date Input Overflow Fix */
+    input[type="date"].premium-pill-input {
+      min-height: 54px;
+      line-height: 1.4;
+      text-align: left !important;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="date"].premium-pill-input::-webkit-date-and-time-value {
+      text-align: left;
+      margin: 0;
     }
 
     .premium-pill-input:focus {
@@ -568,6 +600,12 @@
     .form-row {
       display: flex;
       gap: 14px;
+      width: 100%;
+    }
+
+    .form-row > .icon-input-wrapper {
+      flex: 1 1 0%;
+      min-width: 0;
     }
 
     .booking-perks-strip {
@@ -1502,11 +1540,11 @@
 
   <!-- Floating Royal Navy & White Navbar -->
   <nav>
-    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 14px;">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px; min-width: 0;">
       <img src="IMG_5388.jpeg" alt="Khatkar Travel Company Logo" class="brand-logo-img">
-      <div style="display: flex; flex-direction: column;">
-        <span class="watery-text" style="font-weight: 900; font-size: 17px; font-family: 'Cinzel', serif; line-height: 1.1;">Khatkar Travel Company</span>
-        <span style="font-size: 10.5px; letter-spacing: 2.5px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR • LUXURY FLEET</span>
+      <div style="display: flex; flex-direction: column; min-width: 0;">
+        <span class="watery-text nav-brand-title">Khatkar Travel Company</span>
+        <span style="font-size: 10px; letter-spacing: 2px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR • LUXURY FLEET</span>
       </div>
     </a>
 
@@ -1522,7 +1560,7 @@
       </a>
     </div>
 
-    <div onclick="openMenu()" style="width: 46px; height: 46px; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; box-shadow: 0 6px 16px rgba(7, 22, 44, 0.25); transition: 0.3s; font-size: 18px;">
+    <div onclick="openMenu()" style="width: 44px; height: 44px; flex-shrink: 0; background: var(--navy-royal); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--pure-white); cursor: pointer; box-shadow: 0 6px 16px rgba(7, 22, 44, 0.25); transition: 0.3s; font-size: 18px;">
       <i class="fas fa-bars"></i>
     </div>
   </nav>
@@ -1638,7 +1676,7 @@
 
         <div class="booking-perks-strip">
           <span><i class="fas fa-check-circle"></i> Zero Cancellation Fee</span>
-          <span><i class="fas fa-Sanitizer"></i> Sanitized Royal Cabin</span>
+          <span><i class="fas fa-shield-virus"></i> Sanitized Royal Cabin</span>
           <span><i class="fas fa-headset"></i> 24/7 Dispatch</span>
         </div>
       </form>
@@ -2762,7 +2800,7 @@
         step2Title: 'Amer Fort, Jal Mahal & Hawa Mahal',
         step2Desc: 'Explore hilltop Amer Fort elephant courtyard, Sheesh Mahal, Jal Mahal lakeside, and the iconic Hawa Mahal facade.',
         step3Title: 'City Palace, Jantar Mantar & Chokhi Dhani',
-        step3Desc: 'Tour the royal City Palace museum, shop forgems at Johari Bazaar, and enjoy traditional Rajasthani cultural dining.'
+        step3Desc: 'Tour the royal City Palace museum, shop for gems at Johari Bazaar, and enjoy traditional Rajasthani cultural dining.'
       }
     };
 
