@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Luxury Tour Packages | Destination Cabs Zirakpur</title>
+  <meta name="description" content="Explore all luxury chauffeur cab tour packages from Zirakpur & Chandigarh to Shimla, Manali, Spiti, Dalhousie, Delhi, Amritsar and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="IMG_5388.jpeg">
+
+  <style>
+    :root {
+      --navy-deepest: #030b17;
+      --navy-royal: #07162c;
+      --navy-mid: #0f294a;
+      --royal-accent: #1d4ed8;
+      --sky-glow: #38bdf8;
+      --gold-accent: #d4af37;
+      --pure-white: #ffffff;
+      --off-white: #f4f7fb;
+      --text-dark: #07162c;
+      --text-muted: #52637a;
+      --shadow-luxury: 0 25px 60px rgba(3, 11, 23, 0.10);
+      --shadow-navy-glow: 0 20px 50px rgba(7, 22, 44, 0.35);
+      --spring-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --smooth-easing: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--off-white);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      padding-top: 95px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif-font { font-family: 'Cinzel', serif; }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    .navy-luxury-btn {
+      background: linear-gradient(135deg, var(--navy-royal) 0%, var(--navy-mid) 55%, var(--royal-accent) 100%);
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.45s var(--spring-easing);
+      box-shadow: 0 12px 28px rgba(7, 22, 44, 0.28);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .navy-luxury-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(7, 22, 44, 0.45);
+    }
+
+    .popup-reveal {
+      opacity: 0;
+      transform: scale(0.84) translateY(45px);
+      transition: opacity 0.75s var(--smooth-easing), transform 0.85s var(--spring-easing);
+    }
+    .popup-reveal.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    .popup-card-item {
+      opacity: 0;
+      transform: scale(0.76) translateY(35px);
+      transition: opacity 0.65s var(--smooth-easing), transform 0.8s var(--spring-easing);
+    }
+    .popup-card-item.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0.45); }
+      70% { box-shadow: 0 0 0 16px rgba(7, 22, 44, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0); }
+    }
+
+    nav {
+      position: fixed !important;
+      top: 15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: 94% !important;
+      max-width: 1240px;
+      z-index: 1000 !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 12px 24px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 60px;
+      box-shadow: 0 15px 40px rgba(3, 11, 23, 0.12);
+      border: 1px solid rgba(7, 22, 44, 0.12);
+    }
+
+    .brand-logo-img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal); }
+
+    .back-home-pill {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--off-white);
+      color: var(--navy-royal); padding: 10px 18px; border-radius: 50px; text-decoration: none;
+      font-weight: 800; font-size: 13px; white-space: nowrap; border: 1px solid rgba(7, 22, 44, 0.12);
+      transition: 0.35s var(--spring-easing);
+    }
+    .back-home-pill:hover { background: var(--navy-royal); color: var(--pure-white); }
+
+    .tours-hero-banner {
+      max-width: 1240px; margin: 10px auto 40px; padding: 0 20px;
+    }
+    .tours-hero-card {
+      position: relative; border-radius: 36px; overflow: hidden; padding: 60px 40px;
+      background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-royal) 60%, var(--navy-mid) 100%);
+      color: var(--pure-white); text-align: center; box-shadow: var(--shadow-navy-glow);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .tours-hero-card h1 { font-size: clamp(32px, 5vw, 50px); margin-bottom: 12px; font-weight: 900; }
+    .tours-hero-card p { max-width: 700px; margin: auto; font-size: 16px; color: #cbd5e1; line-height: 1.7; }
+
+    .tours-grid-section { max-width: 1240px; margin: 0 auto 70px; padding: 0 20px; }
+    .tours-grid-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;
+    }
+
+    .tour-card-item {
+      background: var(--pure-white); border-radius: 30px; overflow: hidden;
+      border: 1.5px solid rgba(7, 22, 44, 0.08); box-shadow: var(--shadow-luxury);
+      transition: all 0.5s var(--spring-easing); display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .tour-card-item:hover {
+      transform: translateY(-12px) scale(1.02);
+      border-color: var(--navy-royal);
+      box-shadow: 0 30px 60px rgba(7, 22, 44, 0.2);
+    }
+
+    .tour-img-box { position: relative; height: 240px; overflow: hidden; background: var(--navy-royal); }
+    .tour-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+    .tour-card-item:hover .tour-img-box img { transform: scale(1.1); }
+
+    .tour-price-badge {
+      position: absolute; bottom: 16px; right: 16px; background: rgba(3, 11, 23, 0.85);
+      backdrop-filter: blur(10px); color: var(--pure-white); padding: 8px 16px;
+      border-radius: 30px; font-family: 'Cinzel', serif; font-weight: 800; font-size: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tour-card-body { padding: 28px; }
+    .tour-card-body h3 { font-size: 24px; color: var(--navy-deepest); margin-bottom: 8px; font-weight: 800; }
+    .tour-card-body p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 22px; }
+
+    .tour-meta-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 18px; background: var(--off-white); border-radius: 18px; margin-bottom: 22px;
+      font-size: 13px; font-weight: 700; color: var(--navy-royal); border: 1px solid rgba(7, 22, 44, 0.06);
+    }
+
+    .bc-footer-new { background: var(--navy-deepest); color: #cbd5e1; padding: 75px 25px 35px; margin-top: 70px; border-top: 4px solid var(--navy-royal); }
+    .bc-footer-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; }
+    .bc-footer-new h3 { color: var(--pure-white); font-size: 18px; margin: 0 0 20px; border-bottom: 2px solid var(--sky-glow); padding-bottom: 10px; display: inline-block; }
+    .bc-footer-new a { display: block; color: #94a3b8; text-decoration: none; font-size: 14px; margin: 12px 0; transition: 0.3s; }
+    .bc-footer-new a:hover { color: var(--pure-white); transform: translateX(6px); }
+
+    @media (max-width: 850px) { .bc-footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .bc-footer-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
+      <img src="IMG_5388.jpeg" alt="Logo" class="brand-logo-img">
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--navy-deepest); font-weight: 900; font-size: 17px; font-family: 'Cinzel', serif; line-height: 1.1;">Destination Cabs</span>
+        <span style="font-size: 10px; letter-spacing: 2.5px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR</span>
+      </div>
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="index.html" class="back-home-pill">
+        <i class="fas fa-arrow-left"></i> Home
+      </a>
+      <a href="tel:+916280544730" class="navy-luxury-btn" style="padding: 10px 18px; border-radius: 50px; font-size: 13px; font-weight: 800;">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="tours-hero-banner popup-reveal">
+    <div class="tours-hero-card">
+      <span style="display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 3px; color: var(--sky-glow); text-transform: uppercase; margin-bottom: 12px;">Royal Fleet & Tour Collection</span>
+      <h1>All Luxury <span class="gold-gradient-text">Tour Destinations</span></h1>
+      <p>Explore our complete collection of chauffeur-driven luxury tour packages from Zirakpur and Chandigarh to North India's finest hill stations, capitals, and heritage cities.</p>
+    </div>
+  </section>
+
+  <!-- ALL TOURS GRID -->
+  <section class="tours-grid-section popup-reveal">
+    <div class="tours-grid-container">
+
+      <!-- 1. Shimla -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="3F718C1D-11EE-4842-AD29-6EA4CF1A3087.jpeg" alt="Shimla">
+            <div class="tour-price-badge">From ₹2,499*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Shimla & Kufri</h3>
+            <p>Glide up the Himalayan expressway to The Ridge, Mall Road, and Kufri snow slopes with hill-expert chauffeurs.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 115 KM</span>
+              <span><i class="fas fa-clock"></i> 3.5 Hours</span>
+              <span><i class="fas fa-mountain"></i> 4-Lane</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="place-details.html?place=Shimla" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Shimla Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Manali -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3722.jpeg" alt="Manali">
+            <div class="tour-price-badge">From ₹4,499*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Manali & Solang Valley</h3>
+            <p>Cruise through the new 5-Tunnel highway into Solang snow valley, Atal Tunnel, and Hadimba Devi temple.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 275 KM</span>
+              <span><i class="fas fa-clock"></i> 6.5 Hours</span>
+              <span><i class="fas fa-snowflake"></i> Snow Tunnels</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="manali.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Manali Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Spiti Valley -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3891.jpeg" alt="Spiti Valley">
+            <div class="tour-price-badge">From ₹24,999*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Spiti Valley Expedition</h3>
+            <p>An epic high-altitude circuit across Key Monastery, Chandratal Moon Lake, and world's highest villages.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 420 KM</span>
+              <span><i class="fas fa-clock"></i> 5 Days</span>
+              <span><i class="fas fa-mountain"></i> 15,060 Ft</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="spiti.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Spiti Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Dalhousie -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3731.jpeg" alt="Dalhousie">
+            <div class="tour-price-badge">From ₹4,999*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Dalhousie & Khajjiar</h3>
+            <p>Pine-clad valleys, Scottish heritage architecture, and the lush green saucer-shaped meadows of Khajjiar.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 315 KM</span>
+              <span><i class="fas fa-clock"></i> 7 Hours</span>
+              <span><i class="fas fa-tree"></i> Mini Switzerland</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="dalhousie.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Dalhousie Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Dehradun -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="BD266B34-FEC8-43E3-B520-A0025A333629.jpeg" alt="Dehradun">
+            <div class="tour-price-badge">From ₹2,999*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Dehradun & Foothills</h3>
+            <p>Relaxing valley vibes, Robber's Cave, Sahastradhara sulfur springs, and scenic academic campuses.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 170 KM</span>
+              <span><i class="fas fa-clock"></i> 4 Hours</span>
+              <span><i class="fas fa-leaf"></i> Doon Valley</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="dehradun.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Dehradun Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Delhi -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3894.jpeg" alt="Delhi">
+            <div class="tour-price-badge">From ₹2,999*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Delhi Capital Explorer</h3>
+            <p>Comfortable outstation highway transfer and monument sightseeing across India Gate, Qutub Minar & Red Fort.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 250 KM</span>
+              <span><i class="fas fa-clock"></i> 4.5 Hours</span>
+              <span><i class="fas fa-landmark"></i> Expressway</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="delhi.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Delhi Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 7. Amritsar -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3895.jpeg" alt="Amritsar">
+            <div class="tour-price-badge">From ₹3,299*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Amritsar Golden Temple</h3>
+            <p>Golden Temple illumination darshan, Jallianwala Bagh, and the high-energy Wagah Border retreat ceremony.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 235 KM</span>
+              <span><i class="fas fa-clock"></i> 4 Hours</span>
+              <span><i class="fas fa-place-of-worship"></i> Spiritual</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="amritsar.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Amritsar Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 8. Mussoorie -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_4538.jpeg" alt="Mussoorie">
+            <div class="tour-price-badge">From ₹3,499*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Mussoorie Queen of Hills</h3>
+            <p>Breathtaking views of Doon Valley, Kempty Falls, Mall Road ropeways, and Camel's Back Road sunset walks.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 200 KM</span>
+              <span><i class="fas fa-clock"></i> 5 Hours</span>
+              <span><i class="fas fa-mountain"></i> Ridge Views</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="mussoorie.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Mussoorie Tour →
+          </a>
+        </div>
+      </div>
+
+      <!-- 9. Jaipur -->
+      <div class="tour-card-item popup-card-item">
+        <div>
+          <div class="tour-img-box">
+            <img src="IMG_3889.jpeg" alt="Jaipur">
+            <div class="tour-price-badge">From ₹5,999*</div>
+          </div>
+          <div class="tour-card-body">
+            <h3>Jaipur Pink City</h3>
+            <p>Majestic Amer Fort, Hawa Mahal, City Palace, and vibrant Rajasthani culture in royal comfort.</p>
+            <div class="tour-meta-row">
+              <span><i class="fas fa-road"></i> 505 KM</span>
+              <span><i class="fas fa-clock"></i> 8.5 Hours</span>
+              <span><i class="fas fa-crown"></i> Rajputana</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 0 28px 28px;">
+          <a href="jaipur.html" class="navy-luxury-btn" style="width: 100%; padding: 15px; border-radius: 50px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">
+            View Jaipur Tour →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Contact Buttons -->
+  <div style="position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
+    <a href="https://wa.me/916280544730?text=Hello,%20I%20want%20to%20explore%20your%20tour%20packages." style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; border: 2px solid #fff;">
+      <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
+    </a>
+    <a href="tel:+916280544730" class="navy-luxury-btn" style="width: 58px; height: 58px; border-radius: 50%; border: 2px solid #fff; animation: pulseRing 2.5s infinite;">
+      <i class="fas fa-phone-alt" style="color: white; font-size: 22px;"></i>
+    </a>
+  </div>
+
+  <!-- COMPLETE FOOTER -->
+  <footer class="bc-footer-new">
+    <div class="bc-footer-grid">
+      <div>
+        <div style="font-family:'Cinzel',serif;font-size:26px;font-weight:800;color:var(--pure-white);margin-bottom:12px;">DESTINATION CABS</div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--sky-glow); letter-spacing: 4px; margin-top: -10px; margin-bottom: 20px;">ZIRAKPUR</div>
+        <p style="font-size:14px;line-height:1.7;color:#94a3b8;">Premium taxi and tour services with comfort, safety and reliable support across North India.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="all-tours.html">Tours</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Top Destinations</h3>
+        <a href="place-details.html?place=Shimla">Shimla & Kufri</a>
+        <a href="manali.html">Manali & Solang</a>
+        <a href="spiti.html">Spiti Valley</a>
+        <a href="dalhousie.html">Dalhousie & Khajjiar</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <a href="tel:+916280544730"><i class="fas fa-phone-alt" style="color:var(--sky-glow);"></i> &nbsp; +91 62805 44730</a>
+        <a href="mailto:info@destinationcabs.com"><i class="fas fa-envelope" style="color:var(--sky-glow);"></i> &nbsp; info@destinationcabs.com</a>
+        <a href="https://wa.me/916280544730" target="_blank"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; WhatsApp Support</a>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 45px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; color: #64748b;">
+      © 2026 Destination Cabs Zirakpur. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            entry.target.querySelectorAll('.tour-card-item').forEach((card, idx) => {
+              setTimeout(() => card.classList.add('active'), idx * 80);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.popup-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
