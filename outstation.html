@@ -84,12 +84,6 @@
     }
     .popup-card-item.active { opacity: 1; transform: scale(1) translateY(0); }
 
-    @keyframes pulseRing {
-      0% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0.45); }
-      70% { box-shadow: 0 0 0 16px rgba(7, 22, 44, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0); }
-    }
-
     nav {
       position: fixed !important;
       top: 10px !important;
@@ -189,7 +183,7 @@
       margin-right: 6px;
     }
 
-    /* BOOKING FORM */
+    /* BOOKING FORM - BULLETPROOF MOBILE FIX */
     .outstation-form-wrapper {
       max-width: 760px;
       margin: 0 auto;
@@ -199,11 +193,15 @@
       padding: 30px 25px;
       box-shadow: var(--shadow-navy-glow);
       color: var(--pure-white);
+      overflow: hidden; /* Added to prevent child overflow */
     }
     .os-input-wrapper {
       position: relative;
       margin-bottom: 12px;
       width: 100%;
+      max-width: 100%; /* Strictly bound width */
+      overflow: hidden;
+      border-radius: 50px;
     }
     .os-input-wrapper i {
       position: absolute;
@@ -215,8 +213,16 @@
       z-index: 2;
       pointer-events: none;
     }
-    .os-pill-input {
+    
+    /* FIX FOR OVERFLOWING DATE & SELECT INPUTS */
+    .os-pill-input,
+    input[type="date"].os-pill-input,
+    select.os-pill-input {
       width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      display: block !important;
+      box-sizing: border-box !important;
       padding: 14px 16px 14px 45px !important;
       border-radius: 50px !important;
       border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
@@ -225,8 +231,16 @@
       font-size: 13px !important;
       font-weight: 600 !important;
       font-family: 'Plus Jakarta Sans', sans-serif !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
       outline: none !important;
+      margin: 0 !important;
+      text-align: left !important;
       transition: 0.35s ease;
+    }
+    input[type="date"].os-pill-input::-webkit-date-and-time-value { 
+      text-align: left !important; 
+      margin: 0 !important; 
     }
     .os-pill-input:focus {
       border-color: var(--sky-glow) !important;
@@ -284,8 +298,8 @@
   <section class="os-hero-banner popup-reveal">
     <div class="os-hero-card">
       <span style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 2.5px; color: var(--sky-glow); text-transform: uppercase; margin-bottom: 10px;">Elite Fleet & Outstation Hub</span>
-      <h1>Outstation Cab <span class="gold-gradient-text">Rental</span></h1>
-      <p>Book professional outstation cabs from Zirakpur & Chandigarh. Select your preferred luxury vehicle below and confirm instantly via WhatsApp.</p>
+      <h1>Outstation Cab <span class="gold-gradient-text">Rental Services</span></h1>
+      <p>Book professional outstation cabs from Zirakpur and Chandigarh for multi-day tours, family vacations, or business trips. Select your preferred luxury vehicle below and confirm instantly via WhatsApp.</p>
     </div>
   </section>
 
@@ -306,8 +320,8 @@
           <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px; margin-bottom:0;">Perfect for couples & small family trips.</p>
           <ul class="outstation-features-list">
             <li><i class="fas fa-check-circle"></i> AC & Comfortable Legroom</li>
-            <li><i class="fas fa-check-circle"></i> Best Fuel Economy</li>
-            <li><i class="fas fa-check-circle"></i> Ample Boot Space</li>
+            <li><i class="fas fa-check-circle"></i> Best Fuel Economy for Highways</li>
+            <li><i class="fas fa-check-circle"></i> Ample Boot Space for Luggage</li>
           </ul>
         </div>
         <button onclick="prefillOutstationCar('Sedan (Swift Dzire)')" style="width: 100%; padding: 10px; border-radius: 50px; background: var(--navy-royal); color: var(--pure-white); border: none; font-weight: 800; font-size: 12px; text-transform: uppercase; cursor: pointer; transition: 0.3s;">Select Sedan →</button>
@@ -325,7 +339,7 @@
           <ul class="outstation-features-list">
             <li><i class="fas fa-check-circle"></i> Extra Seating Capacity</li>
             <li><i class="fas fa-check-circle"></i> Dual AC Climate Control</li>
-            <li><i class="fas fa-check-circle"></i> Smooth Mountain Rides</li>
+            <li><i class="fas fa-check-circle"></i> Smooth Ride on Mountain Roads</li>
           </ul>
         </div>
         <button onclick="prefillOutstationCar('SUV (Maruti Ertiga)')" style="width: 100%; padding: 10px; border-radius: 50px; background: var(--navy-royal); color: var(--pure-white); border: none; font-weight: 800; font-size: 12px; text-transform: uppercase; cursor: pointer; transition: 0.3s;">Select Ertiga →</button>
@@ -341,9 +355,9 @@
           </div>
           <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px; margin-bottom:0;">King-class comfort & captain seats.</p>
           <ul class="outstation-features-list">
-            <li><i class="fas fa-check-circle"></i> Leather Captain Seats</li>
-            <li><i class="fas fa-check-circle"></i> Powerful Engine</li>
-            <li><i class="fas fa-check-circle"></i> Ultimate Luxury Feel</li>
+            <li><i class="fas fa-check-circle"></i> Premium Leather Captain Seats</li>
+            <li><i class="fas fa-check-circle"></i> Powerful Engine for High Hills</li>
+            <li><i class="fas fa-check-circle"></i> Ultimate Luxury Experience</li>
           </ul>
         </div>
         <button onclick="prefillOutstationCar('MPV (Innova Crysta)')" style="width: 100%; padding: 10px; border-radius: 50px; background: var(--navy-royal); color: var(--pure-white); border: none; font-weight: 800; font-size: 12px; text-transform: uppercase; cursor: pointer; transition: 0.3s;">Select Crysta →</button>
@@ -353,8 +367,8 @@
 
     <!-- INSTANT OUTSTATION BOOKING FORM -->
     <div class="outstation-form-wrapper popup-card-item" id="os-booking-form-box">
-      <div style="text-align: center; margin-bottom: 20px;">
-        <h3 style="font-size: 22px; font-family: 'Cinzel', serif; color: var(--pure-white); margin-bottom: 4px;">Instant Reservation</h3>
+      <div style="text-align: center; margin-bottom: 24px;">
+        <h3 style="font-size: 24px; font-family: 'Cinzel', serif; color: var(--pure-white); margin-bottom: 6px;">Instant Reservation</h3>
         <p style="font-size: 13px; color: #cbd5e1; margin:0;">Fill your trip details to generate a direct WhatsApp booking request.</p>
       </div>
 
@@ -486,9 +500,7 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            
-            // Fix applied here: Now selects all popup-card-item elements including the form
-            entry.target.querySelectorAll('.popup-card-item').forEach((card, idx) => {
+            entry.target.querySelectorAll('.outstation-car-card, .outstation-form-wrapper').forEach((card, idx) => {
               setTimeout(() => card.classList.add('active'), idx * 80);
             });
           }
