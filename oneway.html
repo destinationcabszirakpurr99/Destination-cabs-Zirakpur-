@@ -1,84 +1,202 @@
-<!-- PREMIUM ONE-WAY TRIPS SECTION -->
-<section class="bc-section popup-reveal" id="one-way-trips" style="background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-royal) 60%, var(--navy-mid) 100%); color: var(--pure-white); border-radius: 40px; padding: 80px 35px; box-shadow: var(--shadow-navy-glow); margin: 60px auto;">
-  
-  <div class="bc-section-head" style="text-align: center; margin-bottom: 50px;">
-    <span class="bc-kicker" style="background: rgba(255,255,255,0.12); color: var(--sky-glow); padding: 8px 22px; border-radius: 30px; font-weight: 800; font-size: 12px; letter-spacing: 3px; text-transform: uppercase;">Zero Return Fare • Premium Outstation Cabs</span>
-    <h2 style="font-size: clamp(30px, 4.5vw, 44px); color: var(--pure-white); margin-top: 15px; margin-bottom: 14px; font-weight: 900; font-family: 'Cinzel', serif;">
-      One-Way Luxury <span class="gold-gradient-text">Cab Routes</span> From Zirakpur & Chandigarh
-    </h2>
-    <p style="max-width: 750px; margin: auto; color: #cbd5e1; font-size: 16px; line-height: 1.75;">
-      Travel across North India without paying return-trip fares. Enjoy door-to-door pickup from Zirakpur, Chandigarh, Mohali, or Panchkula in our spotless Sedans, Ertiga SUVs, and Innova Crysta MPVs with professional verified chauffeurs.
-    </p>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-  <!-- 20+ ROUTES GRID -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete One-Way Cab Routes | Khatkar Travel Company Zirakpur</title>
+  <meta name="description" content="Book 20+ Outstation One-Way Drop Cabs from Zirakpur & Chandigarh to Shimla, Manali, Delhi Airport, Amritsar, Dehradun and more with Khatkar Travel Company.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="IMG_5388.jpeg">
+
   <style>
+    :root {
+      --navy-deepest: #030b17;
+      --navy-royal: #07162c;
+      --navy-mid: #0f294a;
+      --royal-accent: #1d4ed8;
+      --sky-glow: #38bdf8;
+      --gold-accent: #d4af37;
+      --pure-white: #ffffff;
+      --off-white: #f4f7fb;
+      --text-dark: #07162c;
+      --text-muted: #52637a;
+      --shadow-luxury: 0 25px 60px rgba(3, 11, 23, 0.10);
+      --shadow-navy-glow: 0 20px 50px rgba(7, 22, 44, 0.35);
+      --spring-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --smooth-easing: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--off-white);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      padding-top: 95px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif-font { font-family: 'Cinzel', serif; }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    .navy-luxury-btn {
+      background: linear-gradient(135deg, var(--navy-royal) 0%, var(--navy-mid) 55%, var(--royal-accent) 100%);
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.45s var(--spring-easing);
+      box-shadow: 0 12px 28px rgba(7, 22, 44, 0.28);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .navy-luxury-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(7, 22, 44, 0.45);
+    }
+
+    .popup-reveal {
+      opacity: 0;
+      transform: scale(0.84) translateY(45px);
+      transition: opacity 0.75s var(--smooth-easing), transform 0.85s var(--spring-easing);
+    }
+    .popup-reveal.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    .popup-card-item {
+      opacity: 0;
+      transform: scale(0.76) translateY(35px);
+      transition: opacity 0.65s var(--smooth-easing), transform 0.8s var(--spring-easing);
+    }
+    .popup-card-item.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0.45); }
+      70% { box-shadow: 0 0 0 16px rgba(7, 22, 44, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0); }
+    }
+
+    nav {
+      position: fixed !important;
+      top: 15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: 94% !important;
+      max-width: 1240px;
+      z-index: 1000 !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 12px 24px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 60px;
+      box-shadow: 0 15px 40px rgba(3, 11, 23, 0.12);
+      border: 1px solid rgba(7, 22, 44, 0.12);
+    }
+
+    .brand-logo-img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal); }
+
+    .back-home-pill {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--off-white);
+      color: var(--navy-royal); padding: 10px 18px; border-radius: 50px; text-decoration: none;
+      font-weight: 800; font-size: 13px; white-space: nowrap; border: 1px solid rgba(7, 22, 44, 0.12);
+      transition: 0.35s var(--spring-easing);
+    }
+    .back-home-pill:hover { background: var(--navy-royal); color: var(--pure-white); }
+
+    /* HERO BANNER */
+    .ow-hero-banner { max-width: 1240px; margin: 10px auto 40px; padding: 0 20px; }
+    .ow-hero-card {
+      position: relative; border-radius: 36px; overflow: hidden; padding: 70px 40px;
+      background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-royal) 60%, var(--navy-mid) 100%);
+      color: var(--pure-white); text-align: center; box-shadow: var(--shadow-navy-glow);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .ow-hero-card h1 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 12px; font-weight: 900; }
+    .ow-hero-card p { max-width: 750px; margin: auto; font-size: 16px; color: #cbd5e1; line-height: 1.75; }
+
+    /* GRID SECTION */
+    .ow-grid-section { max-width: 1240px; margin: 0 auto 70px; padding: 0 20px; }
     .routes-grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      max-width: 1140px;
-      margin: 0 auto 50px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
     }
     .route-card-box {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(16px);
-      border: 1.5px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 24px;
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      background: var(--pure-white);
+      border: 1.5px solid rgba(7, 22, 44, 0.08);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow-luxury);
+      transition: all 0.45s var(--spring-easing);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .route-card-box:hover {
-      transform: translateY(-8px) scale(1.02);
-      background: rgba(255, 255, 255, 0.11);
-      border-color: var(--sky-glow);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--navy-royal);
+      box-shadow: 0 30px 60px rgba(7, 22, 44, 0.18);
     }
     .route-top-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .route-title {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 800;
-      color: var(--pure-white);
+      color: var(--navy-deepest);
       font-family: 'Cinzel', serif;
     }
     .route-tag-pill {
-      background: rgba(56, 189, 248, 0.18);
-      color: var(--sky-glow);
+      background: rgba(56, 189, 248, 0.15);
+      color: #0284c7;
       font-size: 11px;
       font-weight: 800;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
     .route-info-row {
-      font-size: 13px;
-      color: #94a3b8;
-      margin-bottom: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
       display: flex;
       gap: 15px;
+      font-weight: 600;
     }
     .route-price-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 14px;
+      border-top: 1px solid rgba(7, 22, 44, 0.08);
+      padding-top: 16px;
     }
     .route-book-btn {
-      background: var(--pure-white);
-      color: var(--navy-deepest);
-      padding: 8px 18px;
+      background: var(--navy-royal);
+      color: var(--pure-white);
+      padding: 10px 22px;
       border-radius: 30px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 800;
       text-decoration: none;
       text-transform: uppercase;
@@ -88,484 +206,401 @@
       background: var(--sky-glow);
       color: var(--navy-deepest);
     }
+
+    .bc-footer-new { background: var(--navy-deepest); color: #cbd5e1; padding: 75px 25px 35px; margin-top: 70px; border-top: 4px solid var(--navy-royal); }
+    .bc-footer-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; }
+    .bc-footer-new h3 { color: var(--pure-white); font-size: 18px; margin: 0 0 20px; border-bottom: 2px solid var(--sky-glow); padding-bottom: 10px; display: inline-block; }
+    .bc-footer-new a { display: block; color: #94a3b8; text-decoration: none; font-size: 14px; margin: 12px 0; transition: 0.3s; }
+    .bc-footer-new a:hover { color: var(--pure-white); transform: translateX(6px); }
+
+    @media (max-width: 850px) { .bc-footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .bc-footer-grid { grid-template-columns: 1fr; } }
   </style>
+</head>
 
-  <div class="routes-grid-container">
+<body>
 
-    <!-- Route 1 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Shimla Drop</span>
-          <span class="route-tag-pill">Popular</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 115 KM</span>
-          <span><i class="fas fa-clock"></i> 3.5 Hrs</span>
-        </div>
+  <!-- Floating Luxury Navbar -->
+  <nav>
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
+      <img src="IMG_5388.jpeg" alt="Logo" class="brand-logo-img">
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--navy-deepest); font-weight: 900; font-size: 17px; font-family: 'Cinzel', serif; line-height: 1.1;">Khatkar Travel Company</span>
+        <span style="font-size: 10px; letter-spacing: 2.5px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR</span>
       </div>
-      <div class="route-price-row">
-        <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹2,499*</div>
-        </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Shimla." target="_blank" class="route-book-btn">Book Now</a>
-      </div>
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="index.html" class="back-home-pill">
+        <i class="fas fa-arrow-left"></i> Home
+      </a>
+      <a href="tel:+917696299855" class="navy-luxury-btn" style="padding: 10px 18px; border-radius: 50px; font-size: 13px; font-weight: 800;">
+        <i class="fas fa-phone-alt"></i>
+      </a>
     </div>
+  </nav>
 
-    <!-- Route 2 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Manali Drop</span>
-          <span class="route-tag-pill">Scenic</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 275 KM</span>
-          <span><i class="fas fa-clock"></i> 6.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
-        <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,499*</div>
-        </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Manali." target="_blank" class="route-book-btn">Book Now</a>
-      </div>
+  <!-- HERO BANNER -->
+  <section class="ow-hero-banner popup-reveal">
+    <div class="ow-hero-card">
+      <span style="display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 3px; color: var(--sky-glow); text-transform: uppercase; margin-bottom: 12px;">Zero Return Fare • Outstation Drop Hub</span>
+      <h1>Complete One-Way <span class="gold-gradient-text">Cab Routes</span></h1>
+      <p>Travel across North India without paying return-trip fares. Enjoy door-to-door pickup from Zirakpur, Chandigarh, Mohali, or Panchkula in our spotless Sedans, Ertiga SUVs, and Innova Crysta MPVs.</p>
     </div>
+  </section>
 
-    <!-- Route 3 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Delhi / IGI Airport</span>
-          <span class="route-tag-pill">Express</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 250 KM</span>
-          <span><i class="fas fa-clock"></i> 4.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+  <!-- 22+ ONE-WAY ROUTES GRID SECTION -->
+  <section class="ow-grid-section popup-reveal">
+    <div class="routes-grid-container">
+
+      <!-- 1 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹3,499*</div>
+          <div class="route-top-row"><span class="route-title">Shimla Drop</span><span class="route-tag-pill">Popular</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 115 KM</span><span><i class="fas fa-clock"></i> 3.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct one-way drop from Zirakpur to Shimla Mall Road or hotel.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Delhi%20Airport." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹2,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Shimla." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 4 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Amritsar Golden Temple</span>
-          <span class="route-tag-pill">Spiritual</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 235 KM</span>
-          <span><i class="fas fa-clock"></i> 4.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 2 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,499*</div>
+          <div class="route-top-row"><span class="route-title">Manali Drop</span><span class="route-tag-pill">Scenic</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 275 KM</span><span><i class="fas fa-clock"></i> 6.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Smooth highway drive through Kullu valley directly into Manali town.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Amritsar." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Manali." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 5 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Dehradun Drop</span>
-          <span class="route-tag-pill">Valley</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 170 KM</span>
-          <span><i class="fas fa-clock"></i> 4.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 3 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹3,499*</div>
+          <div class="route-top-row"><span class="route-title">Delhi / IGI Airport</span><span class="route-tag-pill">Express</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 250 KM</span><span><i class="fas fa-clock"></i> 4.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct terminal drop at Delhi IGI Airport (T1, T2, T3) or any Delhi address.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Dehradun." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Delhi%20Airport." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 6 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Mussoorie Hills</span>
-          <span class="route-tag-pill">Scenic</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 200 KM</span>
-          <span><i class="fas fa-clock"></i> 5.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 4 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹3,999*</div>
+          <div class="route-top-row"><span class="route-title">Amritsar Golden Temple</span><span class="route-tag-pill">Spiritual</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 235 KM</span><span><i class="fas fa-clock"></i> 4.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Fast expressway transfer to Amritsar for Golden Temple darshan.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Mussoorie." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Amritsar." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 7 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Dalhousie Drop</span>
-          <span class="route-tag-pill">Pine</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 315 KM</span>
-          <span><i class="fas fa-clock"></i> 7.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 5 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹5,499*</div>
+          <div class="route-top-row"><span class="route-title">Dehradun Drop</span><span class="route-tag-pill">Valley</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 170 KM</span><span><i class="fas fa-clock"></i> 4.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Comfortable drop to Doon valley, FRI, or Robber's cave.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Dalhousie." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Dehradun." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 8 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Dharamshala / Mcleodganj</span>
-          <span class="route-tag-pill">Hill</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 250 KM</span>
-          <span><i class="fas fa-clock"></i> 5.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 6 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,799*</div>
+          <div class="route-top-row"><span class="route-title">Mussoorie Hills</span><span class="route-tag-pill">Scenic</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 200 KM</span><span><i class="fas fa-clock"></i> 5.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct drop to Queen of Hills from Zirakpur doorstep.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Dharamshala." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Mussoorie." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 9 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Katra (Vaishno Devi)</span>
-          <span class="route-tag-pill">Yatra</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 365 KM</span>
-          <span><i class="fas fa-clock"></i> 6.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 7 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,999*</div>
+          <div class="route-top-row"><span class="route-title">Dalhousie Drop</span><span class="route-tag-pill">Pine</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 315 KM</span><span><i class="fas fa-clock"></i> 7.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Pine forest valley drop to Dalhousie or Gandhi Chowk.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Katra." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹5,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Dalhousie." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 10 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Jammu Tawi City</span>
-          <span class="route-tag-pill">Transit</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 325 KM</span>
-          <span><i class="fas fa-clock"></i> 6.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 8 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,699*</div>
+          <div class="route-top-row"><span class="route-title">Dharamshala / Mcleodganj</span><span class="route-tag-pill">Hill</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 250 KM</span><span><i class="fas fa-clock"></i> 5.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Tibetan cultural town drop with mountain expert chauffeurs.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Jammu." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,799*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Dharamshala." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 11 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Kasauli Hills</span>
-          <span class="route-tag-pill">Quick Escape</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 55 KM</span>
-          <span><i class="fas fa-clock"></i> 1.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 9 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹1,699*</div>
+          <div class="route-top-row"><span class="route-title">Katra (Vaishno Devi)</span><span class="route-tag-pill">Yatra</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 365 KM</span><span><i class="fas fa-clock"></i> 6.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct one-way drop to Katra Base Camp for Mata Vaishno Devi yatra.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Kasauli." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Katra." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 12 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Kullu Valley</span>
-          <span class="route-tag-pill">River</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 235 KM</span>
-          <span><i class="fas fa-clock"></i> 5.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 10 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹3,999*</div>
+          <div class="route-top-row"><span class="route-title">Jammu Tawi City</span><span class="route-tag-pill">Transit</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 325 KM</span><span><i class="fas fa-clock"></i> 6.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Safe highway transfer to Jammu city railway station or bus stand.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Kullu." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,699*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Jammu." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 13 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Kasol & Manikaran</span>
-          <span class="route-tag-pill">Parvati</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 265 KM</span>
-          <span><i class="fas fa-clock"></i> 6.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 11 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹4,499*</div>
+          <div class="route-top-row"><span class="route-title">Kasauli Hills</span><span class="route-tag-pill">Quick Escape</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 55 KM</span><span><i class="fas fa-clock"></i> 1.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Short distance weekend drop to pine-covered Kasauli hills.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Kasol." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹1,699*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Kasauli." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 14 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Haridwar & Rishikesh</span>
-          <span class="route-tag-pill">Holy</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 205 KM</span>
-          <span><i class="fas fa-clock"></i> 4.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 12 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹3,699*</div>
+          <div class="route-top-row"><span class="route-title">Kullu Valley</span><span class="route-tag-pill">River</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 235 KM</span><span><i class="fas fa-clock"></i> 5.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct drop alongside Beas river valley in Kullu.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Haridwar." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Kullu." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 15 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Mathura & Vrindavan</span>
-          <span class="route-tag-pill">Braj</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 380 KM</span>
-          <span><i class="fas fa-clock"></i> 6.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 13 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹5,999*</div>
+          <div class="route-top-row"><span class="route-title">Kasol & Manikaran</span><span class="route-tag-pill">Parvati</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 265 KM</span><span><i class="fas fa-clock"></i> 6.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Parvati valley drop to Kasol cafes and Manikaran hot springs.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Mathura." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹4,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Kasol." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 16 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Jaipur Pink City</span>
-          <span class="route-tag-pill">Royal</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 505 KM</span>
-          <span><i class="fas fa-clock"></i> 8.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 14 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹6,999*</div>
+          <div class="route-top-row"><span class="route-title">Haridwar & Rishikesh</span><span class="route-tag-pill">Holy</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 205 KM</span><span><i class="fas fa-clock"></i> 4.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Sacred drop to Haridwar ghats or Rishikesh yoga ashrams.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Jaipur." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,699*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Haridwar." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 17 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Agra Taj Mahal</span>
-          <span class="route-tag-pill">Heritage</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 425 KM</span>
-          <span><i class="fas fa-clock"></i> 7.0 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 15 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹6,499*</div>
+          <div class="route-top-row"><span class="route-title">Mathura & Vrindavan</span><span class="route-tag-pill">Braj</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 380 KM</span><span><i class="fas fa-clock"></i> 6.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Expressway transfer to Banke Bihari Temple and Mathura.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Agra." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹5,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Mathura." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 18 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Ludhiana City</span>
-          <span class="route-tag-pill">Business</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 100 KM</span>
-          <span><i class="fas fa-clock"></i> 1.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 16 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹1,999*</div>
+          <div class="route-top-row"><span class="route-title">Jaipur Pink City</span><span class="route-tag-pill">Royal</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 505 KM</span><span><i class="fas fa-clock"></i> 8.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Long-distance outstation drop to Jaipur heritage city.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Ludhiana." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹6,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Jaipur." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 19 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Jalandhar City</span>
-          <span class="route-tag-pill">Highway</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 145 KM</span>
-          <span><i class="fas fa-clock"></i> 2.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 17 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹2,499*</div>
+          <div class="route-top-row"><span class="route-title">Agra Taj Mahal</span><span class="route-tag-pill">Heritage</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 425 KM</span><span><i class="fas fa-clock"></i> 7.0 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct drop to Agra for Taj Mahal and fort sightseeing.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Jalandhar." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹6,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Agra." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 20 -->
-    <div class="route-card-box popup-card-box">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Patiala City</span>
-          <span class="route-tag-pill">Royal</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 65 KM</span>
-          <span><i class="fas fa-clock"></i> 1.2 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 18 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹1,499*</div>
+          <div class="route-top-row"><span class="route-title">Ludhiana City</span><span class="route-tag-pill">Business</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 100 KM</span><span><i class="fas fa-clock"></i> 1.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Quick business or personal drop to Ludhiana.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Patiala." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹1,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Ludhiana." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 21 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Ambala Cantt</span>
-          <span class="route-tag-pill">Junction</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 45 KM</span>
-          <span><i class="fas fa-clock"></i> 0.8 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 19 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹1,199*</div>
+          <div class="route-top-row"><span class="route-title">Jalandhar City</span><span class="route-tag-pill">Highway</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 145 KM</span><span><i class="fas fa-clock"></i> 2.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Safe and comfortable drop to Jalandhar.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Ambala." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹2,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Jalandhar." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Route 22 -->
-    <div class="route-card-box popup-card-item">
-      <div>
-        <div class="route-top-row">
-          <span class="route-title">Kurukshetra</span>
-          <span class="route-tag-pill">Historic</span>
-        </div>
-        <div class="route-info-row">
-          <span><i class="fas fa-road"></i> 85 KM</span>
-          <span><i class="fas fa-clock"></i> 1.5 Hrs</span>
-        </div>
-      </div>
-      <div class="route-price-row">
+      <!-- 20 -->
+      <div class="route-card-box popup-card-item">
         <div>
-          <div style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">Starts From</div>
-          <div style="font-size: 18px; font-weight: 900; color: var(--pure-white); font-family: 'Cinzel', serif;">₹1,799*</div>
+          <div class="route-top-row"><span class="route-title">Patiala City</span><span class="route-tag-pill">Royal</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 65 KM</span><span><i class="fas fa-clock"></i> 1.2 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Same-day drop to Patiala royal city.</p>
         </div>
-        <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20from%20Zirakpur%20to%20Kurukshetra." target="_blank" class="route-book-btn">Book Now</a>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹1,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Patiala." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
       </div>
-    </div>
 
+      <!-- 21 -->
+      <div class="route-card-box popup-card-item">
+        <div>
+          <div class="route-top-row"><span class="route-title">Ambala Cantt</span><span class="route-tag-pill">Junction</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 45 KM</span><span><i class="fas fa-clock"></i> 0.8 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Quick railway station or city drop to Ambala.</p>
+        </div>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹1,199*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Ambala." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="route-card-box popup-card-item">
+        <div>
+          <div class="route-top-row"><span class="route-title">Kurukshetra</span><span class="route-tag-pill">Historic</span></div>
+          <div class="route-info-row"><span><i class="fas fa-road"></i> 85 KM</span><span><i class="fas fa-clock"></i> 1.5 Hours</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Direct drop to historical holy city of Kurukshetra.</p>
+        </div>
+        <div class="route-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Starts From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹1,799*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab%20to%20Kurukshetra." target="_blank" class="route-book-btn">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Contact Buttons -->
+  <div style="position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
+    <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20one-way%20cab." style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; border: 2px solid #fff;">
+      <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
+    </a>
+    <a href="tel:+917696299855" class="navy-luxury-btn" style="width: 58px; height: 58px; border-radius: 50%; border: 2px solid #fff; animation: pulseRing 2.5s infinite;">
+      <i class="fas fa-phone-alt" style="color: white; font-size: 22px;"></i>
+    </a>
   </div>
 
-  <!-- Why Choose Our One-Way Services -->
-  <div style="max-width: 1000px; margin: 40px auto 0; background: rgba(255,255,255,0.04); border-radius: 24px; padding: 30px; border: 1px solid rgba(255,255,255,0.1);">
-    <h3 style="font-family: 'Cinzel', serif; font-size: 22px; color: var(--pure-white); margin-bottom: 14px; text-align: center;">
-      Why Choose Khatkar Travel Company One-Way Cabs?
-    </h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; font-size: 14px; color: #cbd5e1; line-height: 1.6;">
-      <div><i class="fas fa-check-circle" style="color: var(--gold-accent);"></i> <strong>No Return Fare:</strong> Pay only for the drop distance from Zirakpur / Chandigarh to your destination.</div>
-      <div><i class="fas fa-check-circle" style="color: var(--gold-accent);"></i> <strong>Doorstep Pickup:</strong> Direct pickup from Office no 08, VIP Road, Zirakpur or any location across Tricity.</div>
-      <div><i class="fas fa-check-circle" style="color: var(--gold-accent);"></i> <strong>Verified Drivers:</strong> Experienced, polite, and mountain/highway expert chauffeurs.</div>
+  <!-- COMPLETE FOOTER -->
+  <footer class="bc-footer-new">
+    <div class="bc-footer-grid">
+      <div>
+        <div style="font-family:'Cinzel',serif;font-size:26px;font-weight:800;color:var(--pure-white);margin-bottom:12px;">KHATKAR TRAVEL COMPANY</div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--sky-glow); letter-spacing: 4px; margin-top: -10px; margin-bottom: 20px;">ZIRAKPUR</div>
+        <p style="font-size:14px;line-height:1.7;color:#94a3b8;">Premium taxi and tour services with comfort, safety and reliable support across North India.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="all-tours.html">Tours</a>
+      </div>
+      <div>
+        <h3>Top Destinations</h3>
+        <a href="Shimla.html">Shimla & Kufri</a>
+        <a href="Manali.html">Manali & Solang</a>
+        <a href="chardham.html">Chardham Yatra</a>
+        <a href="mathuravrindavan.html">Mathura & Vrindavan</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <a href="tel:+917696299855"><i class="fas fa-phone-alt" style="color:var(--sky-glow);"></i> &nbsp; +91 76962 99855</a>
+        <a href="mailto:satnamsingh.chotian@gmail.com"><i class="fas fa-envelope" style="color:var(--sky-glow);"></i> &nbsp; satnamsingh.chotian@gmail.com</a>
+        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank"><i class="fas fa-map-marker-alt" style="color:var(--sky-glow);"></i> &nbsp; Google Maps Location</a>
+        <a href="https://wa.me/917696299855" target="_blank"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; WhatsApp Support</a>
+      </div>
     </div>
-  </div>
+    <div style="max-width: 1180px; margin: 45px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; color: #64748b;">
+      © 2026 Khatkar Travel Company Zirakpur. All rights reserved.
+    </div>
+  </footer>
 
-</section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            entry.target.querySelectorAll('.route-card-box').forEach((card, idx) => {
+              setTimeout(() => card.classList.add('active'), idx * 50);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.popup-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
