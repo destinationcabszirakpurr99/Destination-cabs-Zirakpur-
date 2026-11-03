@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Multi-Day Round-Trip Packages | Khatkar Travel Company Zirakpur</title>
+  <meta name="description" content="Book 20+ Outstation Round-Trip Tour Packages from Zirakpur & Chandigarh to Shimla, Manali, Chardham, Jaipur, Ayodhya and more with Khatkar Travel Company.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="IMG_5388.jpeg">
+
+  <style>
+    :root {
+      --navy-deepest: #030b17;
+      --navy-royal: #07162c;
+      --navy-mid: #0f294a;
+      --royal-accent: #1d4ed8;
+      --sky-glow: #38bdf8;
+      --gold-accent: #d4af37;
+      --pure-white: #ffffff;
+      --off-white: #f4f7fb;
+      --text-dark: #07162c;
+      --text-muted: #52637a;
+      --shadow-luxury: 0 25px 60px rgba(3, 11, 23, 0.10);
+      --shadow-navy-glow: 0 20px 50px rgba(7, 22, 44, 0.35);
+      --spring-easing: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --smooth-easing: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--off-white);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      padding-top: 95px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .serif-font { font-family: 'Cinzel', serif; }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+
+    .navy-luxury-btn {
+      background: linear-gradient(135deg, var(--navy-royal) 0%, var(--navy-mid) 55%, var(--royal-accent) 100%);
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.45s var(--spring-easing);
+      box-shadow: 0 12px 28px rgba(7, 22, 44, 0.28);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .navy-luxury-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(7, 22, 44, 0.45);
+    }
+
+    .popup-reveal {
+      opacity: 0;
+      transform: scale(0.84) translateY(45px);
+      transition: opacity 0.75s var(--smooth-easing), transform 0.85s var(--spring-easing);
+    }
+    .popup-reveal.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    .popup-card-item {
+      opacity: 0;
+      transform: scale(0.76) translateY(35px);
+      transition: opacity 0.65s var(--smooth-easing), transform 0.8s var(--spring-easing);
+    }
+    .popup-card-item.active { opacity: 1; transform: scale(1) translateY(0); }
+
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0.45); }
+      70% { box-shadow: 0 0 0 16px rgba(7, 22, 44, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(7, 22, 44, 0); }
+    }
+
+    nav {
+      position: fixed !important;
+      top: 15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: 94% !important;
+      max-width: 1240px;
+      z-index: 1000 !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 12px 24px !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 60px;
+      box-shadow: 0 15px 40px rgba(3, 11, 23, 0.12);
+      border: 1px solid rgba(7, 22, 44, 0.12);
+    }
+
+    .brand-logo-img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--navy-royal); }
+
+    .back-home-pill {
+      display: inline-flex; align-items: center; gap: 8px; background: var(--off-white);
+      color: var(--navy-royal); padding: 10px 18px; border-radius: 50px; text-decoration: none;
+      font-weight: 800; font-size: 13px; white-space: nowrap; border: 1px solid rgba(7, 22, 44, 0.12);
+      transition: 0.35s var(--spring-easing);
+    }
+    .back-home-pill:hover { background: var(--navy-royal); color: var(--pure-white); }
+
+    /* HERO BANNER */
+    .rt-hero-banner { max-width: 1240px; margin: 10px auto 40px; padding: 0 20px; }
+    .rt-hero-card {
+      position: relative; border-radius: 36px; overflow: hidden; padding: 70px 40px;
+      background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-royal) 60%, var(--navy-mid) 100%);
+      color: var(--pure-white); text-align: center; box-shadow: var(--shadow-navy-glow);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .rt-hero-card h1 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 12px; font-weight: 900; }
+    .rt-hero-card p { max-width: 750px; margin: auto; font-size: 16px; color: #cbd5e1; line-height: 1.75; }
+
+    /* GRID SECTION */
+    .rt-grid-section { max-width: 1240px; margin: 0 auto 70px; padding: 0 20px; }
+    .roundtrip-grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+    .roundtrip-card-box {
+      background: var(--pure-white);
+      border: 1.5px solid rgba(7, 22, 44, 0.08);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow-luxury);
+      transition: all 0.45s var(--spring-easing);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .roundtrip-card-box:hover {
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--navy-royal);
+      box-shadow: 0 30px 60px rgba(7, 22, 44, 0.18);
+    }
+    .rt-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .rt-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy-deepest);
+      font-family: 'Cinzel', serif;
+    }
+    .rt-tag-pill {
+      background: rgba(212, 175, 55, 0.15);
+      color: #9a7b1c;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .rt-info-row {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 15px;
+      font-weight: 600;
+    }
+    .rt-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(7, 22, 44, 0.08);
+      padding-top: 16px;
+    }
+    .rt-book-btn {
+      background: var(--navy-royal);
+      color: var(--pure-white);
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+    .rt-book-btn:hover {
+      background: var(--gold-accent);
+      color: var(--navy-deepest);
+    }
+
+    .bc-footer-new { background: var(--navy-deepest); color: #cbd5e1; padding: 75px 25px 35px; margin-top: 70px; border-top: 4px solid var(--navy-royal); }
+    .bc-footer-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; }
+    .bc-footer-new h3 { color: var(--pure-white); font-size: 18px; margin: 0 0 20px; border-bottom: 2px solid var(--sky-glow); padding-bottom: 10px; display: inline-block; }
+    .bc-footer-new a { display: block; color: #94a3b8; text-decoration: none; font-size: 14px; margin: 12px 0; transition: 0.3s; }
+    .bc-footer-new a:hover { color: var(--pure-white); transform: translateX(6px); }
+
+    @media (max-width: 850px) { .bc-footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .bc-footer-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Luxury Navbar -->
+  <nav>
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
+      <img src="IMG_5388.jpeg" alt="Logo" class="brand-logo-img">
+      <div style="display: flex; flex-direction: column;">
+        <span style="color: var(--navy-deepest); font-weight: 900; font-size: 17px; font-family: 'Cinzel', serif; line-height: 1.1;">Khatkar Travel Company</span>
+        <span style="font-size: 10px; letter-spacing: 2.5px; color: var(--royal-accent); font-weight: 800;">ZIRAKPUR</span>
+      </div>
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <a href="index.html" class="back-home-pill">
+        <i class="fas fa-arrow-left"></i> Home
+      </a>
+      <a href="tel:+917696299855" class="navy-luxury-btn" style="padding: 10px 18px; border-radius: 50px; font-size: 13px; font-weight: 800;">
+        <i class="fas fa-phone-alt"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="rt-hero-banner popup-reveal">
+    <div class="rt-hero-card">
+      <span style="display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 3px; color: var(--sky-glow); text-transform: uppercase; margin-bottom: 12px;">Grand Fleet & Outstation Collection</span>
+      <h1>Complete Multi-Day <span class="gold-gradient-text">Round-Trip Packages</span></h1>
+      <p>Explore our comprehensive collection of 22+ professional round-trip tour packages from Zirakpur and Chandigarh. Enjoy dedicated chauffeur service, hotel transfers, sightseeing, and safe return back home.</p>
+    </div>
+  </section>
+
+  <!-- 22+ ROUND-TRIP PACKAGES GRID SECTION -->
+  <section class="rt-grid-section popup-reveal">
+    <div class="roundtrip-grid-container">
+
+      <!-- 1 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Shimla & Kufri Tour</span><span class="rt-tag-pill">2 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 2 Days / 1 Night</span><span><i class="fas fa-mountain"></i> The Ridge & Mall</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Explore colonial heritage, Jakhoo temple, and snow-capped Kufri peaks with dedicated sedan or SUV.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹5,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Shimla." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Manali & Solang Valley</span><span class="rt-tag-pill">4 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 4 Days / 3 Nights</span><span><i class="fas fa-snowflake"></i> Atal Tunnel & Snow</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Enjoy Solang snow valley, Hadimba temple, and scenic drives through the new Himalayan tunnels.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹11,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Manali." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Spiti Grand Circuit</span><span class="rt-tag-pill">9 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 9 Days / 8 Nights</span><span><i class="fas fa-road"></i> Full Mountain Loop</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Epic high-altitude adventure covering Kalpa, Nako, Tabo, Kaza, Key Monastery, and Chandratal Lake.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹38,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20the%209%20Days%20Spiti%20Circuit." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Dalhousie & Khajjiar</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-tree"></i> Mini Switzerland</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Pine-clad hills, Dainkund peak, and saucer-shaped alpine meadows of Khajjiar.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹14,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Dalhousie." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Mussoorie & Doon Valley</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-mountain"></i> Kempty Falls</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Queen of Hills tour featuring Kempty Falls, Gun Hill ropeway, Lal Tibba, and Mall Road walks.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹10,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Mussoorie." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Amritsar & Wagah Border</span><span class="rt-tag-pill">2 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 2 Days / 1 Night</span><span><i class="fas fa-place-of-worship"></i> Golden Temple</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Golden Temple illumination darshan, Jallianwala Bagh, and patriotic Wagah Border retreat ceremony.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹9,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Amritsar." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Vaishno Devi Katra Yatra</span><span class="rt-tag-pill">Yatra</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-om"></i> Bhawan Darshan</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Comfortable pilgrimage tour from Zirakpur to Katra Base Camp for Mata Vaishno Devi darshan.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹11,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Vaishno%20Devi." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Mathura & Vrindavan</span><span class="rt-tag-pill">Braj Tour</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-om"></i> Prem Mandir</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Divine Braj tour covering Banke Bihari Temple, Prem Mandir, Krishna Janmabhoomi, and Govardhan.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹14,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Mathura%20Vrindavan." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Jaipur Pink City</span><span class="rt-tag-pill">Royal Tour</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-crown"></i> Amer Fort</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Explore Amer Fort, Hawa Mahal, City Palace, Jal Mahal, and Nahargarh sunset views in royal comfort.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹16,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Jaipur." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Chardham Yatra Circuit</span><span class="rt-tag-pill">Grand Yatra</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 11 Days / 10 Nights</span><span><i class="fas fa-mountain"></i> All 4 Dhams</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">The ultimate 11-day spiritual Himalayan pilgrimage covering Yamunotri, Gangotri, Kedarnath, and Badrinath.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹52,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20the%2011%20Days%20Chardham%20Yatra." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Dharamshala & Mcleodganj</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-mountain"></i> Dalai Lama Temple</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Tibetan culture, Bhagsu waterfall, Dalai Lama temple, and scenic Dhauladhar mountain views.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹13,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Dharamshala." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Kasol & Manikaran</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-water"></i> Parvati Valley</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Relaxing riverside vibes in Parvati Valley, hot sulfur springs at Manikaran, and scenic cafe trails.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹12,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Kasol." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Agra Taj Mahal Tour</span><span class="rt-tag-pill">2 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 2 Days / 1 Night</span><span><i class="fas fa-monument"></i> Wonder of World</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Visit the majestic Taj Mahal, Agra Fort, and Fatehpur Sikri via smooth Yamuna Expressway drive.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹13,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Agra." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Haridwar & Rishikesh</span><span class="rt-tag-pill">2 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 2 Days / 1 Night</span><span><i class="fas fa-water"></i> Ganga Aarti</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Experience the divine Ganga Aarti at Har Ki Pauri and peaceful yoga ashrams in Rishikesh.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹9,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Rishikesh." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Kasauli Weekend Escape</span><span class="rt-tag-pill">1 Day</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> Same Day / 1 Day</span><span><i class="fas fa-tree"></i> Pine Trails</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Quick same-day or overnight getaway to peaceful pine forests and Christ Church in Kasauli.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹3,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Kasauli." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Nainital Lake Tour</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-water"></i> Naini Lake</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Kumaon hill station tour featuring boating in Naini Lake, snow viewpoints, and cable car rides.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹16,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Nainital." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Jim Corbett Wildlife</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-paw"></i> Jungle Safari</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Thrilling wildlife jungle safaris and luxury resort stay in India's oldest national park.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹17,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Jim%20Corbett." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Udaipur Lakes Tour</span><span class="rt-tag-pill">4 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 4 Days / 3 Nights</span><span><i class="fas fa-crown"></i> City of Lakes</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Romantic boat rides on Lake Pichola, City Palace, and royal Mewar heritage sightseeing.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹24,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Udaipur." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Delhi Capital Tour</span><span class="rt-tag-pill">2 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 2 Days / 1 Night</span><span><i class="fas fa-landmark"></i> Monuments</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Comprehensive capital tour covering India Gate, Qutub Minar, Lotus Temple, and Red Fort.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹7,499*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Delhi." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Solang Valley & Atal Tunnel</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-snowflake"></i> Snow Pass</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Short weekend snow getaway focusing on Solang adventure sports and Sissu waterfall across Atal Tunnel.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹9,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Solang." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Bir Billing Paragliding</span><span class="rt-tag-pill">3 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 3 Days / 2 Nights</span><span><i class="fas fa-wind"></i> Aero Sports</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">World-famous paragliding take-off site, Tibetan monasteries, and camping in Bir Billing.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹13,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Bir%20Billing." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="roundtrip-card-box popup-card-item">
+        <div>
+          <div class="rt-top-row"><span class="rt-title">Ayodhya Ram Mandir Tour</span><span class="rt-tag-pill">4 Days</span></div>
+          <div class="rt-info-row"><span><i class="fas fa-calendar-alt"></i> 4 Days / 3 Nights</span><span><i class="fas fa-om"></i> Divine Darshan</span></div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Spiritual tour to Ayodhya Ram Mandir, Saryu River Ghats, and sacred heritage sites.</p>
+        </div>
+        <div class="rt-price-row">
+          <div><div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Package From</div><div style="font-size: 18px; font-weight: 900; color: var(--navy-deepest); font-family: 'Cinzel', serif;">₹19,999*</div></div>
+          <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20book%20a%20Round-Trip%20for%20Ayodhya." target="_blank" class="rt-book-btn">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating Contact Buttons -->
+  <div style="position: fixed; bottom: 28px; right: 24px; display: flex; flex-direction: column; gap: 14px; z-index: 1000; align-items: flex-end;">
+    <a href="https://wa.me/917696299855?text=Hello,%20I%20want%20to%20explore%20your%20round-trip%20packages." style="width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 12px 30px rgba(37,211,102,0.45); text-decoration: none; border: 2px solid #fff;">
+      <i class="fab fa-whatsapp" style="color: white; font-size: 30px;"></i>
+    </a>
+    <a href="tel:+917696299855" class="navy-luxury-btn" style="width: 58px; height: 58px; border-radius: 50%; border: 2px solid #fff; animation: pulseRing 2.5s infinite;">
+      <i class="fas fa-phone-alt" style="color: white; font-size: 22px;"></i>
+    </a>
+  </div>
+
+  <!-- COMPLETE FOOTER -->
+  <footer class="bc-footer-new">
+    <div class="bc-footer-grid">
+      <div>
+        <div style="font-family:'Cinzel',serif;font-size:26px;font-weight:800;color:var(--pure-white);margin-bottom:12px;">KHATKAR TRAVEL COMPANY</div>
+        <div style="font-size: 12px; font-weight: 800; color: var(--sky-glow); letter-spacing: 4px; margin-top: -10px; margin-bottom: 20px;">ZIRAKPUR</div>
+        <p style="font-size:14px;line-height:1.7;color:#94a3b8;">Premium taxi and tour services with comfort, safety and reliable support across North India.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="all-tours.html">Tours</a>
+      </div>
+      <div>
+        <h3>Top Destinations</h3>
+        <a href="Shimla.html">Shimla & Kufri</a>
+        <a href="Manali.html">Manali & Solang</a>
+        <a href="chardham.html">Chardham Yatra</a>
+        <a href="mathuravrindavan.html">Mathura & Vrindavan</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <a href="tel:+917696299855"><i class="fas fa-phone-alt" style="color:var(--sky-glow);"></i> &nbsp; +91 76962 99855</a>
+        <a href="mailto:satnamsingh.chotian@gmail.com"><i class="fas fa-envelope" style="color:var(--sky-glow);"></i> &nbsp; satnamsingh.chotian@gmail.com</a>
+        <a href="https://maps.app.goo.gl/BT2hQeqiAPZ7Mpxo9?g_st=awb" target="_blank"><i class="fas fa-map-marker-alt" style="color:var(--sky-glow);"></i> &nbsp; Google Maps Location</a>
+        <a href="https://wa.me/917696299855" target="_blank"><i class="fab fa-whatsapp" style="color:var(--sky-glow);"></i> &nbsp; WhatsApp Support</a>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 45px auto 0; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; color: #64748b;">
+      © 2026 Khatkar Travel Company Zirakpur. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            entry.target.querySelectorAll('.roundtrip-card-box').forEach((card, idx) => {
+              setTimeout(() => card.classList.add('active'), idx * 50);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.popup-reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
