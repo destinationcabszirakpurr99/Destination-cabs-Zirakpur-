@@ -135,10 +135,14 @@
     .os-content-section { max-width: 1240px; margin: 0 auto 70px; padding: 0 20px; }
     .outstation-fleet-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       margin-bottom: 60px;
     }
+    @media (max-width: 950px) {
+      .outstation-fleet-grid { grid-template-columns: 1fr; }
+    }
+
     .outstation-car-card {
       background: var(--pure-white);
       border: 1.5px solid rgba(7, 22, 44, 0.08);
@@ -286,10 +290,10 @@
   <!-- OUTSTATION CONTENT SECTION -->
   <section class="os-content-section popup-reveal">
 
-    <!-- FLEET GRID FOR OUTSTATION -->
+    <!-- FLEET GRID FOR OUTSTATION (ALL 3 CARS) -->
     <div class="outstation-fleet-grid">
 
-      <!-- 1. Sedan -->
+      <!-- 1. Swift Dzire Sedan -->
       <div class="outstation-car-card popup-card-item">
         <div>
           <div class="outstation-car-img"><img src="IMG_5788.jpeg" alt="Swift Dzire"></div>
@@ -307,7 +311,7 @@
         <button onclick="prefillOutstationCar('Sedan (Swift Dzire)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--navy-royal); color: var(--pure-white); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer; transition: 0.3s;">Select Sedan →</button>
       </div>
 
-      <!-- 2. Ertiga -->
+      <!-- 2. Maruti Ertiga SUV -->
       <div class="outstation-car-card popup-card-item">
         <div>
           <div class="outstation-car-img"><img src="IMG_5789.jpeg" alt="Maruti Ertiga"></div>
@@ -325,7 +329,7 @@
         <button onclick="prefillOutstationCar('SUV (Maruti Ertiga)')" style="width: 100%; padding: 14px; border-radius: 50px; background: var(--navy-royal); color: var(--pure-white); border: none; font-weight: 800; font-size: 13px; text-transform: uppercase; cursor: pointer; transition: 0.3s;">Select Ertiga →</button>
       </div>
 
-      <!-- 3. Innova Crysta -->
+      <!-- 3. Innova Crysta MPV -->
       <div class="outstation-car-card popup-card-item">
         <div>
           <div class="outstation-car-img"><img src="IMG_5791.jpeg" alt="Innova Crysta"></div>
